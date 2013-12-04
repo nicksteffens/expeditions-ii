@@ -1,0 +1,14 @@
+{
+  "name": "Expeditions-II",
+  "version": "0.0.1",
+  "description": "Expeditions II - Experience",
+  "author": "Nick Steffens <nsteffens@gmail.com>",
+  "dependencies": {
+    "harp": "~0.10.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}
