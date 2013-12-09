@@ -4,9 +4,12 @@
 @font-dk-grey: #636363;
 
 @border-red: #cc3d17;
+@border-dk-red: #621d0b;
 @border-grey: #464646;
+@border-lt-grey: #cacaca;
 
 @bg-black-85: rgba(0, 0, 0, 0.85);
+@bg-red: #cb3d17;
 
 // globals
 body {
@@ -49,4 +52,55 @@ h1, h2, h3, h4, h5, h6 {
     right:0;
     border-left: 1px solid @border-grey;
   }
+}
+
+.content {
+  position: relative;
+  display: block;
+  margin:0;
+  width: 960px;
+  height: 570px;
+}
+
+.bg-container {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 9px;
+  margin-top: 48px;
+  width: 285px;
+
+  .copy-container {
+    background: #fff;
+    padding: 14px 18px;
+    border: 1px solid #000;
+
+    h3 {
+      color: @font-red;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+
+    p {
+      color: @font-dk-grey;
+      font-size: 16px;
+    }
+
+    a {
+      color: #fff;
+      text-shadow: #000 2px 2px;
+      text-decoration: Uppercase;
+
+      display:block;
+      width: 180px;
+      background: @bg-red;
+      border: 1px solid @border-dk-red;
+      padding: 10px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+#introduction {
+  background: url('../images/bg-index.jpg') 0 0 no-repeat;
 }

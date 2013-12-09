@@ -1,10 +1,7 @@
 {
   "index": {
-    "header": {
-      "headline": "Studying Birds in the Brazilian Amazon",
-      "subhead": "John Bates & Jason Weckstein"
-    },
     "intro_1": {
+      "headline": "Introduction",
       "copy": [
         "These birds represent three groups of toucans sampled by John, Jason, and Alex during their Amazonian expedition, as well as other earlier Field Museum expeditions to Amazonia.",
         "As you can see, these groups were found along the boundaries between Areas of Endemism—regions containing species unique to that area."
@@ -15,6 +12,7 @@
       }
     },
     "intro_2": {
+      "headline": "Introduction",
       "copy": [
         "For years, scientists believed these toucans to be different populations of the same species: the Ivory-billed Araçari (Pteroglossus azara).",
 
@@ -28,18 +26,18 @@
       }
     },
     "measurements": {
-      "step_1": {
+      "one": {
         "headline": "Step 1:  Physical Comparison",
         "copy": "The first stage in determining family relationships between birds involves detailed comparisons of their physical traits: their size, coloration, and even their birdcalls.",
         "next": {
           "copy": "Let's begin by taking measurements of each Ivory-billed Araçari population",
           "link": {
             "copy": "begin",
-            "href": "step_2"
+            "href": "two"
           }
         }
       },
-      "step_2": {
+      "two": {
         "instructions": "Click the dots of each bird to take measurements.",
         "birds": {
           "a": {
@@ -59,7 +57,7 @@
           }
         }
       },
-      "step_3": {
+      "three": {
         "copy": "Did you see the differences between the birds' sizes?",
         "answers": ["yes", "no"],
         "birds": {

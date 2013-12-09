@@ -1,7 +1,8 @@
 {
   "globals": {
-    "title": "Expeditions II",
-    "name"  : "Field Musuem",
-    "uri": "http://tbd.com",
+    "header": {
+      "headline": "Studying Birds in the Brazilian Amazon",
+      "subhead": "John Bates & Jason Weckstein"
+    }
   }
 }

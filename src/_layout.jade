@@ -2,7 +2,7 @@
 html
   head
     //- fonts
-    link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Oswald|Helvetica%20Neue")
+    link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Oswald:400,700|Helvetica%20Neue")
     // [if lt IE 9]
       <link href='https://fonts.googleapis.com/css?family=Oswald:400' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Helvetica%20Neue:400' rel='stylesheet' type='text/css'>
@@ -11,6 +11,12 @@ html
     link(rel="stylesheet", href="stylesheets/main.css")
   body
     .container
+      #header.row
+        .col-md-9
+          h1 Studying Birds in the Brazilian Amazon
+          h3 John Bates &amp; Jason Weckstein
+        img(src="images/bg-header.jpg" alt="" width="285" height="70")
+
       != yield
 
   //- scripts
