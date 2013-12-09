@@ -1,0 +1,52 @@
+// mixin's
+@font-red: #cc3d17;
+@font-grey: #acacac;
+@font-dk-grey: #636363;
+
+@border-red: #cc3d17;
+@border-grey: #464646;
+
+@bg-black-85: rgba(0, 0, 0, 0.85);
+
+// globals
+body {
+  background: url('http://expeditions.fieldmuseum.org/sites/all/themes/expeditions/images/bg.png');
+  font-family: "Helvetica Neue";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald";
+}
+
+
+.container {
+  width: 960px;
+}
+
+#header {
+  position: relative;
+  padding: 13px 40px 9px;
+  background: @bg-black-85;
+  border-top: 3px solid @border-red;
+  border-bottom: 1px solid @border-grey;
+
+  h1 {
+    color: @font-red;
+    font-size: 24px;
+    margin: 0 0 5px;
+  }
+
+  h3 {
+    font-family: "Helvetica Neue";
+    color: @font-grey;
+    font-size: 16px;
+    margin:0;
+  }
+
+  img {
+    position: absolute;
+    top:0;
+    right:0;
+    border-left: 1px solid @border-grey;
+  }
+}

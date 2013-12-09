@@ -1,10 +1,17 @@
 !!!
 html
   head
-    link(rel="stylesheet", type="text/css", href="stylesheet/bootstrap.min.css")
+    //- fonts
+    link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Oswald|Helvetica%20Neue")
+    // [if lt IE 9]
+      <link href='https://fonts.googleapis.com/css?family=Oswald:400' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Helvetica%20Neue:400' rel='stylesheet' type='text/css'>
+      [endif]
+    link(rel="stylesheet", type="text/css", href="stylesheets/bootstrap.min.css")
     link(rel="stylesheet", href="stylesheets/main.css")
   body
-    != yield
+    .container
+      != yield
 
   //- scripts
   script(type="text/javascript", src="js/application.js")
