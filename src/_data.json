@@ -21,12 +21,12 @@
         "Replicate the team’s experiments to find out why."
       ],
       "link": {
-        "copy": "continue",
+        "copy": "begin",
         "href": "measurements"
       }
     },
-    "measurements": {
-      "one": {
+    "physical": {
+      "intro": {
         "headline": "Step 1:  Physical Comparison",
         "copy": "The first stage in determining family relationships between birds involves detailed comparisons of their physical traits: their size, coloration, and even their birdcalls.",
         "next": {
@@ -37,146 +37,116 @@
           }
         }
       },
-      "two": {
+      "birds": {
+        "a": {
+          "common": "Ivory-billed Araçari",
+          "scientific": "Pteroglossus azara",
+          "src": "images/bird-a.png"
+        },
+        "b": {
+          "common": "Ivory-billed Araçari",
+          "scientific": "Pteroglossus azara",
+          "src": "images/bird-b.png"
+        },
+        "c": {
+          "common": "Ivory-billed Araçari",
+          "scientific": "Pteroglossus azara",
+          "src": "images/bird-c.png"
+        }
+      },
+      "measurements": {
         "instructions": "Click the dots of each bird to take measurements.",
-        "birds": {
-          "a": {
-            "beak": "126.3 mm",
-            "wing": "127.9 mm",
-            "tail": "90.7 mm"
-          },
-          "b": {
-            "beak": "127.2 mm",
-            "wing": "135.4 mm",
-            "tail": "89.6 mm"
-          },
-          "c": {
-            "beak": "127.0 mm",
-            "wing": "131.0 mm",
-            "tail": "90.1 mm"
-          }
-        }
-      },
-      "three": {
-        "copy": "Did you see the differences between the birds' sizes?",
-        "answers": ["yes", "no"],
-        "birds": {
-          "a": {
-            "beak": "126.3 mm",
-            "wing": "127.9 mm",
-            "tail": "90.7 mm"
-          },
-          "b": {
-            "beak": "127.2 mm",
-            "wing": "135.4 mm",
-            "tail": "89.6 mm"
-          },
-          "c": {
-            "beak": "127.0 mm",
-            "wing": "131.0 mm",
-            "tail": "90.1 mm"
-          }
-        },
-        "correct": {
-          "headline": "You're right!",
-          "copy": "When the team measured the wings, bills, tails, and other features of serveral specimens from each Ivory-billed Araçari population, the birds appeared to be virtually the same size"
-          },
-        "wrong": {
-          "headline": "Wrong answer...",
-          "subhead": "Remember, millimeters are tiny units of measurement.",
-          "copy": "When the team measured the wings, bills, tails, and other features of serveral specimens from each Ivory-billed Araçari population, the birds appeared to be virtually the same size"
-          },
-        "next": {
-          "copy": "Next, look at each bird to see if the colors and patterns of their feathers and bills differ",
-          "link": {
-            "copy": "continue",
-            "href": ""
-          }
-        }
-      }
-    },
-    "appearances": {
-      "instructions": "Click on each dot to zoom in and compare features",
-      "birds": {
         "a": {
-          "common": "Ivory-billed Araçari",
-          "scientific": "Pteroglossus azara"
+          "beak": "126.3 mm",
+          "wing": "127.9 mm",
+          "tail": "90.7 mm"
         },
         "b": {
-          "common": "Ivory-billed Araçari",
-          "scientific": "Pteroglossus azara"
+          "beak": "127.2 mm",
+          "wing": "135.4 mm",
+          "tail": "89.6 mm"
         },
         "c": {
-          "common": "Ivory-billed Araçari",
-          "scientific": "Pteroglossus azara"
-        }
-      },
-      "feathers": {
-        "a": "images/feathers-a.jpg",
-        "b": "images/feathers-b.jpg",
-        "c": "images/feathers-c.jpg"
-      },
-      "tails": {
-        "a": "images/tails-a.jpg",
-        "b": "images/tails-b.jpg",
-        "c": "images/tails-c.jpg"
-      },
-      "bills": {
-        "a": "images/bills-a.jpg",
-        "b": "images/bills-b.jpg",
-        "c": "images/bills-c.jpg"
-      },
-      "conclusion": {
-        "copy": "Did you see the differences between the birds' appearances?",
-        "answers": {
-          "yes": {
-            "copy": "You're right!"
-          },
-          "no": {
-            "copy": "Wrong answer..."
-          },
-          "copy": "Now listen to each population's bird call and compare them. Keep in mind that the recordings feature both calm individuals and excited groups of birds",
-          "link": {
-            "copy": "continue",
-            "href": "calls"
+          "beak": "127.0 mm",
+          "wing": "131.0 mm",
+          "tail": "90.1 mm"
+        },
+        "conclusion": {
+          "copy": "Did you see the differences between the birds' sizes?",
+          "answers": {
+            "yes": {
+              "headline": "Wrong answer...",
+              "subhead": "Remember, millimeters are tiny units of measurement."
+              },
+            "no": "You're Right!",
+            "copy": "When the team measured the wings, bills, tails, and other features of serveral specimens from each Ivory-billed Araçari population, the birds appeared to be virtually the same size",
+            "next": {
+              "copy": "Next, look at each bird to see if the colors and patterns of their feathers and bills differ",
+              "link": {
+                "copy": "continue",
+                "href": ""
+              }
+            }
           }
         }
-      }
-    },
-    "calls": {
-      "instructions": "Click on the microphones to record each of bird's call.",
-      "birds": {
-        "a": {
-          "common": "Ivory-billed Araçari",
-          "scientific": "Pteroglossus azara",
-          "song": "#"
+      },
+      "magnify": {
+        "intro": "Click on each dot to zoom in and compare features",
+        "feathers": {
+          "a": "images/feathers-a.jpg",
+          "b": "images/feathers-b.jpg",
+          "c": "images/feathers-c.jpg"
         },
-        "b": {
-          "common": "Ivory-billed Araçari",
-          "scientific": "Pteroglossus azara",
-          "song": "#"
+        "tails": {
+          "a": "images/tails-a.jpg",
+          "b": "images/tails-b.jpg",
+          "c": "images/tails-c.jpg"
         },
-        "c": {
-          "common": "Ivory-billed Araçari",
-          "scientific": "Pteroglossus azara",
-          "song": "#"
+        "bills": {
+          "a": "images/bills-a.jpg",
+          "b": "images/bills-b.jpg",
+          "c": "images/bills-c.jpg"
+        },
+        "conclusion": {
+          "copy": "Did you see the differences between the birds' appearances?",
+          "answers": {
+            "yes": "You're right!",
+            "no": "Wrong answer...",
+            "next": {
+              "copy": "Now listen to each population's bird call and compare them. Keep in mind that the recordings feature both calm individuals and excited groups of birds",
+              "link": {
+                "copy": "continue",
+                "href": "calls"
+              }
+            }
+          }
         }
       },
-      "conclusion": {
-        "copy": "Did you hear many differnces in the way these birds called to one another?",
-        "answers": {
-          "yes": "You're Right!",
-          "no": "Wrong answer...",
-          "copy": "When the team compared the calls and sonograms of several specimens from each Ivory-billed Araçari population, they all appeared to be &quot;singing from the same songbook&quot;",
-          "next": {
-            "copy": "You've confirmed the team's results by demonstrating that the three Ivory-billed Araçari populations appear to be almost identical&mdash;that's why they've long been considered members of the same species.",
-            "link": {
-              "copy": "continue",
-              "href": "#"
+      "listen": {
+        "intro": "Click on the microphones to record each of bird's call.",
+        "sonograms": {
+          "a": "#",
+          "b": "#",
+          "c": "#"
+        },
+        "conclusion": {
+          "copy": "Did you hear many differnces in the way these birds called to one another?",
+          "answers": {
+            "yes": "You're Right!",
+            "no": "Wrong answer...",
+            "copy": "When the team compared the calls and sonograms of several specimens from each Ivory-billed Araçari population, they all appeared to be &quot;singing from the same songbook&quot;",
+            "next": {
+              "copy": "You've confirmed the team's results by demonstrating that the three Ivory-billed Araçari populations appear to be almost identical&mdash;that's why they've long been considered members of the same species.",
+              "link": {
+                "copy": "continue",
+                "href": "#"
+              }
             }
           }
         }
       }
-    }
+    },
+    "genetic": {},
+    "lice_gentic": {}
   }
 }

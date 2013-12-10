@@ -11,6 +11,10 @@
 @bg-black-85: rgba(0, 0, 0, 0.85);
 @bg-red: #cb3d17;
 
+.bg-index {
+  background: url('../images/bg-index.jpg') 0 0 no-repeat;
+}
+
 // globals
 body {
   background: url('http://expeditions.fieldmuseum.org/sites/all/themes/expeditions/images/bg.png');
@@ -85,10 +89,14 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 16px;
     }
 
+    hr {
+      border-top: 1px solid #cacaca;
+    }
+
     a {
       color: #fff;
       text-shadow: #000 2px 2px;
-      text-decoration: Uppercase;
+      text-transform: uppercase;
 
       display:block;
       width: 180px;
@@ -101,6 +109,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#introduction {
-  background: url('../images/bg-index.jpg') 0 0 no-repeat;
+#intro_1, #intro_2 {
+  .bg-index;
+}
+
+#physical {
+  background: #fff;
 }
