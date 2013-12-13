@@ -1,0 +1,25 @@
+mixin eachLice(obj)
+  .col-md-4(class="lice #{obj.lice}")
+
+    a.icon.crosshair
+
+    .footer.text-center
+      h3.common= obj.common
+      p.scientific From: #{obj.from}
+
+#lice-section.row
+  .col-12-md
+    .genetic.content
+      .row
+        each entry in lice.info
+          +eachLice(entry)
+
+      .instructions.text-center
+        h3= lice.instructions
+
+      //- TODO:
+      //-   Conclusion Light box
+      //-     DNA Comparsion
+      //-     Question
+      //-     Correct
+      //-     Wrong

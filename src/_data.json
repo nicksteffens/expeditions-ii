@@ -137,12 +137,27 @@
         }
       },
       "listen": {
-        "intro": "Click on the microphones to record each of bird's call.",
-        "sonograms": {
-          "a": "#",
-          "b": "#",
-          "c": "#"
-        },
+        "instructions": "Click on the microphones to record each of bird's call.",
+        "info": [
+          {
+            "bird": "a",
+            "sonogram": "#",
+            "common": "Ivory-billed Araçari",
+            "scientific": "Pteroglossus azara"
+          },
+          {
+            "bird": "b",
+            "sonogram": "#",
+            "common": "Ivory-billed Araçari",
+            "scientific": "Pteroglossus azara"
+          },
+          {
+            "bird": "c",
+            "sonogram": "#",
+            "common": "Ivory-billed Araçari",
+            "scientific": "Pteroglossus azara"
+          }
+        ],
         "conclusion": {
           "copy": "Did you hear many differnces in the way these birds called to one another?",
           "answers": {
@@ -158,9 +173,86 @@
             }
           }
         }
+      },
+      "genetic": {
+        "instructions": "Take a tissue sampe of each bird",
+        "info": [
+          {
+            "bird": "a",
+            "common": "Ivory-billed Araçari",
+            "scientific": "Pteroglossus azara mariae"
+          },
+          {
+            "bird": "b",
+            "common": "Ivory-billed Araçari",
+            "scientific": "Pteroglossus azara flavirostris"
+          },
+          {
+            "bird": "c",
+            "common": "Ivory-billed Araçari",
+            "scientific": "Pteroglossus azara azara"
+          }
+        ],
+        "conclusion": {
+          "copy": "Which bird’s gene sequence is different?",
+          "subhead": "Slide the highlighter along gene sequences and select the one that is different.",
+          "answers": [
+            {
+              "bird": "a",
+              "sequence": "ccctggcatcttcctattcactgtagggggcttcac",
+              "isCorrect": false
+            },
+            {
+              "bird": "b",
+              "sequence": "ccctggcatcttcctattcactgtagggggcttcac",
+              "isCorrect": false
+            },
+            {
+              "bird": "c",
+              "sequence": "ccctagcatcttcctgttcactgtggggggcttcac",
+              "isCorrect": true
+            }
+          ],
+          "next": {
+            "copy": "You've confirmed the team's results by demonstrating that the three Ivory-billed Araçari populations appear to be almost identical&mdash;that's why they've long been considered members of the same species.",
+            "link": {
+              "copy": "continue",
+              "href": "#"
+            }
+          }
+        }
       }
     },
-    "genetic": {},
-    "lice_gentic": {}
+    "range": {
+      "headline": "Range Map",
+      "copy": [
+        "Populations A and B are interbreeding with each other, but neither is interbreeding with population C on the Japurá’s north bank—these toucans are evolving in isolation within their own tiny territory.",
+        "To see if this same pattern held true for other animals, the team tried another experiment: comparing bird parasites. "
+      ],
+      "link": {
+        "copy": "continue",
+        "href": "lice"
+      }
+    },
+    "lice": {
+      "instructions": "Take a tissue sample from each chewing lice.",
+      "info": [
+        {
+          "lice": "a",
+          "common": "Chewing Lice",
+          "from": "Pteroglossus azara mariae"
+        },
+        {
+          "lice": "b",
+          "common": "Chewing Lice",
+          "from": "Pteroglossus azara flavirostris"
+        },
+        {
+          "lice": "c",
+          "common": "Chewing Lice",
+          "from": "Pteroglossus azara azara"
+        }
+      ]
+    }
   }
 }

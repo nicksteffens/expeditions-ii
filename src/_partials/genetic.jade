@@ -1,28 +1,23 @@
 mixin eachBird(obj)
   .col-md-4(class="bird #{obj.bird}")
 
-    a.icon.microphone(href=obj.sonogram)
+    a.icon.crosshair
 
     .footer.text-center
       h3.common= obj.common
       p.scientific= obj.scientific
 
-#listen.content
+#genetic.content
   .row
-    each entry in physical.listen.info
+    each entry in physical.genetic.info
       +eachBird(entry)
 
   .instructions.text-center
-    h3= physical.listen.instructions
+    h3= physical.genetic.instructions
 
   //- TODO:
-  //-
-  //-   Parts comparasion lightbox
-  //-     feathers
-  //-     tails
-  //-     bills
-  //-
   //-   Conclusion Light box
+  //-     DNA Comparsion
   //-     Question
   //-     Correct
   //-     Wrong

@@ -15,6 +15,9 @@
 .bg-index {
   background: url('../images/bg-index.jpg') 0 0 no-repeat;
 }
+.bg-range {
+  background: url('../images/bg-range.jpg') 0 0 no-repeat;
+}
 
 
 // globals
@@ -114,6 +117,44 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.icon {
+  position: absolute;
+  display:block;
+  text-decoration: none;
+  width: 41px;
+  height: 46px;
+
+  &.beak {
+    top: 28px;
+    left: 203px;
+    background: url('../images/icon-beak.png') 0 0 no-repeat;
+  }
+
+  &.wing {
+    top: 159px;
+    left: 73px;
+    background: url('../images/icon-wing.png') 0 0 no-repeat;
+  }
+
+  &.tail {
+    top: 337px;
+    left: 21px;
+    background: url('../images/icon-tail.png') 0 0 no-repeat;
+  }
+
+  &.microphone {
+    background: url('../images/icon-microphone.png') 0 0 no-repeat;
+  }
+
+  &.crosshair {
+    background: url('../images/icon-crosshair.png') 0 0 no-repeat;
+  }
+
+  &.checked {
+    background: url('../images/icon-checked.png') 0 0 no-repeat !important;
+  }
+}
+
 #intro_1, #intro_2 {
   .bg-index;
 }
@@ -136,31 +177,7 @@ h1, h2, h3, h4, h5, h6 {
       background: url('../images/bird-c.jpg') 0 0 no-repeat;
     }
 
-    .icon {
-      position: absolute;
-      display:block;
-      text-decoration: none;
-      width: 41px;
-      height: 46px;
 
-      &.beak {
-        top: 28px;
-        left: 203px;
-        background: url('../images/icon-beak.png') 0 0 no-repeat;
-      }
-
-      &.wing {
-        top: 159px;
-        left: 73px;
-        background: url('../images/icon-wing.png') 0 0 no-repeat;
-      }
-
-      &.tail {
-        top: 337px;
-        left: 21px;
-        background: url('../images/icon-tail.png') 0 0 no-repeat;
-      }
-    }
 
     ul {
       list-style-type: none;
@@ -239,6 +256,77 @@ h1, h2, h3, h4, h5, h6 {
       &.tail {
 
       }
+    }
+  }
+
+  #listen {
+    position: relative;
+
+    .icon.microphone {
+      top: 87px;
+      left: 214px;
+    }
+  }
+
+  #genetic {
+    position: relative;
+
+    .icon.crosshair {
+      top: 163px;
+      left: 111px;
+    }
+  }
+}
+
+#range {
+  .bg-range;
+
+  hr {
+    margin-top: 60px;
+  }
+}
+
+#lice-section {
+  position: relative;
+  background: #fff;
+
+  .col-md-4.lice {
+    height: 570px;
+
+    &.a {
+      background: url('../images/lice-a.jpg') 0 0 no-repeat;
+    }
+
+    &.b {
+      background: url('../images/lice-b.jpg') 0 0 no-repeat;
+    }
+    &.c {
+      background: url('../images/lice-c.jpg') 0 0 no-repeat;
+    }
+  }
+
+  .icon.crosshair {
+    top: 282px;
+    left: 138px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+
+    .common {
+      color: @font-red;
+      font-size: 20px;
+      margin: 13px 0 0;
+    }
+
+    .scientific {
+      font-style: italic;
+      font-size: 16px;
+      color: @font-dk-grey;
     }
   }
 }

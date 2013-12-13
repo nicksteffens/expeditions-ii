@@ -1,0 +1,16 @@
+//- TODO:
+//-   lightbox
+
+#range.row
+  .col-md-12.content
+    .row
+        .col-md-4.col-md-offset-8.bg-container
+          .copy-container
+            h3= range.headline
+            each paragraph in range.copy
+              p
+                != paragraph
+
+            hr
+
+            a(href=range.link.href)= range.link.copy
