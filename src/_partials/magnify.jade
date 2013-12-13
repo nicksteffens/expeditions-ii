@@ -1,2 +1,28 @@
+mixin eachBird(obj)
+  .col-md-4(class="bird #{obj.bird}")
+
+    a.icon(class="#{obj.position}")
+
+    .footer.text-center
+      h3.common= obj.common
+      p.scientific= obj.scientific
+
 #magnify.content
   .row
+    each entry in physical.magnify.info
+      +eachBird(entry)
+
+  .instructions.text-center
+    h3= physical.magnify.instructions
+
+  //- TODO:
+  //-
+  //-   Parts comparasion lightbox
+  //-     feathers
+  //-     tails
+  //-     bills
+  //-
+  //-   Conclusion Light box
+  //-     Question
+  //-     Correct
+  //-     Wrong

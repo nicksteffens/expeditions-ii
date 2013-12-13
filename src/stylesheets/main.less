@@ -20,7 +20,6 @@
 // globals
 body {
   background: url('http://expeditions.fieldmuseum.org/sites/all/themes/expeditions/images/bg.png');
-  font-family: "Helvetica Neue";
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -136,6 +135,49 @@ h1, h2, h3, h4, h5, h6 {
     &.c {
       background: url('../images/bird-c.jpg') 0 0 no-repeat;
     }
+
+    .icon {
+      position: absolute;
+      display:block;
+      text-decoration: none;
+      width: 41px;
+      height: 46px;
+
+      &.beak {
+        top: 28px;
+        left: 203px;
+        background: url('../images/icon-beak.png') 0 0 no-repeat;
+      }
+
+      &.wing {
+        top: 159px;
+        left: 73px;
+        background: url('../images/icon-wing.png') 0 0 no-repeat;
+      }
+
+      &.tail {
+        top: 337px;
+        left: 21px;
+        background: url('../images/icon-tail.png') 0 0 no-repeat;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      position: absolute;
+      top: 383px;
+      right: 55px;
+
+      li {
+        color: @font-dk-grey;
+        font-size: 18px;
+
+        strong {
+          color: #000;
+        }
+      }
+
+    }
   }
 
   .footer {
@@ -144,10 +186,6 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     height: 70px;
-
-    .row {
-      margin: 0;
-    }
 
     .common {
       color: @font-red;
@@ -158,6 +196,7 @@ h1, h2, h3, h4, h5, h6 {
     .scientific {
       font-style: italic;
       font-size: 16px;
+      color: @font-dk-grey;
     }
   }
 
@@ -180,5 +219,26 @@ h1, h2, h3, h4, h5, h6 {
 
   #measurements{
     position: relative;
+  }
+
+  #magnify {
+    position: relative;
+
+    .icon {
+      background: url('../images/icon-magnify.png') 0 0 no-repeat;
+      &.feather {
+        top: 155px;
+        left: 153px;
+      }
+
+      &.bill {
+        top: 55px;
+        left: 161px;
+      }
+
+      &.tail {
+
+      }
+    }
   }
 }

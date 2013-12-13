@@ -1,16 +1,7 @@
-mixin common-scientific(obj)
-  .col-md-4.text-center
-    h3.common= obj.common
-    p.scientific= obj.scientific
-
-
 #physical.row
   .col-12-md
     != partial('measurements')
+    != partial('magnify')
 
-    .footer
-      .row
-        each bird in physical.birds
-          +common-scientific(bird)
 
 

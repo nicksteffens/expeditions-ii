@@ -1,12 +1,20 @@
 mixin eachBird(obj)
   .col-md-4(class="bird #{obj.bird}")
-    ul
+    ul.text-right
       li Beak:
-        span #{obj.beak}
+        strong &nbsp;#{obj.beak}
       li Wing:
-        span #{obj.wing}
+        strong &nbsp;#{obj.wing}
       li Tail:
-        span #{obj.tail}
+        strong &nbsp;&nbsp;&nbsp;#{obj.tail}
+
+    a.icon.beak
+    a.icon.wing
+    a.icon.tail
+
+    .footer.text-center
+      h3.common= obj.common
+      p.scientific= obj.scientific
 
 #measurements.content
   .row
@@ -15,5 +23,13 @@ mixin eachBird(obj)
 
   .instructions.text-center
     h3= physical.measurements.instructions
+
+  //- TODO:
+  //-   Conclusion Light box
+  //-     Question
+  //-     Correct
+  //-     Wrong
+
+
 
 
