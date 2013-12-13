@@ -2,6 +2,7 @@
 @font-red: #cc3d17;
 @font-grey: #acacac;
 @font-dk-grey: #636363;
+@font-blue: #4caac7;
 
 @border-red: #cc3d17;
 @border-dk-red: #621d0b;
@@ -14,6 +15,7 @@
 .bg-index {
   background: url('../images/bg-index.jpg') 0 0 no-repeat;
 }
+
 
 // globals
 body {
@@ -64,6 +66,10 @@ h1, h2, h3, h4, h5, h6 {
   margin:0;
   width: 960px;
   height: 570px;
+
+  .row {
+    margin: 0;
+  }
 }
 
 .bg-container {
@@ -115,4 +121,64 @@ h1, h2, h3, h4, h5, h6 {
 
 #physical {
   background: #fff;
+  position: relative;
+
+  .col-md-4.bird {
+    height: 570px;
+
+    &.a {
+      background: url('../images/bird-a.jpg') 0 0 no-repeat;
+    }
+
+    &.b {
+      background: url('../images/bird-b.jpg') 0 0 no-repeat;
+    }
+    &.c {
+      background: url('../images/bird-c.jpg') 0 0 no-repeat;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+
+    .row {
+      margin: 0;
+    }
+
+    .common {
+      color: @font-red;
+      font-size: 20px;
+      margin: 13px 0 0;
+    }
+
+    .scientific {
+      font-style: italic;
+      font-size: 16px;
+    }
+  }
+
+  .instructions {
+    position: absolute;
+    top: 422px;
+    width: 100%;
+
+    h3 {
+      display:inline-block;
+      margin: 0 auto;
+      padding: 13px 44px;
+      background: #fff;
+      color: @font-blue;
+      font-size: 20px;
+
+      box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  #measurements{
+    position: relative;
+  }
 }

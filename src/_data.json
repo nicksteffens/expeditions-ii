@@ -37,40 +37,48 @@
           }
         }
       },
-      "birds": {
-        "a": {
+      "birds": [
+        {
+          "bird": "a",
           "common": "Ivory-billed Araçari",
           "scientific": "Pteroglossus azara",
           "src": "images/bird-a.png"
         },
-        "b": {
+        {
+          "bird": "b",
           "common": "Ivory-billed Araçari",
           "scientific": "Pteroglossus azara",
           "src": "images/bird-b.png"
         },
-        "c": {
+        {
+          "bird": "c",
           "common": "Ivory-billed Araçari",
           "scientific": "Pteroglossus azara",
           "src": "images/bird-c.png"
         }
-      },
+      ],
       "measurements": {
         "instructions": "Click the dots of each bird to take measurements.",
-        "a": {
-          "beak": "126.3 mm",
-          "wing": "127.9 mm",
-          "tail": "90.7 mm"
-        },
-        "b": {
-          "beak": "127.2 mm",
-          "wing": "135.4 mm",
-          "tail": "89.6 mm"
-        },
-        "c": {
-          "beak": "127.0 mm",
-          "wing": "131.0 mm",
-          "tail": "90.1 mm"
-        },
+        "info": [
+          {
+            "bird": "a",
+            "beak": "126.3 mm",
+            "wing": "127.9 mm",
+            "tail": "90.7 mm"
+          },
+          {
+            "bird": "b",
+            "beak": "127.2 mm",
+            "wing": "135.4 mm",
+            "tail": "89.6 mm"
+          },
+          {
+            "bird": "c",
+            "beak": "127.0 mm",
+            "wing": "131.0 mm",
+            "tail": "90.1 mm"
+          }
+        ],
         "conclusion": {
           "copy": "Did you see the differences between the birds' sizes?",
           "answers": {

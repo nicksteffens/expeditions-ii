@@ -1,0 +1,19 @@
+mixin eachBird(obj)
+  .col-md-4(class="bird #{obj.bird}")
+    ul
+      li Beak:
+        span #{obj.beak}
+      li Wing:
+        span #{obj.wing}
+      li Tail:
+        span #{obj.tail}
+
+#measurements.content
+  .row
+    each entry in physical.measurements.info
+      +eachBird(entry)
+
+  .instructions.text-center
+    h3= physical.measurements.instructions
+
+
