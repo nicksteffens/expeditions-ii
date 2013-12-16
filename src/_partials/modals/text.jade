@@ -8,7 +8,17 @@
       .modal-body.text-center
         each paragraph in copy
           p= paragraph
+
+        if list
+          ul
+            each item in list
+             li.text-left: em!= item
+
         hr.dashed
         p= next.copy
 
-        a(href=next.link.href)= next.link.copy
+        if id == 'step_1_conclusion'
+          a.btn.open-modal(href=next.link.href data-dismiss="modal" aria-hidden="true")= next.link.copy
+
+        else
+          a.btn.router(href=next.link.href data-dismiss="modal" aria-hidden="true")= next.link.copy

@@ -11,6 +11,7 @@
 
 @bg-black-85: rgba(0, 0, 0, 0.85);
 @bg-red: #cb3d17;
+@bg-blue: #4caac7;
 
 .bg-index {
   background: url('../images/bg-index.jpg') 0 0 no-repeat;
@@ -71,6 +72,33 @@ h1, h2, h3, h4, h5, h6 {
 
   .row {
     margin: 0;
+  }
+
+}
+
+a.btn, a.btn:hover, a.btn:visited {
+  color: #fff;
+  text-shadow: #000 2px 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  font-family: "Oswald";
+  font-size: 18px;
+
+  display:block;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4);
+  width: 180px;
+  background: @bg-red;
+  border: 1px solid @border-dk-red;
+  border-radius: 0;
+  padding: 10px;
+  margin: 30px auto;
+  text-align: center;
+
+  &.listen {
+    background: @bg-blue url('../images/icon-listen.png') 50px 9px no-repeat;
+    padding: 10px 0 10px 80px;
+    text-align: left;
   }
 }
 
@@ -240,6 +268,10 @@ h1, h2, h3, h4, h5, h6 {
 
   #measurements{
     position: relative;
+
+    strong.hidden {
+      display:inline !important;
+    }
   }
 
   #magnify {
@@ -384,6 +416,69 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 
+  .quiz & {
+
+    h2 {
+      color: @font-blue;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: @font-dk-grey;
+      font-size: 18px;
+    }
+
+    .pre h2 {
+      text-transform: uppercase;
+      color: #000;
+      margin: 0 0 17px;
+    }
+
+
+    .btn {
+      display: inline-block;
+      margin: 30px 5px 0;
+    }
+
+    .modal-body {
+      padding-top: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      width:150px;
+      margin: 0 auto;
+
+      li {
+        color: @font-dk-grey;
+        font-size: 18px;
+        width: 100%;
+
+        strong {
+          color: #000;
+          display:inline-block;
+          width: 85px;
+        }
+      }
+
+    }
+  }
+
+  // magnify only
+  #magnify_quiz.quiz & {
+
+    .modal-content {
+      min-height: 300px;
+    }
+
+    h2.pre {
+      margin-top: 65px;
+    }
+
+  }
+
   .close {
     position: absolute;
     top: -20px;
@@ -403,12 +498,19 @@ h1, h2, h3, h4, h5, h6 {
 
   }
 
+  ul {
+    list-style-type: none;
+    width: 300px;
+    margin:0 auto;
+    padding: 0;
+  }
+
   h2 {
       color: @font-red;
       margin-bottom: 0;
     }
 
-  p {
+  p, li {
     color: @font-dk-grey;
     size: 18px;
   }
@@ -416,25 +518,18 @@ h1, h2, h3, h4, h5, h6 {
   hr.dashed {
     border-top: 1px dashed @border-lt-grey;
     margin: 50px 0;
+
+    &.no-margin-top {
+      margin-top: 0;
+    }
   }
 
-  a, a:hover, a:visited {
-    color: #fff;
-    text-shadow: #000 2px 2px;
-    text-transform: uppercase;
-    text-decoration: none;
+  .next .btn {
+    margin-bottom: 60px;
+  }
 
-    font-family: "Oswald";
-    font-size: 18px;
-
-    display:block;
-    width: 180px;
-    background: @bg-red;
-    border: 1px solid @border-dk-red;
-    border-radius: 0;
-    padding: 10px;
-    margin: 30px auto;
-    text-align: center;
+  .btn.listen {
+    margin-top: 0;
   }
 
 }

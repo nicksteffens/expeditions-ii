@@ -87,18 +87,21 @@
           {
             "bird": "a",
             "sonogram": "#",
+            "modal": "#listen_a",
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           },
           {
             "bird": "b",
             "sonogram": "#",
+            "modal": "#listen_b",
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           },
           {
             "bird": "c",
             "sonogram": "#",
+            "modal": "#listen_c",
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           }
@@ -195,7 +198,7 @@
         }
       },
       {
-        "id": "quiz_measurements",
+        "id": "measurements_quiz",
         "type": "quiz",
         "headline": "Did you see the differences between the birds' sizes?",
         "sizes": [
@@ -222,7 +225,7 @@
           {
             "answer": "yes",
             "headline": "Wrong answer...",
-            "subheadline": "Remember, millimeters are tiny units of measurement.",
+            "subhead": "Remember, millimeters are tiny units of measurement.",
             "isCorrect": false
           },
           {
@@ -236,7 +239,7 @@
           "copy": "Next, look at each bird to see if the colors and patterns of their feathers and bills differ",
           "link": {
             "copy": "continue",
-            "href": "magnify"
+            "href": "#magnify"
           }
         }
       },
@@ -270,6 +273,7 @@
       {
         "id": "magnify_quiz",
         "type": "quiz",
+        "headline": "Did you find any differences between the birds’ appearances?",
         "answers": [
           {
             "answer": "yes",
@@ -287,13 +291,28 @@
           "copy": "Now listen to each population’s bird call to compare them. Keep in mind that the recordings feature both calm individuals and excited groups of birds.",
           "link": {
             "copy": "continue",
-            "href": "listen"
+            "href": "#listen"
           }
         }
       },
       {
-        "id": "listen_quiz",
+        "id": "listen_a",
         "type": "audio",
+        "href": "#"
+      },
+      {
+        "id": "listen_b",
+        "type": "audio",
+        "href": "#"
+      },
+      {
+        "id": "listen_c",
+        "type": "audio",
+        "href": "#"
+      },
+      {
+        "id": "listen_quiz",
+        "type": "quiz",
         "headline": "Did you hear many differences in the way these birds called to one another?",
         "audio": [
           {
@@ -326,24 +345,28 @@
           "copy": "You’ve confirmed the team’s results by demonstrating that the three Ivory-billed Araçari populations appear to be almost identical—that’s why they’ve long been considered members of the same species. ",
           "link": {
             "copy": "continue",
-            "href": "step_1_conclusion"
+            "modal": "open-modal",
+            "href": "#step_1_conclusion"
           }
         }
       },
       {
         "id": "step_1_conclusion",
         "type": "text",
-        "copy": "You’ve also confirmed that the only apparent difference between them is bill and eye-ring coloration, which is why each population has its own subspecies name.",
+        "copy": [
+          "You’ve also confirmed that the only apparent difference between them is bill and eye-ring coloration, which is why each population has its own subspecies name."
+          ],
         "list": [
-          "A:  Pteroglossus azara mariae ",
-          "B:  Pteroglossus azara flavirostris",
-          "C:  Pteroglossus azara azara"
+          "A:  Pteroglossus azara <strong>mariae</strong>",
+          "B:  Pteroglossus azara <strong>flavirostris</strong>",
+          "C:  Pteroglossus azara <strong>azara</strong>"
         ],
         "next": {
           "copy": "Let’s see if the DNA of these birds tells the same story...",
           "link": {
             "copy": "continue",
-            "href": "step_2"
+            "modal": "open-modal",
+            "href": "#step_2"
           }
         }
       },
@@ -351,7 +374,9 @@
         "id": "step_2",
         "type": "text",
         "headline": "Step 2: Genetic Comparison",
-        "copy": "Today’s scientists don’t have to rely on appearances alone to classify species. They have another tool in their toolbox—genetic sequencing.",
+        "copy": [
+          "Today’s scientists don’t have to rely on appearances alone to classify species. They have another tool in their toolbox—genetic sequencing."
+          ],
         "next": {
           "copy": "Tweeze off a tissue sample from each bird and send it out for sequencing to pinpoint how closely related these Ivory-billed Araçari are to one another.",
           "link": {
@@ -369,24 +394,26 @@
           {
             "answer": "a",
             "sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac",
-            "isCorrect": false,
-            "headline": "Are you sure?",
-            "subhead": "Compare the DNA sequences again and select the one that is different."
+            "isCorrect": false
           },
           {
             "answer": "b",
             "sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac",
-            "isCorrect": false,
-            "headline": "Are you sure?",
-            "subhead": "Compare the DNA sequences again and select the one that is different."
+            "isCorrect": false
           },
           {
             "answer": "c",
             "sequence": "ccctaggcttcatcttcctgttcactgtggggggcttaac",
-            "isCorrect": true,
-            "headline": "You’re right!"
+            "isCorrect": true
           }
         ],
+        "correct": {
+          "headline": "You’re right!"
+        },
+        "wrong": {
+          "headline": "Are you sure?",
+          "subhead": "Compare the DNA sequences again and select the one that is different."
+        },
         "next": {
           "copy": "When the team compared samples of DNA taken from several specimens of the three Ivory-billed Araçari populations, the DNA of population C didn’t match the other two!",
           "link": {

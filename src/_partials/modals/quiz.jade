@@ -4,5 +4,60 @@
   .modal-dialog
     .modal-content
       .modal-header.text-center
+        h2.pre= headline
+        .answers
+          each answer in answers
+            if answer.isCorrect == true
+              isCorrect = "correct"
+            else
+              isCorrect = "wrong"
+
+            a.btn.pre(href=isCorrect)= answer.answer
+
+            if answer.isCorrect
+              .correct.hidden
+                h2= answer.headline
+
+            else
+              .wrong.hidden
+                h2= answer.headline
+                if answer.subhead
+                  p= answer.subhead
+
+        .copy.post.hidden
+          p= copy
 
       .modal-body.text-center
+        if id != 'magnify_quiz'
+          hr.dashed
+        else
+          hr.dashed.post.hidden
+
+        if id == 'measurements_quiz'
+          .row.pre
+            each size in sizes
+              .col-xs-4.size.text-center
+                h2 #{size.id}.
+                ul
+                  li.text-right beak:
+                    strong #{size.beak}
+                  li.text-right wing:
+                    strong #{size.wing}
+                  li.text-right tail:
+                    strong #{size.tail}
+
+        if id == 'listen_quiz'
+          .row.pre
+            each sonogram in audio
+              .col-xs-4
+                h2 #{sonogram.id}.
+                a.btn.listen(href=sonogram.href) Listen
+
+
+        .next.post.hidden
+          p= next.copy
+          if id == 'listen_quiz'
+            a.btn.open-modal(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
+          else
+            a.btn.router(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
+

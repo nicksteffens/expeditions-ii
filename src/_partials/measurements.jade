@@ -1,12 +1,12 @@
 mixin eachBird(obj)
   .col-md-4(class="bird #{obj.bird}")
     ul.text-right
-      li Beak:
-        strong &nbsp;#{obj.beak}
-      li Wing:
-        strong &nbsp;#{obj.wing}
-      li Tail:
-        strong &nbsp;&nbsp;&nbsp;#{obj.tail}
+      li.info-beak Beak:
+        strong.hidden &nbsp;#{obj.beak}
+      li.info-wing Wing:
+        strong.hidden &nbsp;#{obj.wing}
+      li.info-tail Tail:
+        strong.hidden &nbsp;&nbsp;&nbsp;#{obj.tail}
 
     a.icon.beak
     a.icon.wing
