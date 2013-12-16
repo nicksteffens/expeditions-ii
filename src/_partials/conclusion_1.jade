@@ -1,0 +1,13 @@
+#conclusion_1.row
+  .col-md-12.content
+    .row
+        .col-md-4.col-md-offset-8.bg-container
+          .copy-container
+            h3= conclusion_1.headline
+            each paragraph in conclusion_1.copy
+              p
+                != paragraph
+
+            hr
+
+            a(href=conclusion_1.link.href)= conclusion_1.link.copy

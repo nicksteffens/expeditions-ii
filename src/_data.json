@@ -8,7 +8,7 @@
         ],
       "link": {
         "copy": "continue",
-        "href": "intro_2"
+        "href": "#intro_2"
       }
     },
     "intro_2": {
@@ -22,21 +22,10 @@
       ],
       "link": {
         "copy": "begin",
-        "href": "measurements"
+        "href": "#step_1"
       }
     },
     "physical": {
-      "intro": {
-        "headline": "Step 1:  Physical Comparison",
-        "copy": "The first stage in determining family relationships between birds involves detailed comparisons of their physical traits: their size, coloration, and even their birdcalls.",
-        "next": {
-          "copy": "Let's begin by taking measurements of each Ivory-billed Araçari population",
-          "link": {
-            "copy": "begin",
-            "href": "two"
-          }
-        }
-      },
       "measurements": {
         "instructions": "Click the dots of each bird to take measurements.",
         "info": [
@@ -64,25 +53,7 @@
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           }
-        ],
-        "conclusion": {
-          "copy": "Did you see the differences between the birds' sizes?",
-          "answers": {
-            "yes": {
-              "headline": "Wrong answer...",
-              "subhead": "Remember, millimeters are tiny units of measurement."
-              },
-            "no": "You're Right!",
-            "copy": "When the team measured the wings, bills, tails, and other features of serveral specimens from each Ivory-billed Araçari population, the birds appeared to be virtually the same size",
-            "next": {
-              "copy": "Next, look at each bird to see if the colors and patterns of their feathers and bills differ",
-              "link": {
-                "copy": "continue",
-                "href": ""
-              }
-            }
-          }
-        }
+        ]
       },
       "magnify": {
         "instructions": "Click on each dot to zoom in and compare features",
@@ -105,36 +76,7 @@
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           }
-        ],
-        "feathers": {
-          "a": "images/feathers-a.jpg",
-          "b": "images/feathers-b.jpg",
-          "c": "images/feathers-c.jpg"
-        },
-        "tails": {
-          "a": "images/tails-a.jpg",
-          "b": "images/tails-b.jpg",
-          "c": "images/tails-c.jpg"
-        },
-        "bills": {
-          "a": "images/bills-a.jpg",
-          "b": "images/bills-b.jpg",
-          "c": "images/bills-c.jpg"
-        },
-        "conclusion": {
-          "copy": "Did you see the differences between the birds' appearances?",
-          "answers": {
-            "yes": "You're right!",
-            "no": "Wrong answer...",
-            "next": {
-              "copy": "Now listen to each population's bird call and compare them. Keep in mind that the recordings feature both calm individuals and excited groups of birds",
-              "link": {
-                "copy": "continue",
-                "href": "calls"
-              }
-            }
-          }
-        }
+        ]
       },
       "listen": {
         "instructions": "Click on the microphones to record each of bird's call.",
@@ -157,22 +99,7 @@
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           }
-        ],
-        "conclusion": {
-          "copy": "Did you hear many differnces in the way these birds called to one another?",
-          "answers": {
-            "yes": "You're Right!",
-            "no": "Wrong answer...",
-            "copy": "When the team compared the calls and sonograms of several specimens from each Ivory-billed Araçari population, they all appeared to be &quot;singing from the same songbook&quot;",
-            "next": {
-              "copy": "You've confirmed the team's results by demonstrating that the three Ivory-billed Araçari populations appear to be almost identical&mdash;that's why they've long been considered members of the same species.",
-              "link": {
-                "copy": "continue",
-                "href": "#"
-              }
-            }
-          }
-        }
+        ]
       },
       "genetic": {
         "instructions": "Take a tissue sampe of each bird",
@@ -192,35 +119,7 @@
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara azara"
           }
-        ],
-        "conclusion": {
-          "copy": "Which bird’s gene sequence is different?",
-          "subhead": "Slide the highlighter along gene sequences and select the one that is different.",
-          "answers": [
-            {
-              "bird": "a",
-              "sequence": "ccctggcatcttcctattcactgtagggggcttcac",
-              "isCorrect": false
-            },
-            {
-              "bird": "b",
-              "sequence": "ccctggcatcttcctattcactgtagggggcttcac",
-              "isCorrect": false
-            },
-            {
-              "bird": "c",
-              "sequence": "ccctagcatcttcctgttcactgtggggggcttcac",
-              "isCorrect": true
-            }
-          ],
-          "next": {
-            "copy": "You've confirmed the team's results by demonstrating that the three Ivory-billed Araçari populations appear to be almost identical&mdash;that's why they've long been considered members of the same species.",
-            "link": {
-              "copy": "continue",
-              "href": "#"
-            }
-          }
-        }
+        ]
       }
     },
     "range": {
@@ -231,7 +130,7 @@
       ],
       "link": {
         "copy": "continue",
-        "href": "lice"
+        "href": "#lice"
       }
     },
     "lice": {
@@ -253,6 +152,347 @@
           "from": "Pteroglossus azara azara"
         }
       ]
-    }
+    },
+    "conclusion_1": {
+      "headline": "Conclusion",
+      "copy": [
+        "It tells us two things.",
+        "First, you and the team have redefined the family trees of both Ivory-billed Araçari and their chewing lice, proving that there’s more diversity in Amazonia than previously understood. "
+        ],
+      "link": {
+        "copy": "continue",
+        "href": "conclusion_2"
+      }
+    },
+    "conclusion_2": {
+      "headline": "onclusion",
+      "copy": [
+        "And you’ve uncovered evidence that confirms the existence of a previously unrecognized Area of Endemism (recently named the Jaú). Congratulations!",
+        "Through studies like these, we can continue to identify species that are evolving in isolation and take appropriate actions to protect both them and their habitats."
+        ],
+      "link": {
+        "copy": "start over",
+        "href": "intro_1"
+      }
+    },
+    "modals": [
+      {
+        "id": "step_1",
+        "type": "text",
+        "headline": "Step 1:  Physical Comparison",
+        "copy": [
+          "The first stage in determining family relationships between birds involves detailed comparisons of their physical traits: their size, coloration, and even their birdcalls."
+        ],
+        "next": {
+          "copy": "Let's begin by taking measurements of each Ivory-billed Araçari population",
+          "link": {
+            "copy": "begin",
+            "href": "#measurements"
+          }
+        }
+      },
+      {
+        "id": "quiz_measurements",
+        "type": "quiz",
+        "headline": "Did you see the differences between the birds' sizes?",
+        "sizes": [
+          {
+            "id": "a",
+            "beak": "126.3 mm",
+            "wing": "127.9 mm",
+            "tail": "90.7 mm"
+          },
+          {
+            "id": "b",
+            "beak": "127.2 mm",
+            "wing": "135.4 mm",
+            "tail": "89.6 mm"
+          },
+          {
+            "id": "c",
+            "beak": "127.0 mm",
+            "wing": "131.0 mm",
+            "tail": "90.1 mm"
+          }
+        ],
+        "answers": [
+          {
+            "answer": "yes",
+            "headline": "Wrong answer...",
+            "subheadline": "Remember, millimeters are tiny units of measurement.",
+            "isCorrect": false
+          },
+          {
+            "answer": "no",
+            "headline": "You're Right!",
+            "isCorrect": true
+          }
+        ],
+        "copy": "When the team measured the wings, bills, tails, and other features of serveral specimens from each Ivory-billed Araçari population, the birds appeared to be virtually the same size",
+        "next": {
+          "copy": "Next, look at each bird to see if the colors and patterns of their feathers and bills differ",
+          "link": {
+            "copy": "continue",
+            "href": "magnify"
+          }
+        }
+      },
+      {
+        "id": "magnify_chest",
+        "type": "image-horizontal",
+        "images": [
+          "images/magnify-chest-a.jpg",
+          "images/magnify-chest-b.jpg",
+          "images/magnify-chest-c.jpg"
+        ]
+      },
+      {
+        "id": "magnify_tail",
+        "type": "image-horizontal",
+        "images": [
+          "images/magnify-tail-a.jpg",
+          "images/magnify-tail-b.jpg",
+          "images/magnify-tail-c.jpg"
+        ]
+      },
+      {
+        "id": "magnify_beak",
+        "type": "image-vertical",
+        "images": [
+          "images/magnify-beak-a.jpg",
+          "images/magnify-beak-b.jpg",
+          "images/magnify-beak-c.jpg"
+        ]
+      },
+      {
+        "id": "magnify_quiz",
+        "type": "quiz",
+        "answers": [
+          {
+            "answer": "yes",
+            "isCorrect": true,
+            "headline": "You’re right!"
+          },
+          {
+            "answer": "no",
+            "isCorrect": false,
+            "headline": "Wrong answer..."
+          }
+        ],
+        "copy": "When the team compared the appearance of several specimens from each Ivory-billed Araçari population, their plumage appeared to be virtually identical, but the coloration of their bills and eye rings differed slightly.",
+        "next": {
+          "copy": "Now listen to each population’s bird call to compare them. Keep in mind that the recordings feature both calm individuals and excited groups of birds.",
+          "link": {
+            "copy": "continue",
+            "href": "listen"
+          }
+        }
+      },
+      {
+        "id": "listen_quiz",
+        "type": "audio",
+        "headline": "Did you hear many differences in the way these birds called to one another?",
+        "audio": [
+          {
+            "id": "a",
+            "href": "#"
+          },
+          {
+            "id": "b",
+            "href": "#"
+          },
+          {
+            "id": "c",
+            "href": "#"
+          }
+        ],
+        "answers": [
+          {
+            "answer": "yes",
+            "isCorrect": false,
+            "headline": "Wrong answer..."
+          },
+          {
+            "answer": "no",
+            "isCorrect": true,
+            "headline": "You’re right!"
+          }
+        ],
+        "copy": "When the team compared the calls and sonograms of several specimens from each Ivory-billed Araçari population, they all appeared to be “singing from the same songbook.”",
+        "next": {
+          "copy": "You’ve confirmed the team’s results by demonstrating that the three Ivory-billed Araçari populations appear to be almost identical—that’s why they’ve long been considered members of the same species. ",
+          "link": {
+            "copy": "continue",
+            "href": "step_1_conclusion"
+          }
+        }
+      },
+      {
+        "id": "step_1_conclusion",
+        "type": "text",
+        "copy": "You’ve also confirmed that the only apparent difference between them is bill and eye-ring coloration, which is why each population has its own subspecies name.",
+        "list": [
+          "A:  Pteroglossus azara mariae ",
+          "B:  Pteroglossus azara flavirostris",
+          "C:  Pteroglossus azara azara"
+        ],
+        "next": {
+          "copy": "Let’s see if the DNA of these birds tells the same story...",
+          "link": {
+            "copy": "continue",
+            "href": "step_2"
+          }
+        }
+      },
+      {
+        "id": "step_2",
+        "type": "text",
+        "headline": "Step 2: Genetic Comparison",
+        "copy": "Today’s scientists don’t have to rely on appearances alone to classify species. They have another tool in their toolbox—genetic sequencing.",
+        "next": {
+          "copy": "Tweeze off a tissue sample from each bird and send it out for sequencing to pinpoint how closely related these Ivory-billed Araçari are to one another.",
+          "link": {
+            "copy": "begin",
+            "link": "genetic"
+          }
+        }
+      },
+      {
+        "id": "genetic_quiz",
+        "type": "dna",
+        "headline": "Which bird’s gene sequence is different?",
+        "subhead": "Slide the highlighter along gene sequences and select the one that is different.",
+        "answers": [
+          {
+            "answer": "a",
+            "sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac",
+            "isCorrect": false,
+            "headline": "Are you sure?",
+            "subhead": "Compare the DNA sequences again and select the one that is different."
+          },
+          {
+            "answer": "b",
+            "sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac",
+            "isCorrect": false,
+            "headline": "Are you sure?",
+            "subhead": "Compare the DNA sequences again and select the one that is different."
+          },
+          {
+            "answer": "c",
+            "sequence": "ccctaggcttcatcttcctgttcactgtggggggcttaac",
+            "isCorrect": true,
+            "headline": "You’re right!"
+          }
+        ],
+        "next": {
+          "copy": "When the team compared samples of DNA taken from several specimens of the three Ivory-billed Araçari populations, the DNA of population C didn’t match the other two!",
+          "link": {
+            "copy": "continue",
+            "href": "lice"
+          }
+        }
+      },
+      {
+        "id": "step_2_conclusion",
+        "type": "text-image",
+        "headline": "Good job!",
+        "copy": [
+          "Both you and the team have now demonstrated that population C (P.a. azara) is genetically distinct—a completely separate species from the other two Ivory-billed Araçari populations, not just a subspecies.",
+          "In other words, the family tree would show that A and B share the same twig, while C branches off on its own.  "
+        ],
+        "image": {
+          "src": "images/step_2_conclusion.jpg",
+          "alt": "Pteroglossus azara"
+        },
+        "next": {
+          "copy": "To understand how this may have happened, the team mapped the geographic ranges of each population...",
+          "link": {
+            "copy": "continue",
+            "href": "step_3"
+          }
+        }
+      },
+      {
+        "id": "step_3",
+        "type": "text",
+        "headline": "Step 3: Range Mapping",
+        "copy": "When the team took a closer look at the geographical ranges of each Ivory-billed Araçari population, they noticed that the Japurá River seems to play a role in their relationship.",
+        "next": {
+          "copy": "Let’s go back to the map to take another look.",
+          "link": {
+            "copy": "begin",
+            "href": "range"
+          }
+        }
+      },
+      {
+        "id": "step_4",
+        "type": "text",
+        "headline": "Step 4: Parasite Comparison",
+        "copy": "The team found that all three Ivory-billed Araçari populations appeared to be carrying the same species of chewing lice (Myrsidea dorotheae). But as we’ve learned, appearances can be deceiving.",
+        "next": {
+          "copy": "Compare the gene sequences of each toucan population’s chewing lice to see if any are different.",
+          "link": {
+            "copy": "begin",
+            "href": "lice"
+          }
+        }
+      },
+      {
+        "id": "lice_quiz",
+        "type": "dna",
+        "headline": "Which lice’s DNA doesn’t match the other two?",
+        "subhead": "Slide the highlighter along gene sequences and select the one that is different.",
+        "answers": [
+          {
+            "id": "a",
+            "isCorrect": false,
+            "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat",
+            "headline": "Are you sure?",
+            "subhead": "Compare the DNA sequences again and select the one that is different."
+          },
+          {
+            "id": "b",
+            "isCorrect": false,
+            "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat",
+            "headline": "Are you sure?",
+            "subhead": "Compare the DNA sequences again and select the one that is different."
+          },
+          {
+            "id": "c",
+            "isCorrect": true,
+            "sequence": "aaagaggaaaaaaggaaagctttggtgttattgggataat",
+            "headline": "You’re right!"
+          }
+        ],
+        "copy": "When the team compared samples of DNA taken from several specimens of chewing lice found on the three Ivory-billed Araçari populations, the genes of the lice on toucan population C were unique.",
+        "next": {
+          "link": {
+            "copy": "continue",
+            "href": "step_4_conclusion"
+          }
+        }
+      },
+      {
+        "id": "step_4_conclusion",
+        "type": "text-image",
+        "headline": "Good job!",
+        "copy": [
+          "You’ve now demonstrated that the lice on population C are genetically distinct from the lice found on the other two Ivory-billed Araçari populations.",
+          "You’ve also proven that a pattern exists: the Japurá River appears to isolate both the birds and lice in population C, preventing them from interbreeding with populations A and B."
+        ],
+        "image": {
+          "src": "images/step_4_conclusion.jpg",
+          "alt": "chewing lice"
+        },
+        "next": {
+          "copy": "To understand how this may have happened, the team mapped the geographic ranges of each population...",
+          "link": {
+            "copy": "continue",
+            "href": "conclusion_1"
+          }
+        }
+      }
+    ]
   }
 }

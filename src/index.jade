@@ -3,3 +3,11 @@
 != partial('_partials/physical')
 != partial('_partials/range')
 != partial('_partials/lice')
+!= partial('_partials/conclusion_1')
+!= partial('_partials/conclusion_2')
+
+// Start Modals
+each modal in modals
+  != partial('_partials/modals/'+modal.type, modal)
+
+// End Modals

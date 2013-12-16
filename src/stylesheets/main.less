@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
       color: #fff;
       text-shadow: #000 2px 2px;
       text-transform: uppercase;
-
+      font-family: "Oswald";
       display:block;
       width: 180px;
       background: @bg-red;
@@ -328,5 +328,76 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 16px;
       color: @font-dk-grey;
     }
+  }
+}
+
+#conclusion_1 {
+  background: url('../images/bg-conclusion_1.jpg') 0 0 no-repeat;
+
+  hr {
+    margin-top: 135px;
+  }
+}
+
+#conclusion_2 {
+  background: url('../images/bg-conclusion-2.jpg') 0 0 no-repeat;
+
+  hr {
+    margin-top: 80px;
+  }
+}
+
+// Light box
+.fade.in {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-dialog {
+  width: 820px;
+}
+
+.modal-content {
+
+  border-radius: 0;
+  border: 5px solid #000;
+
+
+  .modal-header {
+    border-bottom: none;
+
+  }
+
+  h2 {
+      color: @font-red;
+      margin-bottom: 0;
+    }
+
+  p {
+    color: @font-dk-grey;
+    size: 18px;
+  }
+
+  hr.dashed {
+    border-top: 1px dashed @border-lt-grey;
+    margin: 50px 0;
+  }
+
+  a, a:hover, a:visited {
+    color: #fff;
+    text-shadow: #000 2px 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    font-family: "Oswald";
+    font-size: 18px;
+
+    display:block;
+    width: 180px;
+    background: @bg-red;
+    border: 1px solid @border-dk-red;
+    border-radius: 0;
+    padding: 10px;
+    margin: 30px auto;
+    text-align: center;
   }
 }

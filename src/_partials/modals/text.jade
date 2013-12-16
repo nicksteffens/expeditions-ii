@@ -1,0 +1,14 @@
+
+// Text Modal
+.modal.text.fade(id=id tabindex='-1', role='dialog', aria-labelledby='#{id}Label', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header.text-center
+        h2= headline
+      .modal-body.text-center
+        each paragraph in copy
+          p= paragraph
+        hr.dashed
+        p= next.copy
+
+        a(href=next.link.href)= next.link.copy
