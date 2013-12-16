@@ -61,18 +61,21 @@
           {
             "bird": "a",
             "position": "feather",
+            "modal": "#magnify_chest",
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           },
           {
             "bird": "b",
             "position": "tail",
+            "modal": "#magnify_tail",
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           },
           {
             "bird": "c",
             "position": "bill",
+            "modal": "#magnify_beak",
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           }

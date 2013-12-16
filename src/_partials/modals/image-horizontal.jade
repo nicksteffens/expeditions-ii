@@ -4,5 +4,9 @@
   .modal-dialog
     .modal-content
       .modal-header.text-center
-
-      .modal-body.text-center
+        button.close.icon.close(type="button" class="close" data-dismiss="modal" aria-hidden="true") &nbsp;
+      .modal-body
+        .row
+          each image in images
+            .col-xs-4.text-center.padding-2
+              img(src=image alt=id)

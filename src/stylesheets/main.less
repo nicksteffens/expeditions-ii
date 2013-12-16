@@ -153,6 +153,10 @@ h1, h2, h3, h4, h5, h6 {
   &.checked {
     background: url('../images/icon-checked.png') 0 0 no-repeat !important;
   }
+
+  &.close {
+    background: url('../images/icon-close.png') 0 0 no-repeat;
+  }
 }
 
 #intro_1, #intro_2 {
@@ -354,6 +358,38 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal-dialog {
   width: 820px;
+
+  .image-horizontal & {
+    width: 856px;
+
+
+    .row {
+      margin: 0;
+    }
+    .padding-2 {
+      padding: 0 2px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .image-vertical & {
+    width: 660px;
+
+    img {
+      max-width: 100%;
+
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    opacity: 1;
+  }
 }
 
 .modal-content {
@@ -400,4 +436,5 @@ h1, h2, h3, h4, h5, h6 {
     margin: 30px auto;
     text-align: center;
   }
+
 }

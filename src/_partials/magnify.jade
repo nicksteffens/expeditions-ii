@@ -1,7 +1,7 @@
 mixin eachBird(obj)
   .col-md-4(class="bird #{obj.bird}")
 
-    a.icon(class="#{obj.position}")
+    a.icon(class="#{obj.position}", data-toggle='modal', data-target=obj.modal, href=obj.modal)
 
     .footer.text-center
       h3.common= obj.common
