@@ -11,11 +11,12 @@
         p
           span.pre= subhead
           span.wrong.hidden!= wrong.subhead
+          span.correct.hidden!= copy
 
 
-        hr.dashed
+        hr.dashed.no-margin-bottom
       .modal-body.text-center
-        .row
+        .row.pre
           .col-xs-1.col-xs-offset-11.select select
 
         each answer in answers
@@ -35,16 +36,16 @@
 
 
 
-      .next.post.hidden
-        if next.copy
-          p= next.copy
+        .next.post.hidden
+          if next.copy
+            p= next.copy
 
-        if id == 'listen_quiz'
-          a.btn.open-modal(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
-        else
-          a.btn.router(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
+          if id == 'listen_quiz'
+            a.btn.open-modal(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
+          else
+            a.btn.router(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
 
-      .viewport
+      .viewport.pre
         .bg-slider
         img.slider(src="images/slider.png")
 

@@ -414,11 +414,11 @@
           "headline": "Are you sure?",
           "subhead": "Compare the DNA sequences again and select the one that is different."
         },
+        "copy": "When the team compared samples of DNA taken from several specimens of the three <br/>Ivory-billed Araçari populations, the DNA of population C didn’t match the other two!",
         "next": {
-          "copy": "When the team compared samples of DNA taken from several specimens of the three Ivory-billed Araçari populations, the DNA of population C didn’t match the other two!",
           "link": {
             "copy": "continue",
-            "href": "lice"
+            "href": "step_2_conclusion"
           }
         }
       },
@@ -495,6 +495,13 @@
             "headline": "You’re right!"
           }
         ],
+        "correct": {
+          "headline": "You’re right!"
+        },
+        "wrong": {
+          "headline": "Are you sure?",
+          "subhead": "Compare the DNA sequences again and select the one that is different."
+        },
         "copy": "When the team compared samples of DNA taken from several specimens of chewing lice found on the three Ivory-billed Araçari populations, the genes of the lice on toucan population C were unique.",
         "next": {
           "link": {

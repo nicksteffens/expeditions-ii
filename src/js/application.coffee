@@ -5,6 +5,7 @@ Router = {
     # listeners
     Listeners.click()
     Listeners.viewPort()
+    Router.step_2_conclusion()
 
     #router events
     $('.router').on({
@@ -111,32 +112,47 @@ Router = {
 
   }
 
-  genetic: {
+  genetic:
 
     quiz: ()->
       $("#genetic_quiz").modal('show')
-      $('#genetic_quiz .answers a').on({
+      $('#genetic_quiz a').on({
           click: (ev)->
             ev.preventDefault()
             $parent = $('#genetic_quiz')
+            isCorrect = $(this).hasClass('correct')
 
-            if $(this).attr('href') == "correct"
+            # show correct
+            if isCorrect
               $parent.find('.correct').removeClass('hidden')
+              $parent.find('.wrong').addClass('hidden')
 
-            else if $(this).attr('href') == "wrong"
+               # hide pre-answered
+              $parent.find('.pre').addClass('hidden')
+
+              # show post-answered
+              $parent.find('.post').removeClass('hidden')
+
+              # adjust margins
+              $parent.find('.no-margin-bottom').removeClass('no-margin-bottom')
+              $parent.find('.modal-body').addClass('no-margin-bottom')
+
+            else
+              # show wrong help text
               $parent.find('.wrong').removeClass('hidden')
-
-            # hide pre-answered
-            $parent.find('.pre').addClass('hidden')
-
-
-            # show post-answered
-            $parent.find('.post').removeClass('hidden')
-            $('#genetic_quiz .dashed').addClass('no-margin-top')
+              $parent.find('.modal-header .pre').addClass('hidden')
 
         })
 
-  }
+  step_2_conclusion: ()->
+      $("#genetic_quiz").on("hidden.bs.modal", ()->
+
+        $('#step_2_conclusion').modal('show')
+
+        )
+
+
+
 
   reset: ()->
     $(".checked").removeClass("checked")
