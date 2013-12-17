@@ -1,8 +1,8 @@
 //- TODO:
 //-   lightbox
 
-#range.row
-  .col-xs-12.content
+#range.row.section.hidden
+  .col-xs-12.content(data-section="#range")
     .row
         .col-xs-4.col-xs-offset-8.bg-container
           .copy-container
@@ -13,4 +13,4 @@
 
             hr
 
-            a(href=range.link.href)= range.link.copy
+            a.btn(data-toggle="modal" data-target=range.link.href href=range.link.href)= range.link.copy

@@ -7,9 +7,9 @@ mixin eachLice(obj)
       h3.common= obj.common
       p.scientific From: #{obj.from}
 
-#lice-section.row
+#lice-section.row.section.hidden
   .col-12-md
-    .genetic.content
+    .genetic.content(data-section="#lice-section")
       .row
         each entry in lice.info
           +eachLice(entry)

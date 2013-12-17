@@ -1,5 +1,5 @@
-#intro_1.row
-  .col-xs-12.content
+#intro_1.row.section
+  .col-xs-12.content(data-section="#intro_1")
     .row
         .col-xs-4.col-xs-offset-8.bg-container
           .copy-container
@@ -10,4 +10,4 @@
 
             hr
 
-            a.btn(href=intro_1.link.href)= intro_1.link.copy
+            a.btn.router(href=intro_1.link.href)= intro_1.link.copy

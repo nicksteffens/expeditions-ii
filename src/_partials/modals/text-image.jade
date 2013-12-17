@@ -4,5 +4,25 @@
   .modal-dialog
     .modal-content
       .modal-header.text-center
+        h2!= headline
+
 
       .modal-body.text-center
+
+        each paragraph in copy
+          .row
+            .col-xs-10.col-xs-offset-1.text-center
+              p!= paragraph
+
+        .row
+          .col-xs-12
+            img(src=image.src alt=image.alt)
+        hr.dashed
+
+        .row
+          .col-xs-10.col-xs-offset-1
+            p!= next.copy
+
+        .row
+          .col-xs-12
+            a.btn.router(href=next.link.href data-dismiss="modal" aria-hidden="true")= next.link.copy

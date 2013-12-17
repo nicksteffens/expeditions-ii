@@ -1,158 +1,170 @@
 Router = {
-
   init: ()->
-    console.log 'Router Init'
     # listeners
-    Listeners.click()
+    Listeners.measurements()
     Listeners.viewPort()
-    Router.step_2_conclusion()
+    Listeners.router()
 
-    #router events
-    $('.router').on({
-        click: (ev)->
+    #quiz
+    Router.quiz.measurements()
+    Router.quiz.listen()
+    Router.quiz.magnify()
+    Router.quiz.genetic($('#genetic_quiz'))
+    Router.quiz.genetic($('#lice_quiz'))
+
+
+
+    # populate sections and required interactions
+    $('.content').each ()->
+      currentSection = $(this).attr('data-section')
+
+      # attachlistener
+      Listeners.sectionInteractions(currentSection)
+
+
+  route: (section)->
+    console.log 'Incoming Section ', section
+    Router.toggleSections(section)
+
+
+
+  toggleSections: (el)->
+    switch el
+      when "#measurements" then $('#physical').removeClass('hidden')
+      when "#step_2", "#step_2_conclusion" then el = "#genetic"
+      when "#step_3"
+        $('#physical').addClass('hidden')
+        el = "#range"
+
+      when "#step_4_conclusion"
+        el = "#conclusion_1"
+
+    # hide sections
+    $('.section').addClass('hidden')
+    # show active
+    $(el).removeClass('hidden')
+
+  quiz:
+
+    measurements: ()->
+      $quiz = $('#measurements_quiz')
+      $quiz.find('.answers a').on(
+        "click": (ev)->
           ev.preventDefault()
-          console.log 'router click'
+          isCorrect = $(this).hasClass('correct')
+          switch isCorrect
+            when true then $quiz.find('.correct').removeClass('hidden')
+            else $quiz.find('.wrong').removeClass('hidden')
 
-      })
-
-    $('.open-modal').on({
-        click: (ev)->
-          ev.preventDefault()
-          openModal = $(this).attr('href')
-          $(openModal).modal('show')
-      })
-
-
-  measurements: {
-
-    quiz: ()->
-      $('#measurements_quiz').modal('show')
-      $('#measurements_quiz .answers a').on({
-        click: (ev)->
-          ev.preventDefault()
-          if $(this).attr('href') == "correct"
-            $('#measurements_quiz .correct').removeClass('hidden')
-
-          else if $(this).attr('href') == "wrong"
-
-            $('#measurements_quiz .wrong').removeClass('hidden')
-
-          # hide pre-answered
-          $('#measurements_quiz .pre').addClass('hidden')
-
-          # show post-answered
-          $('#measurements_quiz .post').removeClass('hidden')
-
-          $('#measurements_quiz .dashed').addClass('no-margin-top')
-
-        })
-
-  }
-
-  magnify: {
-
-    quiz: (activeModal)->
-      # waits for current modal to close
-      $(activeModal).on('hidden.bs.modal', ()->
-        $('#magnify_quiz').modal('show')
-      )
-
-      $('#magnify_quiz .answers a').on({
-          click: (ev)->
-            ev.preventDefault()
-            $parent = $('#magnify_quiz')
-
-            if $(this).attr('href') == "correct"
-              $parent.find('.correct').removeClass('hidden')
-
-            else if $(this).attr('href') == "wrong"
-              $parent.find('.wrong').removeClass('hidden')
-
-            # hide pre-answered
-            $parent.find('.pre').addClass('hidden')
-
-
-            # show post-answered
-            $parent.find('.post').removeClass('hidden')
-            $('#measurements_quiz .dashed').addClass('no-margin-top')
-
-        })
-
-
-  }
-
-  listen: {
-
-    quiz: (activeModal)->
-      # wait for active modal to close
-      $(activeModal).on('hidden.bs.modal', ()->
-        $('#listen_quiz').modal('show')
-      )
-
-      $('#listen_quiz .answers a').on({
-        click: (ev)->
-          ev.preventDefault()
-          $parent = $('#listen_quiz')
-
-          if $(this).attr('href') == "correct"
-            $parent.find('.correct').removeClass('hidden')
-
-          else if $(this).attr('href') == "wrong"
-            $parent.find('.wrong').removeClass('hidden')
-
-          # hide pre-answered
-          $parent.find('.pre').addClass('hidden')
-
-
-          # show post-answered
-          $parent.find('.post').removeClass('hidden')
-          $('#listen_quiz .dashed').addClass('no-margin-top')
-
-      })
-
-  }
-
-  genetic:
-
-    quiz: ()->
-      $("#genetic_quiz").modal('show')
-      $('#genetic_quiz a').on({
-          click: (ev)->
-            ev.preventDefault()
-            $parent = $('#genetic_quiz')
-            isCorrect = $(this).hasClass('correct')
-
-            # show correct
-            if isCorrect
-              $parent.find('.correct').removeClass('hidden')
-              $parent.find('.wrong').addClass('hidden')
-
-               # hide pre-answered
-              $parent.find('.pre').addClass('hidden')
-
-              # show post-answered
-              $parent.find('.post').removeClass('hidden')
-
-              # adjust margins
-              $parent.find('.no-margin-bottom').removeClass('no-margin-bottom')
-              $parent.find('.modal-body').addClass('no-margin-bottom')
-
-            else
-              # show wrong help text
-              $parent.find('.wrong').removeClass('hidden')
-              $parent.find('.modal-header .pre').addClass('hidden')
-
-        })
-
-  step_2_conclusion: ()->
-      $("#genetic_quiz").on("hidden.bs.modal", ()->
-
-        $('#step_2_conclusion').modal('show')
+          $quiz.find('.pre').addClass('hidden')
+          $quiz.find('.post').removeClass('hidden')
 
         )
 
+    magnify: ()->
+      $quiz = $('#magnify_quiz')
+      $quiz.find('.answers a').on({
+        click: (ev)->
+          ev.preventDefault()
+          isCorrect = $(this).hasClass('correct')
+          switch isCorrect
+            when true then $quiz.find('.correct').removeClass('hidden')
+            else $quiz.find('.wrong').removeClass('hidden')
+
+          # hide pre-answered
+          $quiz.find('.pre').addClass('hidden')
+
+          # show post-answered
+          $quiz.find('.post').removeClass('hidden')
+          $quiz.find('.dashed').addClass('no-margin-top')
+
+      })
+
+    listen: ()->
+      $quiz = $('#listen_quiz')
+      $quiz.find('.answers a').on({
+        click: (ev)->
+          ev.preventDefault()
+          isCorrect = $(this).hasClass('correct')
+          switch isCorrect
+            when true then $quiz.find('.correct').removeClass('hidden')
+            else $quiz.find('.wrong').removeClass('hidden')
+
+          # hide pre-answered
+          $quiz.find('.pre').addClass('hidden')
+
+          # show post-answered
+          $quiz.find('.post').removeClass('hidden')
+          $quiz.find('.dashed').addClass('no-margin-top')
+
+      })
+
+    genetic: ($quiz)->
+      $quiz.find('.answers a').on({
+        click: (ev)->
+          ev.preventDefault()
+          isCorrect = $(this).hasClass('correct')
+          if isCorrect
+            $quiz.find('.correct').removeClass('hidden')
+            $quiz.find('.wrong').addClass('hidden')
+
+            # hide pre-answered
+            $quiz.find('.pre').addClass('hidden')
+
+            # show post-answered
+            $quiz.find('.post').removeClass('hidden')
+
+            # adjust margins
+            $quiz.find('.no-margin-bottom').removeClass('no-margin-bottom')
+            $quiz.find('.modal-body').addClass('no-margin-bottom')
+
+          else
+            # show wrong help text
+            $quiz.find('.wrong').removeClass('hidden')
+            $quiz.find('.modal-header .pre').addClass('hidden')
+
+        })
 
 
+
+  modals:
+
+    open: (section)->
+      openModal = null
+      switch section
+        when "#measurements" then openModal = "#measurements_quiz"
+        when "#magnify" then openModal = "#magnify_quiz"
+        when "#listen" then openModal = "#listen_quiz"
+        when "#genetic" then openModal = "#genetic_quiz"
+        when "#lice-section" then openModal = "#lice_quiz"
+        when "#range" then openModal = "#step_4"
+
+      if openModal != null
+        $(openModal).modal({backdrop: "static"})
+        $(openModal).modal('show')
+        Router.modals.secondary(openModal)
+
+
+
+    secondary: (openModal)->
+      nextModal = false
+      switch openModal
+        when "#listen_quiz" then nextModal = "#step_1_conclusion"
+        when "#genetic_quiz" then nextModal = "#step_2_conclusion"
+        when "#lice_quiz" then nextModal = "#step_4_conclusion"
+        when "#step_1_conclusion" then nextModal = "#step_2"
+        when"#step_2_conclusion" then nextModal = "#step_3"
+        # else ()->
+        #   Router.route(openModal)
+      if nextModal != false
+
+        $(openModal).on("hidden.bs.modal", ()->
+
+          $(nextModal).modal('show')
+
+          Router.modals.secondary(nextModal)
+
+          )
 
   reset: ()->
     $(".checked").removeClass("checked")
@@ -164,96 +176,79 @@ Router = {
 }
 
 Listeners = {
-  click: ()->
 
+  sectionInteractions: (section)->
+    howManyIntercations = $(section).find('.icon').length
+
+    if howManyIntercations > 0
+      currentInteractions = 0
+
+      $(section).find('.icon').on(
+        'click': (ev)->
+          ev.preventDefault()
+          $(section).find(".instructions").addClass('hidden')
+          $(this).addClass('checked')
+
+          currentInteractions = currentInteractions + 1
+
+          if currentInteractions == howManyIntercations
+            # open modal
+            if section != '#magnify' && section != "#listen"
+              Router.modals.open(section)
+
+            # wait for the last modal to close for magnify / listen
+            else
+
+              modalId = $(this).attr('data-target')
+              $(modalId).on('hidden.bs.modal', ()->
+
+                Router.modals.open(section)
+
+                )
+
+
+            # reset interactions
+            currentInteractions = 0
+            $(section).find('.checked').removeClass('checked')
+
+            # reset measurements list
+            if section == "#measurements"
+              $(section).find(".hidden").removeClass('hidden')
+
+        )
+
+  measurements: ()->
     # measurements
-    toMeasure = $("#measurements .icon").length
-    measureCount = 0
     $("#measurements .icon").on({
       "click": (ev)->
         ev.preventDefault();
         if !$(this).hasClass('checked')
-          $("#measurements .instructions").addClass('hidden')
           $parent = $(this).parent()
 
           if $(this).hasClass('tail')
-            section = "tail"
+            area = "tail"
 
           else if $(this).hasClass('wing')
-            section = "wing"
+            area = "wing"
 
           else if $(this).hasClass('beak')
-            section = "beak"
+            area = "beak"
 
-          $parent.find('.info-' + section ).children('strong').removeClass('hidden')
-
-          $(this).addClass('checked')
-          measureCount = measureCount+1
-
-          # activate router
-          if measureCount == toMeasure
-            Router.measurements.quiz()
+          $parent.find('.info-' + area ).children('strong').removeClass('hidden')
 
       })
 
-    # magnify
-    toMagnify = $('#magnify .icon').length
-    magnifyCount = 0
-    $('#magnify .icon').on({
-        click: (ev)->
-          ev.preventDefault()
-          $('#magnify .instructions').addClass('hidden');
-
-          if !$(this).hasClass('checked')
-            $(this).addClass('checked')
-
-            magnifyCount = magnifyCount + 1
-            if magnifyCount == toMagnify
-              activeModal = $(this).attr('href')
-              Router.magnify.quiz(activeModal)
-
-
-      })
-
-    #listen
-    toListen = $("#listen .icon").length
-    listenCount = 0
-    $('#listen .icon').on({
-        click: (ev)->
-          ev.preventDefault()
-          $('#listen .instructions').addClass('hidden')
-
-          if !$(this).hasClass('checked')
-            $(this).addClass('checked');
-
-            listenCount = listenCount + 1
-            if listenCount == toListen
-              activeModal = $(this).attr('href')
-              Router.listen.quiz(activeModal)
-      })
-
-
-    # genetic
-    toGenetic = $("#genetic .icon").length
-    geneticCount = 0
-    $('#genetic .icon').on({
-        click: (ev)->
-          ev.preventDefault()
-          $('#genetic .instructions').addClass('hidden')
-
-          if !$(this).hasClass('checked')
-            $(this).addClass('checked');
-
-            geneticCount = geneticCount + 1
-            if geneticCount == toGenetic
-              Router.genetic.quiz()
-      })
-
+  router: ()->
+    $('.router').on(
+      'click': (ev)->
+        ev.preventDefault()
+        nextSection = $(this).attr('href')
+        Router.route(nextSection)
+      )
 
   viewPort: ()->
-    $('.dna').on('shown.bs.modal', ()->
-      $('.viewport .slider').draggable({axis: "x", containment: ".viewport"})
-      )
+    $('.viewport .slider').draggable({axis: "x", containment: "parent"})
+
 
 }
 

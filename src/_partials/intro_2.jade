@@ -1,5 +1,5 @@
-#intro_2.row
-  .col-xs-12.content
+#intro_2.row.section.hidden
+  .col-xs-12.content(data-section="#intro_2")
     .row
         .col-xs-4.col-xs-offset-8.bg-container
           .copy-container
@@ -10,4 +10,4 @@
 
             hr
 
-            a.btn(data-toggle='modal', data-target=intro_2.link.href href=intro_2.link.href)= intro_2.link.copy
+            a.btn.router(data-toggle='modal', data-target=intro_2.link.modal href=intro_2.link.href)= intro_2.link.copy

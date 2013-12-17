@@ -7,7 +7,7 @@ mixin eachBird(obj)
       h3.common= obj.common
       p.scientific= obj.scientific
 
-#genetic.content
+#genetic.section.content(data-section="#genetic")
   .row
     each entry in physical.genetic.info
       +eachBird(entry)

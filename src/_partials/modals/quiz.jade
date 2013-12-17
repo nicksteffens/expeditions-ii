@@ -5,14 +5,14 @@
     .modal-content
       .modal-header.text-center
         h2.pre= headline
-        .answers
+        .answers.post
           each answer in answers
             if answer.isCorrect == true
               isCorrect = "correct"
             else
               isCorrect = "wrong"
 
-            a.btn.pre(href=isCorrect)= answer.answer
+            a.btn.pre(class=isCorrect href="#")= answer.answer
 
             if answer.isCorrect
               .correct.hidden

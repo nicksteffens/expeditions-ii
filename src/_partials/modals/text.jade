@@ -17,8 +17,5 @@
         hr.dashed
         p= next.copy
 
-        if id == 'step_1_conclusion'
-          a.btn.open-modal(href=next.link.href data-dismiss="modal" aria-hidden="true")= next.link.copy
+        a.btn.router(href=next.link.href, data-dismiss="modal" aria-hidden="true")= next.link.copy
 
-        else
-          a.btn.router(href=next.link.href data-dismiss="modal" aria-hidden="true")= next.link.copy

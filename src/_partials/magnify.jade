@@ -7,7 +7,7 @@ mixin eachBird(obj)
       h3.common= obj.common
       p.scientific= obj.scientific
 
-#magnify.content
+#magnify.content.section.hidden(data-section="#magnify").hidden
   .row
     each entry in physical.magnify.info
       +eachBird(entry)

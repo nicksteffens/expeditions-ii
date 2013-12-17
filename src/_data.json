@@ -22,7 +22,8 @@
       ],
       "link": {
         "copy": "begin",
-        "href": "#step_1"
+        "modal": "#step_1",
+        "href": "#measurements"
       }
     },
     "physical": {
@@ -136,7 +137,7 @@
       ],
       "link": {
         "copy": "continue",
-        "href": "#lice"
+        "href": "#step_4"
       }
     },
     "lice": {
@@ -167,18 +168,18 @@
         ],
       "link": {
         "copy": "continue",
-        "href": "conclusion_2"
+        "href": "#conclusion_2"
       }
     },
     "conclusion_2": {
-      "headline": "onclusion",
+      "headline": "Conclusion",
       "copy": [
         "And you’ve uncovered evidence that confirms the existence of a previously unrecognized Area of Endemism (recently named the Jaú). Congratulations!",
         "Through studies like these, we can continue to identify species that are evolving in isolation and take appropriate actions to protect both them and their habitats."
         ],
       "link": {
         "copy": "start over",
-        "href": "intro_1"
+        "href": "/"
       }
     },
     "modals": [
@@ -365,8 +366,7 @@
           "copy": "Let’s see if the DNA of these birds tells the same story...",
           "link": {
             "copy": "continue",
-            "modal": "open-modal",
-            "href": "#step_2"
+            "href": "#genetic"
           }
         }
       },
@@ -381,7 +381,7 @@
           "copy": "Tweeze off a tissue sample from each bird and send it out for sequencing to pinpoint how closely related these Ivory-billed Araçari are to one another.",
           "link": {
             "copy": "begin",
-            "link": "genetic"
+            "href": "#genetic"
           }
         }
       },
@@ -418,7 +418,7 @@
         "next": {
           "link": {
             "copy": "continue",
-            "href": "step_2_conclusion"
+            "href": "#step_2_conclusion"
           }
         }
       },
@@ -438,7 +438,7 @@
           "copy": "To understand how this may have happened, the team mapped the geographic ranges of each population...",
           "link": {
             "copy": "continue",
-            "href": "step_3"
+            "href": "#step_3"
           }
         }
       },
@@ -446,12 +446,12 @@
         "id": "step_3",
         "type": "text",
         "headline": "Step 3: Range Mapping",
-        "copy": "When the team took a closer look at the geographical ranges of each Ivory-billed Araçari population, they noticed that the Japurá River seems to play a role in their relationship.",
+        "copy": ["When the team took a closer look at the geographical ranges of each Ivory-billed Araçari population, they noticed that the Japurá River seems to play a role in their relationship."],
         "next": {
           "copy": "Let’s go back to the map to take another look.",
           "link": {
             "copy": "begin",
-            "href": "range"
+            "href": "#range"
           }
         }
       },
@@ -459,12 +459,12 @@
         "id": "step_4",
         "type": "text",
         "headline": "Step 4: Parasite Comparison",
-        "copy": "The team found that all three Ivory-billed Araçari populations appeared to be carrying the same species of chewing lice (Myrsidea dorotheae). But as we’ve learned, appearances can be deceiving.",
+        "copy": ["The team found that all three Ivory-billed Araçari populations appeared to be carrying the same species of chewing lice (Myrsidea dorotheae). But as we’ve learned, appearances can be deceiving."],
         "next": {
           "copy": "Compare the gene sequences of each toucan population’s chewing lice to see if any are different.",
           "link": {
             "copy": "begin",
-            "href": "lice"
+            "href": "#lice-section"
           }
         }
       },
@@ -475,24 +475,19 @@
         "subhead": "Slide the highlighter along gene sequences and select the one that is different.",
         "answers": [
           {
-            "id": "a",
+            "answer": "a",
             "isCorrect": false,
-            "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat",
-            "headline": "Are you sure?",
-            "subhead": "Compare the DNA sequences again and select the one that is different."
+            "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat"
           },
           {
-            "id": "b",
+            "answer": "b",
             "isCorrect": false,
-            "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat",
-            "headline": "Are you sure?",
-            "subhead": "Compare the DNA sequences again and select the one that is different."
+            "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat"
           },
           {
-            "id": "c",
+            "answer": "c",
             "isCorrect": true,
-            "sequence": "aaagaggaaaaaaggaaagctttggtgttattgggataat",
-            "headline": "You’re right!"
+            "sequence": "aaagaggaaaaaaggaaagctttggtgttattgggataat"
           }
         ],
         "correct": {
@@ -506,7 +501,7 @@
         "next": {
           "link": {
             "copy": "continue",
-            "href": "step_4_conclusion"
+            "href": "#step_4_conclusion"
           }
         }
       },
@@ -526,7 +521,7 @@
           "copy": "To understand how this may have happened, the team mapped the geographic ranges of each population...",
           "link": {
             "copy": "continue",
-            "href": "conclusion_1"
+            "href": "#conclusion_1"
           }
         }
       }
