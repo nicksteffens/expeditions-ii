@@ -4,41 +4,52 @@
   .modal-dialog
     .modal-content
       .modal-header.text-center
-        h2= headline
-        p= subhead
+        h2
+          span.pre!= headline
+          span.correct.hidden!= correct.headline
+          span.wrong.hidden!= wrong.headline
+        p
+          span.pre= subhead
+          span.wrong.hidden!= wrong.subhead
 
-        .post.hidden
-          .correct.hidden
-            h2 correct.headline
-
-          .wrong.hidden
-            h2 wrong.headline
-            p wrong.subhead
 
         hr.dashed
       .modal-body.text-center
+        .row
+          .col-xs-1.col-xs-offset-11.select select
+
         each answer in answers
           .row.answers.pre
-            .col-xs-12
+            .col-xs-1
               h2 #{answer.answer}.
-                h3.sequenc= answer.sequence
-                if answer.isCorrect
-                  isCorrect = "correct"
-                else
-                  isCorrect = "wrong"
+            .col-xs-10.text-left
+              h3.sequence= answer.sequence
 
-                a.radio(class=isCorrect) radio
+            .col-xs-1
+              if answer.isCorrect
+                isCorrect = "correct"
+              else
+                isCorrect = "wrong"
+
+              a.icon.radio(class=isCorrect href="#")
 
 
 
-        .next.post.hidden
-          if next.copy
-            p= next.copy
+      .next.post.hidden
+        if next.copy
+          p= next.copy
 
-          if id == 'listen_quiz'
-            a.btn.open-modal(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
-          else
-            a.btn.router(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
+        if id == 'listen_quiz'
+          a.btn.open-modal(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
+        else
+          a.btn.router(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
+
+      .viewport
+        .bg-slider
+        img.slider(src="images/slider.png")
+
+
+
 
 
 

@@ -1,0 +1,5 @@
+h2 DNA Test
+obj = {"id": "genetic_quiz","headline": "Which bird’s gene sequence is different?","subhead": "Slide the highlighter along gene sequences and select the one that is different.","answers": [  {    "answer": "a",    "sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac",    "isCorrect": false  },  {    "answer": "b",    "sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac",    "isCorrect": false  },  {    "answer": "c",    "sequence": "ccctaggcttcatcttcctgttcactgtggggggcttaac",    "isCorrect": true  }],"correct": {  "headline": "You’re right!"},"wrong": {  "headline": "Are you sure?",  "subhead": "Compare the DNA sequences again and select the one that is different."},"next": {  "copy": "When the team compared samples of DNA taken from several specimens of the three Ivory-billed Araçari populations, the DNA of population C didn’t match the other two!",  "link": {    "copy": "continue",    "href": "lice"  }}}
+
+!= partial("_partials/modals/dna", obj)
+button.btn(data-toggle='modal', data-target="#genetic_quiz") DNA QUIZ

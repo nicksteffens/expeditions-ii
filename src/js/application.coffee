@@ -4,6 +4,7 @@ Router = {
     console.log 'Router Init'
     # listeners
     Listeners.click()
+    Listeners.viewPort()
 
     #router events
     $('.router').on({
@@ -231,6 +232,12 @@ Listeners = {
             if geneticCount == toGenetic
               Router.genetic.quiz()
       })
+
+
+  viewPort: ()->
+    $('.dna').on('shown.bs.modal', ()->
+      $('.viewport .slider').draggable({axis: "x", containment: ".viewport"})
+      )
 
 }
 
