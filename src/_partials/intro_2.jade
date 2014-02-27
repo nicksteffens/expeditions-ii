@@ -1,7 +1,12 @@
 #intro_2.row.section.hidden
   .col-xs-12.content(data-section="#intro_2")
     .row
-        .col-xs-4.col-xs-offset-8.bg-container
+        .col-xs-8.bird-container
+          .img-container
+            img(src="images/intro-02-birds.jpg", alt="Birds")
+
+
+        .col-xs-4.col-xs-offset-1.bg-container
           .copy-container
             h3= intro_2.headline
             each paragraph in intro_2.copy
@@ -11,3 +16,4 @@
             hr
 
             a.btn.router(data-toggle='modal', data-target=intro_2.link.modal href=intro_2.link.href)= intro_2.link.copy
+
