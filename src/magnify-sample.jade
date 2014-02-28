@@ -1,0 +1,24 @@
+mixin eachBird(obj)
+  .col-xs-4.magnify.nogutter(class="bird #{obj.bird}")
+    .small
+      img.source(src=obj.images.small data-bird=obj.bird)
+
+    a.icon.close(href="#" data-bird=obj.bird)
+
+
+#physical.row
+  .col-12-md
+
+    //- partial
+    #magnify.content.section(data-section="#magnify")
+      .row-fluid
+        each entry in physical.magnify.info
+          +eachBird(entry)
+
+      .row.instructions
+        .col-xs-8.text-center
+
+            h3!= physical.magnify.instructions
+
+        .col-xs-4
+            a.btn.router(href=physical.magnify.link.href, data-dismiss="modal" aria-hidden="true")= physical.magnify.link.copy

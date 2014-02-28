@@ -4,10 +4,13 @@
   .modal-dialog
     .modal-content
       .modal-header.text-center
-        h2= headline
+        if headline == 'Reclassifying Relationships'
+          h2.blue!= headline
+        else
+          h2!= headline
       .modal-body.text-center
         each paragraph in copy
-          p= paragraph
+          p!= paragraph
 
         if list
           ul

@@ -4,6 +4,7 @@ Router = {
     Listeners.measurements()
     Listeners.viewPort()
     Listeners.router()
+    Listeners.magnifier()
 
     #quiz
     Router.quiz.measurements()
@@ -37,7 +38,7 @@ Router = {
         el = "#range"
 
       when "#step_4_conclusion"
-        el = "#conclusion_1"
+        el = "#conclusion_2"
 
     # hide sections
     $('.section').addClass('hidden')
@@ -149,7 +150,7 @@ Router = {
     secondary: (openModal)->
       nextModal = false
       switch openModal
-        when "#listen_quiz" then nextModal = "#step_1_conclusion"
+        when "#magnify_quiz" then nextModal = "#step_1_conclusion"
         when "#genetic_quiz" then nextModal = "#step_2_conclusion"
         when "#lice_quiz" then nextModal = "#step_4_conclusion"
         when "#step_1_conclusion" then nextModal = "#step_2"
@@ -186,8 +187,9 @@ Listeners = {
       $(section).find('.icon').on(
         'click': (ev)->
           ev.preventDefault()
-          $(section).find(".instructions").addClass('hidden')
-          $(this).addClass('checked')
+          if $(section).attr('id') != 'magnify'
+            $(section).find(".instructions").addClass('hidden')
+            $(this).addClass('checked')
 
           currentInteractions = currentInteractions + 1
 
@@ -248,6 +250,40 @@ Listeners = {
 
   viewPort: ()->
     $('.viewport .slider').draggable({axis: "x", containment: "parent"})
+
+
+  magnifier: ()->
+    # attach zoom for each bird
+    $.each $('.magnify .close'), (i,v)->
+      birdId = $(this).attr('data-bird')
+      Listeners.attachZoom(birdId)
+
+    # close button
+    $('.magnify .close').click( (ev)->
+        ev.preventDefault()
+        $(this).toggle()
+
+      )
+
+    # listens for zoom
+    $('.small span').click( ->
+        $(this)
+          .parent()
+          .parent()
+          .find('.close')
+          .click()
+      )
+
+  attachZoom: (i)->
+    $('.bird.' + i + ' img.source')
+      .wrap('<span style="display:inline-block"></span>')
+      .css('display', 'block')
+      .parent()
+      .zoom
+        url: 'images/bird-' + i + '-large.jpg'
+        on: 'click'
+        callback: ()->
+          console.log i + ' loaded'
 
 
 }

@@ -3,8 +3,8 @@
     "intro_1": {
       "headline": "Introduction",
       "copy": [
-        "These birds represent three groups of toucans sampled by John, Jason, and Alex during their Amazonian expedition, as well as other earlier Field Museum expeditions to Amazonia.",
-        "As you can see, these groups were found along the boundaries between Areas of Endemism—regions containing species unique to that area."
+        "These birds represent three populations of toucans sampled by John, Jason, and Alex during their 2007 Amazonian Expedition, as well as other earlier collecting trips.",
+        "The dots represent locations where specimens from the three populations were found. As you can see, each population lives within specific, river-bordered Areas of Endemism&mdash; zones containing species unique to that region."
         ],
       "link": {
         "copy": "continue",
@@ -16,19 +16,23 @@
       "copy": [
         "For years, scientists believed these toucans to be different populations of the same species: the Ivory-billed Araçari (Pteroglossus azara).",
 
-        "But the work of John, Jason, and Alex’s team is revealing that perhaps the birds’ relationships—and the Areas of Endemism—need to be re-evaluated. ",
+        "But the work of John, Jason, and Alex's team is revealing that perhaps the birds' relationships&mdash;and the Areas of Endemism&mdash;need to be re-evaluated. ",
 
-        "Replicate the team’s experiments to find out why."
+        "Replicate the team's experiments to find out why."
       ],
       "link": {
         "copy": "begin",
         "modal": "#step_1",
         "href": "#measurements"
+      },
+      "img": {
+        "src": "images/intro-02-birds.jpg",
+        "alt": "Birds"
       }
     },
     "physical": {
       "measurements": {
-        "instructions": "Click the dots of each bird to take measurements.",
+        "instructions": "Drag the tape from point to point to take measurements.",
         "info": [
           {
             "bird": "a",
@@ -57,7 +61,7 @@
         ]
       },
       "magnify": {
-        "instructions": "Click on each dot to zoom in and compare features",
+        "instructions": "Drag the magnifier from point to point to compare features.",
         "info": [
           {
             "bird": "a",
@@ -83,7 +87,7 @@
         ]
       },
       "listen": {
-        "instructions": "Click on the microphones to record each of bird's call.",
+        "instructions": "Drag the microphone from bill to bill to compare birdcalls.",
         "info": [
           {
             "bird": "a",
@@ -109,7 +113,7 @@
         ]
       },
       "genetic": {
-        "instructions": "Take a tissue sampe of each bird",
+        "instructions": "Drag the tweezers from the target to the test tube.",
         "info": [
           {
             "bird": "a",
@@ -132,8 +136,11 @@
     "range": {
       "headline": "Range Map",
       "copy": [
-        "Populations A and B are interbreeding with each other, but neither is interbreeding with population C on the Japurá’s north bank—these toucans are evolving in isolation within their own tiny territory.",
-        "To see if this same pattern held true for other animals, the team tried another experiment: comparing bird parasites. "
+        "Mapping out the ranges for Ivory-billed Araçari populations, the team verified that A and B must be crossing the Solimões to interbreed, since they're genetically identical.",
+
+        "However, neither A nor B is crossing the lower reaches of the Japurá where it approaches the Solimões. Population C is evolving in isolation within its own tiny territory!",
+
+        "But just how big a barrier is the Japurá to gene sharing between other animals?"
       ],
       "link": {
         "copy": "continue",
@@ -141,7 +148,7 @@
       }
     },
     "lice": {
-      "instructions": "Take a tissue sample from each chewing lice.",
+      "instructions": "Drag the tweezers from the target to the test tube.",
       "info": [
         {
           "lice": "a",
@@ -161,10 +168,11 @@
       ]
     },
     "conclusion_1": {
+      "note": " THIS IS UNUSED NOW!",
       "headline": "Conclusion",
       "copy": [
         "It tells us two things.",
-        "First, you and the team have redefined the family trees of both Ivory-billed Araçari and their chewing lice, proving that there’s more diversity in Amazonia than previously understood. "
+        "First, you and the team have redefined the family trees of both Ivory-billed Araçari and their chewing lice, proving that there's more diversity in Amazonia than previously understood. "
         ],
       "link": {
         "copy": "continue",
@@ -174,8 +182,9 @@
     "conclusion_2": {
       "headline": "Conclusion",
       "copy": [
-        "And you’ve uncovered evidence that confirms the existence of a previously unrecognized Area of Endemism (recently named the Jaú). Congratulations!",
-        "Through studies like these, we can continue to identify species that are evolving in isolation and take appropriate actions to protect both them and their habitats."
+        "By demonstrating that more than one species experiences a barrier to interbreeding along the lower reaches of the Japurá, you and the team have helped confirm the existence of a previously unrecognized Area of Endemism (recently named the Jaú.) Congratulations!",
+
+        "​Through research like this, we can continue to identify and study species that are evolving in isolation and take appropriate actions to protect them and their habitats."
         ],
       "link": {
         "copy": "start over",
@@ -191,7 +200,7 @@
           "The first stage in determining family relationships between birds involves detailed comparisons of their physical traits: their size, coloration, and even their birdcalls."
         ],
         "next": {
-          "copy": "Let's begin by taking measurements of each Ivory-billed Araçari population",
+          "copy": "Let's begin by taking measurements of birds from each population to see if they differ in size.",
           "link": {
             "copy": "begin",
             "href": "#measurements"
@@ -201,7 +210,7 @@
       {
         "id": "measurements_quiz",
         "type": "quiz",
-        "headline": "Did you see the differences between the birds' sizes?",
+        "headline": "Do you see BIG differences in the birds' sizes? <br><span class='hint'>(HINT: millimeters are tiny units of measurement.)</span>",
         "sizes": [
           {
             "id": "a",
@@ -225,7 +234,7 @@
         "answers": [
           {
             "answer": "yes",
-            "headline": "Wrong answer...",
+            "headline": "Sorry...",
             "subhead": "Remember, millimeters are tiny units of measurement.",
             "isCorrect": false
           },
@@ -235,12 +244,12 @@
             "isCorrect": true
           }
         ],
-        "copy": "When the team measured the wings, bills, tails, and other features of serveral specimens from each Ivory-billed Araçari population, the birds appeared to be virtually the same size",
+        "copy": "When the team measured the wings, bills, tails, and other features of several specimens from each Ivory-billed Araçari population, the birds appeared to be <em>almost</em> the same size.",
         "next": {
-          "copy": "Next, look at each bird to see if the colors and patterns of their feathers and bills differ",
+          "copy": "Next, listen to recordings of individuals and flocks from each population to compare their birdcalls.",
           "link": {
             "copy": "continue",
-            "href": "#magnify"
+            "href": "#listen"
           }
         }
       },
@@ -274,25 +283,26 @@
       {
         "id": "magnify_quiz",
         "type": "quiz",
-        "headline": "Did you find any differences between the birds’ appearances?",
+        "headline": "​Do you see BIG differences in the birds' appearances? <br><span class='hint'>(HINT: look closely at their bills and eye rings.)</span>",
         "answers": [
           {
             "answer": "yes",
             "isCorrect": true,
-            "headline": "You’re right!"
+            "headline": "You're right!"
           },
           {
             "answer": "no",
             "isCorrect": false,
-            "headline": "Wrong answer..."
+            "headline": "Sorry..."
           }
         ],
-        "copy": "When the team compared the appearance of several specimens from each Ivory-billed Araçari population, their plumage appeared to be virtually identical, but the coloration of their bills and eye rings differed slightly.",
+        "copy": "When the team compared the appearance of several specimens from each Ivory-billed Araçari population, their plumage appeared to be identical, although their eye rings and bills differed slightly.",
         "next": {
-          "copy": "Now listen to each population’s bird call to compare them. Keep in mind that the recordings feature both calm individuals and excited groups of birds.",
+          "copy": "Good job! You've confirmed the team's results by demonstrating that the three Ivory-billed Araçari populations appear to be <em>almost</em> identical—that's why they've long been considered members of the same species.",
           "link": {
             "copy": "continue",
-            "href": "#listen"
+            "modal": "open-modal",
+            "href": "#step_1_conclusion"
           }
         }
       },
@@ -314,7 +324,7 @@
       {
         "id": "listen_quiz",
         "type": "quiz",
-        "headline": "Did you hear many differences in the way these birds called to one another?",
+        "headline": "​Do you hear BIG differences in the birdcalls? <br><span class='hint'>(HINT: pay attention only to pitch, tone, and rhythm, not the speed or number of calls.)</span>",
         "audio": [
           {
             "id": "a",
@@ -333,29 +343,29 @@
           {
             "answer": "yes",
             "isCorrect": false,
-            "headline": "Wrong answer..."
+            "headline": "Sorry..."
           },
           {
             "answer": "no",
             "isCorrect": true,
-            "headline": "You’re right!"
+            "headline": "You're right!"
           }
         ],
-        "copy": "When the team compared the calls and sonograms of several specimens from each Ivory-billed Araçari population, they all appeared to be “singing from the same songbook.”",
+        "copy": "When the team compared the calls and sonograms of several specimens from each Ivory-billed Araçari population, <em>the patterns of the calls were virtually identical.</em>",
         "next": {
-          "copy": "You’ve confirmed the team’s results by demonstrating that the three Ivory-billed Araçari populations appear to be almost identical—that’s why they’ve long been considered members of the same species. ",
+          "copy": "Next, closely examine birds from each population to see if their plumage, eyes, and bills differ.",
           "link": {
             "copy": "continue",
-            "modal": "open-modal",
-            "href": "#step_1_conclusion"
+            "href": "#magnify"
           }
         }
       },
       {
         "id": "step_1_conclusion",
         "type": "text",
+        "headline": "Reclassifying Relationships",
         "copy": [
-          "You’ve also confirmed that the only apparent difference between them is bill and eye-ring coloration, which is why each population has its own subspecies name."
+          "But by confirming the minor differences between their eye-ring and bill coloration, you've also helped each population earn recognition as a subspecies of Ivory-billed Araçari."
           ],
         "list": [
           "A:  Pteroglossus azara <strong>mariae</strong>",
@@ -363,7 +373,7 @@
           "C:  Pteroglossus azara <strong>azara</strong>"
         ],
         "next": {
-          "copy": "Let’s see if the DNA of these birds tells the same story...",
+          "copy": "Let's see if the DNA of these birds tells the same story...",
           "link": {
             "copy": "continue",
             "href": "#genetic"
@@ -375,10 +385,10 @@
         "type": "text",
         "headline": "Step 2: Genetic Comparison",
         "copy": [
-          "Today’s scientists don’t have to rely on appearances alone to classify species. They have another tool in their toolbox—genetic sequencing."
+          "Today's scientists don't have to rely on appearances alone to classify species. They have another tool in their toolbox—genetic sequencing."
           ],
         "next": {
-          "copy": "Tweeze off a tissue sample from each bird and send it out for sequencing to pinpoint how closely related these Ivory-billed Araçari are to one another.",
+          "copy": "Take a DNA sample of birds from each Ivory-billed Araçari population to determine their relationships.",
           "link": {
             "copy": "begin",
             "href": "#genetic"
@@ -388,7 +398,7 @@
       {
         "id": "genetic_quiz",
         "type": "dna",
-        "headline": "Which bird’s gene sequence is different?",
+        "headline": "Do you see ANY differences in the birds' genes? <br><span class='hint'>(HINT: slide the bar slowly along the gene sequences, then select which bird's DNA doesn't match.)</span>",
         "subhead": "Slide the highlighter along gene sequences and select the one that is different.",
         "answers": [
           {
@@ -408,13 +418,12 @@
           }
         ],
         "correct": {
-          "headline": "You’re right!"
+          "headline": "You're right!"
         },
         "wrong": {
           "headline": "Are you sure?",
           "subhead": "Compare the DNA sequences again and select the one that is different."
         },
-        "copy": "When the team compared samples of DNA taken from several specimens of the three <br/>Ivory-billed Araçari populations, the DNA of population C didn’t match the other two!",
         "next": {
           "link": {
             "copy": "continue",
@@ -425,17 +434,18 @@
       {
         "id": "step_2_conclusion",
         "type": "text-image",
-        "headline": "Good job!",
+        "headline": "Reclassifying Relationships",
         "copy": [
-          "Both you and the team have now demonstrated that population C (P.a. azara) is genetically distinct—a completely separate species from the other two Ivory-billed Araçari populations, not just a subspecies.",
-          "In other words, the family tree would show that A and B share the same twig, while C branches off on its own.  "
+          "By confirming that population C is genetically distinct, you and the team have altered our understanding of the Ivory-billed Araçari family tree. Populations A and B share the same twig, while C branches off on its own.",
+
+          "This may mean that population C should be reclassified as a species, not a subspecies!"
         ],
         "image": {
           "src": "images/step_2_conclusion.jpg",
           "alt": "Pteroglossus azara"
         },
         "next": {
-          "copy": "To understand how this may have happened, the team mapped the geographic ranges of each population...",
+          "copy": "Let's look at a map to see what's keeping these species on separate evolutionary tracks",
           "link": {
             "copy": "continue",
             "href": "#step_3"
@@ -446,9 +456,11 @@
         "id": "step_3",
         "type": "text",
         "headline": "Step 3: Range Mapping",
-        "copy": ["When the team took a closer look at the geographical ranges of each Ivory-billed Araçari population, they noticed that the Japurá River seems to play a role in their relationship."],
+        "copy": [
+          "To understand why species begin evolving separately, scientists look at the landscape for barriers that prevent interbreeding."
+          ],
         "next": {
-          "copy": "Let’s go back to the map to take another look.",
+          "copy": "Let's examine the range maps to see what separates each Ivory-billed Araçari population.",
           "link": {
             "copy": "begin",
             "href": "#range"
@@ -459,9 +471,9 @@
         "id": "step_4",
         "type": "text",
         "headline": "Step 4: Parasite Comparison",
-        "copy": ["The team found that all three Ivory-billed Araçari populations appeared to be carrying the same species of chewing lice (Myrsidea dorotheae). But as we’ve learned, appearances can be deceiving."],
+        "copy": ["To see if this same evolutionary pattern of isolation held true for other species, the team tried another experiment: comparing the genes of a common parasite."],
         "next": {
-          "copy": "Compare the gene sequences of each toucan population’s chewing lice to see if any are different.",
+          "copy": "Take DNA samples of Chewing Lice found on each Ivory-billed Aracari population to determine their relationships.",
           "link": {
             "copy": "begin",
             "href": "#lice-section"
@@ -471,7 +483,7 @@
       {
         "id": "lice_quiz",
         "type": "dna",
-        "headline": "Which lice’s DNA doesn’t match the other two?",
+        "headline": "Do you see ANY differences in these louse genes? <br><span class='hint'>(HINT: slide the bar slowly along the gene sequences, then select which louse's DNA doesn't match the others.)</span>",
         "subhead": "Slide the highlighter along gene sequences and select the one that is different.",
         "answers": [
           {
@@ -491,14 +503,15 @@
           }
         ],
         "correct": {
-          "headline": "You’re right!"
+          "headline": "You're right!"
         },
         "wrong": {
           "headline": "Are you sure?",
           "subhead": "Compare the DNA sequences again and select the one that is different."
         },
-        "copy": "When the team compared samples of DNA taken from several specimens of chewing lice found on the three Ivory-billed Araçari populations, the genes of the lice on toucan population C were unique.",
+        "copy": "When the team compared samples of DNA taken from several specimens of Chewing Lice found on the three Ivory-billed Aracari populations, the genes of the lice from population C were unique.",
         "next": {
+          "copy": "Good job! You've confirmed the team's results by demonstrating that, although the lice appear almost identical, those found on population C are genetically distinct from those found on the other two Ivory-billed Araçari populations.",
           "link": {
             "copy": "continue",
             "href": "#step_4_conclusion"
@@ -508,23 +521,56 @@
       {
         "id": "step_4_conclusion",
         "type": "text-image",
-        "headline": "Good job!",
+        "headline": "Reclassifying Relationships",
         "copy": [
-          "You’ve now demonstrated that the lice on population C are genetically distinct from the lice found on the other two Ivory-billed Araçari populations.",
-          "You’ve also proven that a pattern exists: the Japurá River appears to isolate both the birds and lice in population C, preventing them from interbreeding with populations A and B."
+          "By revealing the true family trees of both Ivory-billed Araçari and their parasites, you've demonstrated that there's more genetic diversity in Amazonia than previously understood."
         ],
         "image": {
           "src": "images/step_4_conclusion.jpg",
           "alt": "chewing lice"
         },
         "next": {
-          "copy": "To understand how this may have happened, the team mapped the geographic ranges of each population...",
+          "copy": "Let's look at a map to see how this new knowledge affects Amazonia's Areas of Endemism.",
           "link": {
             "copy": "continue",
-            "href": "#conclusion_1"
+            "href": "#conclusion_2"
           }
         }
       }
     ]
+  },
+  "magnify-sample": {
+    "physical": {
+      "magnify": {
+        "instructions": "Drag the magnifier from point to point to compare features.",
+        "info": [
+          {
+            "bird": "a",
+            "images": {
+              "small": "/images/bird-a.jpg",
+              "large": "/images/bird-a-large.jpg"
+            }
+          },
+          {
+            "bird": "b",
+            "images": {
+              "small": "/images/bird-b.jpg",
+              "large": "/images/bird-b-large.jpg"
+            }
+          },
+          {
+            "bird": "c",
+            "images": {
+              "small": "/images/bird-c.jpg",
+              "large": "/images/bird-c-large.jpg"
+            }
+          }
+        ],
+        "link": {
+          "copy": "continue",
+          "href": "#magnify_quiz"
+        }
+      }
+    }
   }
 }

@@ -4,7 +4,7 @@
   .modal-dialog
     .modal-content
       .modal-header.text-center
-        h2.pre= headline
+        h2.pre!= headline
         .answers.post
           each answer in answers
             if answer.isCorrect == true
@@ -25,7 +25,7 @@
                   p= answer.subhead
 
         .copy.post.hidden
-          p= copy
+          p!= copy
 
       .modal-body.text-center
         if id != 'magnify_quiz'
@@ -55,8 +55,8 @@
 
 
         .next.post.hidden
-          p= next.copy
-          if id == 'listen_quiz'
+          p!= next.copy
+          if id == 'magnify_quiz'
             a.btn.open-modal(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
           else
             a.btn.router(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy

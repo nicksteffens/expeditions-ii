@@ -111,7 +111,7 @@ a.btn, a.btn:hover, a.btn:visited {
   margin-top: 48px;
   width: 285px;
 
-  .copy-container {
+  .copy-container, .img-container {
     background: #fff;
     padding: 14px 18px;
     border: 1px solid #000;
@@ -200,6 +200,19 @@ a.btn, a.btn:hover, a.btn:visited {
 
 #intro_2 {
   .bg-index-02;
+
+  #birds-img.bg-container {
+    display: block;
+    position: absolute;
+    left: 15px;
+    width: auto;
+
+    .img-container {
+      height: 456px;
+    }
+  }
+
+
 }
 
 #physical {
@@ -265,6 +278,7 @@ a.btn, a.btn:hover, a.btn:visited {
     top: 422px;
     width: 100%;
 
+
     h3 {
       display:inline-block;
       margin: 0 auto;
@@ -272,7 +286,6 @@ a.btn, a.btn:hover, a.btn:visited {
       background: #fff;
       color: @font-blue;
       font-size: 20px;
-
       box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4);
     }
   }
@@ -288,23 +301,61 @@ a.btn, a.btn:hover, a.btn:visited {
   #magnify {
     position: relative;
 
-    .icon {
-      background: url('../images/icon-magnify.png') 0 0 no-repeat;
-      &.feather {
-        top: 155px;
-        left: 153px;
+    .instructions {
+      position: static;
+      top: auto;
+
+      h3 {
+        margin: 25px auto;
+        padding: 0;
+        box-shadow: none;
       }
 
-      &.bill {
-        top: 55px;
-        left: 161px;
-      }
-
-      &.tail {
-
+      .btn {
+        margin: 15px auto;
+        box-shadow: none;
       }
     }
+
+    .icon {
+      position: absolute;
+
+      &.close  {
+        display: none;
+        opacity: 1;
+        top: 10px;
+        right: 20px;
+        background: url('../images/icon-close.png') 0 0 no-repeat;
+      }
+
+    }
+
+
+
+    .col-xs-4.bird {
+      height: 500px;
+      background: none;
+
+      &.nogutter {
+        padding: 0;
+      }
+
+      .small {
+        display: block;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        cursor:url(../images/icon-magnify.png),auto;
+
+        & .close {
+          cursor: pointer;
+        }
+      }
+
+    }
   }
+
+
 
   #listen {
     position: relative;
@@ -328,8 +379,12 @@ a.btn, a.btn:hover, a.btn:visited {
 #range {
   .bg-range;
 
+  .bg-container {
+    width: 315px;
+  }
+
   hr {
-    margin-top: 60px;
+    margin-top: 40px;
   }
 }
 
@@ -406,8 +461,12 @@ a.btn, a.btn:hover, a.btn:visited {
 #conclusion_2 {
   background: url('../images/bg-conclusion-2.jpg') 0 0 no-repeat;
 
+  .bg-container {
+    width: auto;
+  }
+
   hr {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 }
 
@@ -450,9 +509,10 @@ a.btn, a.btn:hover, a.btn:visited {
       color: @font-blue;
       font-size: 30px;
       margin-bottom: 10px;
+
     }
 
-    p {
+    p, span.hint {
       color: @font-dk-grey;
       font-size: 18px;
     }
@@ -516,6 +576,11 @@ a.btn, a.btn:hover, a.btn:visited {
 
     .pre h2  {
         color: #000;
+    }
+
+    span.hint {
+      color: @font-dk-grey;
+      font-size: 18px;
     }
 
     .modal-body {
@@ -627,6 +692,10 @@ a.btn, a.btn:hover, a.btn:visited {
 
   .modal-header {
     border-bottom: none;
+
+    h2.blue {
+      color: @font-blue;
+    }
 
   }
 
