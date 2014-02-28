@@ -66,22 +66,22 @@
           {
             "bird": "a",
             "images": {
-              "small": "/images/bird-a.jpg",
-              "large": "/images/bird-a-large.jpg"
+              "small": "images/bird-a.jpg",
+              "large": "images/bird-a-large.jpg"
             }
           },
           {
             "bird": "b",
             "images": {
-              "small": "/images/bird-b.jpg",
-              "large": "/images/bird-b-large.jpg"
+              "small": "images/bird-b.jpg",
+              "large": "images/bird-b-large.jpg"
             }
           },
           {
             "bird": "c",
             "images": {
-              "small": "/images/bird-c.jpg",
-              "large": "/images/bird-c-large.jpg"
+              "small": "images/bird-c.jpg",
+              "large": "images/bird-c-large.jpg"
             }
           }
         ],
@@ -542,22 +542,22 @@
           {
             "bird": "a",
             "images": {
-              "small": "/images/bird-a.jpg",
-              "large": "/images/bird-a-large.jpg"
+              "small": "images/bird-a.jpg",
+              "large": "images/bird-a-large.jpg"
             }
           },
           {
             "bird": "b",
             "images": {
-              "small": "/images/bird-b.jpg",
-              "large": "/images/bird-b-large.jpg"
+              "small": "images/bird-b.jpg",
+              "large": "images/bird-b-large.jpg"
             }
           },
           {
             "bird": "c",
             "images": {
-              "small": "/images/bird-c.jpg",
-              "large": "/images/bird-c-large.jpg"
+              "small": "images/bird-c.jpg",
+              "large": "images/bird-c-large.jpg"
             }
           }
         ],
