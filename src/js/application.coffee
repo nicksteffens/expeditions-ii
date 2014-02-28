@@ -273,7 +273,7 @@ Listeners = {
           .parent()
           .parent()
           .find('.close')
-          .click()
+          .toggle()
       )
 
     # quiz route
@@ -291,7 +291,7 @@ Listeners = {
         url: 'images/bird-' + i + '-large.jpg'
         on: 'click'
         callback: ()->
-          # after images loaded
+          console.log 'image loaded'
 
 
 }
