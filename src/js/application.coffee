@@ -23,6 +23,7 @@ Router = {
       Listeners.sectionInteractions(currentSection)
 
 
+
   route: (section)->
     console.log 'Incoming Section ', section
     Router.toggleSections(section)
@@ -134,13 +135,14 @@ Router = {
       openModal = null
       switch section
         when "#measurements" then openModal = "#measurements_quiz"
-        when "#magnify" then openModal = "#magnify_quiz"
+        when "#magnify_quiz" then openModal = "#magnify_quiz"
         when "#listen" then openModal = "#listen_quiz"
         when "#genetic" then openModal = "#genetic_quiz"
         when "#lice-section" then openModal = "#lice_quiz"
         when "#range" then openModal = "#step_4"
 
       if openModal != null
+        console.log openModal
         $(openModal).modal({backdrop: "static"})
         $(openModal).modal('show')
         Router.modals.secondary(openModal)
@@ -179,7 +181,7 @@ Router = {
 Listeners = {
 
   sectionInteractions: (section)->
-    howManyIntercations = $(section).find('.icon').length
+    howManyIntercations = $(section).find('.icon:not(.close)').length
 
     if howManyIntercations > 0
       currentInteractions = 0
@@ -195,7 +197,7 @@ Listeners = {
 
           if currentInteractions == howManyIntercations
             # open modal
-            if section != '#magnify' && section != "#listen"
+            if section != "#listen"
               Router.modals.open(section)
 
             # wait for the last modal to close for magnify / listen
@@ -203,7 +205,6 @@ Listeners = {
 
               modalId = $(this).attr('data-target')
               $(modalId).on('hidden.bs.modal', ()->
-
                 Router.modals.open(section)
 
                 )
@@ -218,6 +219,7 @@ Listeners = {
               $(section).find(".hidden").removeClass('hidden')
 
         )
+
 
   measurements: ()->
     # measurements
@@ -274,6 +276,12 @@ Listeners = {
           .click()
       )
 
+    # quiz route
+    $('#magnify .instructions .btn').click ()->
+      console.log 'magnify router'
+      Router.modals.open($(this).attr('href'))
+
+
   attachZoom: (i)->
     $('.bird.' + i + ' img.source')
       .wrap('<span style="display:inline-block"></span>')
@@ -283,7 +291,7 @@ Listeners = {
         url: 'images/bird-' + i + '-large.jpg'
         on: 'click'
         callback: ()->
-          console.log i + ' loaded'
+          # after images loaded
 
 
 }

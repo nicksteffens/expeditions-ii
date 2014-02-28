@@ -65,26 +65,30 @@
         "info": [
           {
             "bird": "a",
-            "position": "feather",
-            "modal": "#magnify_chest",
-            "common": "Ivory-billed Araçari",
-            "scientific": "Pteroglossus azara"
+            "images": {
+              "small": "/images/bird-a.jpg",
+              "large": "/images/bird-a-large.jpg"
+            }
           },
           {
             "bird": "b",
-            "position": "tail",
-            "modal": "#magnify_tail",
-            "common": "Ivory-billed Araçari",
-            "scientific": "Pteroglossus azara"
+            "images": {
+              "small": "/images/bird-b.jpg",
+              "large": "/images/bird-b-large.jpg"
+            }
           },
           {
             "bird": "c",
-            "position": "bill",
-            "modal": "#magnify_beak",
-            "common": "Ivory-billed Araçari",
-            "scientific": "Pteroglossus azara"
+            "images": {
+              "small": "/images/bird-c.jpg",
+              "large": "/images/bird-c-large.jpg"
+            }
           }
-        ]
+        ],
+        "link": {
+          "copy": "continue",
+          "href": "#magnify_quiz"
+        }
       },
       "listen": {
         "instructions": "Drag the microphone from bill to bill to compare birdcalls.",
@@ -252,33 +256,6 @@
             "href": "#listen"
           }
         }
-      },
-      {
-        "id": "magnify_chest",
-        "type": "image-horizontal",
-        "images": [
-          "images/magnify-chest-a.jpg",
-          "images/magnify-chest-b.jpg",
-          "images/magnify-chest-c.jpg"
-        ]
-      },
-      {
-        "id": "magnify_tail",
-        "type": "image-horizontal",
-        "images": [
-          "images/magnify-tail-a.jpg",
-          "images/magnify-tail-b.jpg",
-          "images/magnify-tail-c.jpg"
-        ]
-      },
-      {
-        "id": "magnify_beak",
-        "type": "image-vertical",
-        "images": [
-          "images/magnify-beak-a.jpg",
-          "images/magnify-beak-b.jpg",
-          "images/magnify-beak-c.jpg"
-        ]
       },
       {
         "id": "magnify_quiz",
