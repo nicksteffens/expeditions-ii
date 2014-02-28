@@ -339,16 +339,35 @@
       },
       {
         "id": "step_1_conclusion",
-        "type": "text",
+        "type": "text-image",
         "headline": "Reclassifying Relationships",
         "copy": [
           "But by confirming the minor differences between their eye-ring and bill coloration, you've also helped each population earn recognition as a subspecies of Ivory-billed Araçari."
           ],
-        "list": [
-          "A:  Pteroglossus azara <strong>mariae</strong>",
-          "B:  Pteroglossus azara <strong>flavirostris</strong>",
-          "C:  Pteroglossus azara <strong>azara</strong>"
-        ],
+        "list": {
+          "a": {
+            "name": "mariae",
+            "image": {
+              "src": "images/bird-a-conclusion.jpg",
+              "alt": "Pteroglossus azara mariae"
+            }
+          },
+          "b": {
+            "name": "flavirostris",
+            "image": {
+              "src": "images/bird-b-conclusion.jpg",
+              "alt": "Pteroglossus azara flavirostris"
+            }
+          },
+          "c": {
+            "name": "azara",
+            "image": {
+              "src": "images/bird-c-conclusion.jpg",
+              "alt": "Pteroglossus azara azara"
+            }
+          }
+
+        },
         "next": {
           "copy": "Let's see if the DNA of these birds tells the same story...",
           "link": {

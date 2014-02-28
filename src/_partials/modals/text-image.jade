@@ -17,9 +17,19 @@
             .col-xs-10.col-xs-offset-1.text-center
               p!= paragraph
 
-        .row
-          .col-xs-12
-            img(src=image.src alt=image.alt)
+        if id != 'step_1_conclusion'
+          .row
+            .col-xs-12
+              img(src=image.src alt=image.alt)
+        else
+          .row
+            .col-xs-12.text-center
+              .row
+                each bird in list
+                  .col-xs-4(class=bird.name)
+                    img(src=bird.image.src alt=bird.image.alt)
+                    p.scientific Pteroglossus azara <strong>#{bird.name}</strong>
+
         hr.dashed
 
         .row

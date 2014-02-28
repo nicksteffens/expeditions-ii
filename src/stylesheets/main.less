@@ -3,6 +3,8 @@
 @font-grey: #acacac;
 @font-dk-grey: #636363;
 @font-blue: #4caac7;
+@font-yellow: #ffcb3f;
+@font-green: #869a1f;
 
 @border-red: #cc3d17;
 @border-dk-red: #621d0b;
@@ -736,6 +738,25 @@ a.btn, a.btn:hover, a.btn:visited {
 
   .btn.listen {
     margin-top: 0;
+  }
+
+  p.scientific {
+    font-style: italic;
+    font-size: 14px;
+    color: @font-dk-grey;
+    margin-top: 18px;
+  }
+
+  .mariae p.scientific strong {
+    color: @font-blue;
+  }
+
+  .flavirostris p.scientific strong {
+    color: @font-yellow;
+  }
+
+  .azara p.scientific strong {
+    color: @font-green
   }
 
 }
