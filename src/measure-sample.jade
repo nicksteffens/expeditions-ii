@@ -1,0 +1,34 @@
+physical = {"measurements": {"instructions": "Drag the tape from point to point to take measurements.","info": [  {    "bird": "a",    "beak": "126.3 mm",    "wing": "127.9 mm",    "tail": "90.7 mm",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara"  },  {    "bird": "b",    "beak": "127.2 mm",    "wing": "135.4 mm",    "tail": "89.6 mm",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara"  },  {    "bird": "c",    "beak": "127.0 mm",    "wing": "131.0 mm",    "tail": "90.1 mm",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara"  }]}}
+
+mixin eachBird(obj)
+  .col-xs-4(class="bird #{obj.bird}")
+    ul.text-right
+      li.info-beak Beak:
+        strong.hidden &nbsp;#{obj.beak}
+      li.info-wing Wing:
+        strong.hidden &nbsp;#{obj.wing}
+      li.info-tail Tail:
+        strong.hidden &nbsp;&nbsp;&nbsp;#{obj.tail}
+
+    a.icon.beak
+    a.icon.wing
+    a.icon.tail
+
+    .footer.text-center
+      h3.common= obj.common
+      p.scientific= obj.scientific
+
+#physical.row
+  .col-12-md
+
+    #measurements.content.section(data-section="#measurements")
+      .row
+        each entry in physical.measurements.info
+          +eachBird(entry)
+
+      .instructions.text-center
+        h3= physical.measurements.instructions
+
+
+
+

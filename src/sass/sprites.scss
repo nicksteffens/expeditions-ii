@@ -1,0 +1,59 @@
+@import "compass/utilities/sprites";
+@import "compass/css3";
+$measure-beak-layout: horizontal;
+$measure-tail-layout: horizontal;
+$measure-wing-layout: horizontal;
+
+@import "measure-beak/*.png";
+@import "measure-tail/*.png";
+@import "measure-wing/*.png";
+
+@include all-measure-tail-sprites;
+@include all-measure-wing-sprites;
+
+
+.icon.beak {
+
+  &.animate, &.complete {
+    background-image: $measure-beak-sprites;
+    margin: 0 -50px;
+    @include measure-beak-sprite-dimensions(img-01)
+  };
+
+  &.complete {
+    @include measure-beak-sprite-position(img-06);
+  }
+}
+
+.icon.tail {
+
+  &.animate, &.complete {
+    background-image: $measure-tail-sprites;
+    margin: -75px -30px 0;
+    @include measure-tail-sprite-dimensions(img-01);
+  }
+
+  &.complete {
+    @include measure-tail-sprite-position(img-06);
+  }
+}
+
+.icon.wing {
+
+
+  &.animate, &.complete {
+    background-image: $measure-wing-sprites;
+    margin: -60px -50px 0;
+    @include measure-wing-sprite-dimensions(img-01);
+  }
+
+  &.complete {
+    @include measure-wing-sprite-position(img-06);
+  }
+}
+
+
+
+
+
+

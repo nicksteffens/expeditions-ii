@@ -1,0 +1,124 @@
+@import "compass/utilities/sprites/base";
+
+// General Sprite Defaults
+// You can override them before you import this file.
+$measure-tail-sprite-base-class: ".measure-tail-sprite" !default;
+$measure-tail-sprite-dimensions: false !default;
+$measure-tail-position: 0% !default;
+$measure-tail-spacing: 0 !default;
+$measure-tail-repeat: no-repeat !default;
+$measure-tail-prefix: '' !default;
+$measure-tail-clean-up: true !default;
+$measure-tail-layout:vertical !default;
+$measure-tail-inline: false !default;
+
+  
+ // These variables control the generated sprite output
+ // You can override them selectively before you import this file.
+ 
+   $measure-tail-tail-01-position: $measure-tail-position !default;
+   $measure-tail-tail-01-spacing:  $measure-tail-spacing !default;
+   $measure-tail-tail-01-repeat:   $measure-tail-repeat !default;
+ 
+   $measure-tail-tail-02-position: $measure-tail-position !default;
+   $measure-tail-tail-02-spacing:  $measure-tail-spacing !default;
+   $measure-tail-tail-02-repeat:   $measure-tail-repeat !default;
+ 
+   $measure-tail-tail-03-position: $measure-tail-position !default;
+   $measure-tail-tail-03-spacing:  $measure-tail-spacing !default;
+   $measure-tail-tail-03-repeat:   $measure-tail-repeat !default;
+ 
+   $measure-tail-tail-04-position: $measure-tail-position !default;
+   $measure-tail-tail-04-spacing:  $measure-tail-spacing !default;
+   $measure-tail-tail-04-repeat:   $measure-tail-repeat !default;
+ 
+   $measure-tail-tail-05-position: $measure-tail-position !default;
+   $measure-tail-tail-05-spacing:  $measure-tail-spacing !default;
+   $measure-tail-tail-05-repeat:   $measure-tail-repeat !default;
+ 
+   $measure-tail-tail-06-position: $measure-tail-position !default;
+   $measure-tail-tail-06-spacing:  $measure-tail-spacing !default;
+   $measure-tail-tail-06-repeat:   $measure-tail-repeat !default;
+ 
+
+ $measure-tail-sprites: sprite-map("measure-tail/*.png",
+ 
+   $measure-tail-tail-01-position: $measure-tail-tail-01-position, 
+   $measure-tail-tail-01-spacing:  $measure-tail-tail-01-spacing, 
+   $measure-tail-tail-01-repeat:   $measure-tail-tail-01-repeat,
+ 
+   $measure-tail-tail-02-position: $measure-tail-tail-02-position, 
+   $measure-tail-tail-02-spacing:  $measure-tail-tail-02-spacing, 
+   $measure-tail-tail-02-repeat:   $measure-tail-tail-02-repeat,
+ 
+   $measure-tail-tail-03-position: $measure-tail-tail-03-position, 
+   $measure-tail-tail-03-spacing:  $measure-tail-tail-03-spacing, 
+   $measure-tail-tail-03-repeat:   $measure-tail-tail-03-repeat,
+ 
+   $measure-tail-tail-04-position: $measure-tail-tail-04-position, 
+   $measure-tail-tail-04-spacing:  $measure-tail-tail-04-spacing, 
+   $measure-tail-tail-04-repeat:   $measure-tail-tail-04-repeat,
+ 
+   $measure-tail-tail-05-position: $measure-tail-tail-05-position, 
+   $measure-tail-tail-05-spacing:  $measure-tail-tail-05-spacing, 
+   $measure-tail-tail-05-repeat:   $measure-tail-tail-05-repeat,
+ 
+   $measure-tail-tail-06-position: $measure-tail-tail-06-position, 
+   $measure-tail-tail-06-spacing:  $measure-tail-tail-06-spacing, 
+   $measure-tail-tail-06-repeat:   $measure-tail-tail-06-repeat,
+ 
+ $layout: $measure-tail-layout,
+ $cleanup: $measure-tail-clean-up
+ );
+
+
+// All sprites should extend this class
+// The measure-tail-sprite mixin will do so for you.
+@if $measure-tail-inline {
+  #{$measure-tail-sprite-base-class} {
+    background-image: inline-sprite($measure-tail-sprites);
+  } 
+} @else {
+  #{$measure-tail-sprite-base-class} {
+    background: $measure-tail-sprites no-repeat;
+  }
+}
+//sass functions to return the dimensions of a sprite image as units
+
+  @function measure-tail-sprite-width($name) {
+    $file: sprite_file($measure-tail-sprites, $name);
+    @return image-width($file);
+  }
+
+  @function measure-tail-sprite-height($name) {
+    $file: sprite_file($measure-tail-sprites, $name);
+    @return image-height($file);
+  }
+
+
+// Use this to set the dimensions of an element
+// based on the size of the original image.
+@mixin measure-tail-sprite-dimensions($name) {
+  @include sprite-dimensions($measure-tail-sprites, $name)
+}
+
+// Move the background position to display the sprite.
+@mixin measure-tail-sprite-position($name, $offset-x: 0, $offset-y: 0) {
+  @include sprite-background-position($measure-tail-sprites, $name, $offset-x, $offset-y)
+}
+
+// Extends the sprite base class and set the background position for the desired sprite.
+// It will also apply the image dimensions if $dimensions is true.
+@mixin measure-tail-sprite($name, $dimensions: $measure-tail-sprite-dimensions, $offset-x: 0, $offset-y: 0) {
+  @extend #{$measure-tail-sprite-base-class};
+  @include sprite($measure-tail-sprites, $name, $dimensions, $offset-x, $offset-y)
+}
+
+@mixin measure-tail-sprites($sprite-names, $dimensions: $measure-tail-sprite-dimensions, $prefix: sprite-map-name($measure-tail-sprites), $offset-x: 0, $offset-y: 0) {
+  @include sprites($measure-tail-sprites, $sprite-names, $measure-tail-sprite-base-class, $dimensions, $prefix, $offset-x, $offset-y)
+}
+
+// Generates a class for each sprited image.
+@mixin all-measure-tail-sprites($dimensions: $measure-tail-sprite-dimensions, $prefix: sprite-map-name($measure-tail-sprites), $offset-x: 0, $offset-y: 0) {
+  @include measure-tail-sprites(tail-01 tail-02 tail-03 tail-04 tail-05 tail-06, $dimensions, $prefix, $offset-x, $offset-y);
+}

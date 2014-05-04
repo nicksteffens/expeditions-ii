@@ -1,0 +1,148 @@
+@import "compass/utilities/sprites/base";
+
+// General Sprite Defaults
+// You can override them before you import this file.
+$measure-wing-sprite-base-class: ".measure-wing-sprite" !default;
+$measure-wing-sprite-dimensions: false !default;
+$measure-wing-position: 0% !default;
+$measure-wing-spacing: 0 !default;
+$measure-wing-repeat: no-repeat !default;
+$measure-wing-prefix: '' !default;
+$measure-wing-clean-up: true !default;
+$measure-wing-layout:vertical !default;
+$measure-wing-inline: false !default;
+
+  
+ // These variables control the generated sprite output
+ // You can override them selectively before you import this file.
+ 
+   $measure-wing-wing-01-position: $measure-wing-position !default;
+   $measure-wing-wing-01-spacing:  $measure-wing-spacing !default;
+   $measure-wing-wing-01-repeat:   $measure-wing-repeat !default;
+ 
+   $measure-wing-wing-02-position: $measure-wing-position !default;
+   $measure-wing-wing-02-spacing:  $measure-wing-spacing !default;
+   $measure-wing-wing-02-repeat:   $measure-wing-repeat !default;
+ 
+   $measure-wing-wing-03-position: $measure-wing-position !default;
+   $measure-wing-wing-03-spacing:  $measure-wing-spacing !default;
+   $measure-wing-wing-03-repeat:   $measure-wing-repeat !default;
+ 
+   $measure-wing-wing-04-position: $measure-wing-position !default;
+   $measure-wing-wing-04-spacing:  $measure-wing-spacing !default;
+   $measure-wing-wing-04-repeat:   $measure-wing-repeat !default;
+ 
+   $measure-wing-wing-05-position: $measure-wing-position !default;
+   $measure-wing-wing-05-spacing:  $measure-wing-spacing !default;
+   $measure-wing-wing-05-repeat:   $measure-wing-repeat !default;
+ 
+   $measure-wing-wing-06-position: $measure-wing-position !default;
+   $measure-wing-wing-06-spacing:  $measure-wing-spacing !default;
+   $measure-wing-wing-06-repeat:   $measure-wing-repeat !default;
+ 
+   $measure-wing-wing-07-position: $measure-wing-position !default;
+   $measure-wing-wing-07-spacing:  $measure-wing-spacing !default;
+   $measure-wing-wing-07-repeat:   $measure-wing-repeat !default;
+ 
+   $measure-wing-wing-08-position: $measure-wing-position !default;
+   $measure-wing-wing-08-spacing:  $measure-wing-spacing !default;
+   $measure-wing-wing-08-repeat:   $measure-wing-repeat !default;
+ 
+   $measure-wing-wing-09-position: $measure-wing-position !default;
+   $measure-wing-wing-09-spacing:  $measure-wing-spacing !default;
+   $measure-wing-wing-09-repeat:   $measure-wing-repeat !default;
+ 
+
+ $measure-wing-sprites: sprite-map("measure-wing/*.png",
+ 
+   $measure-wing-wing-01-position: $measure-wing-wing-01-position, 
+   $measure-wing-wing-01-spacing:  $measure-wing-wing-01-spacing, 
+   $measure-wing-wing-01-repeat:   $measure-wing-wing-01-repeat,
+ 
+   $measure-wing-wing-02-position: $measure-wing-wing-02-position, 
+   $measure-wing-wing-02-spacing:  $measure-wing-wing-02-spacing, 
+   $measure-wing-wing-02-repeat:   $measure-wing-wing-02-repeat,
+ 
+   $measure-wing-wing-03-position: $measure-wing-wing-03-position, 
+   $measure-wing-wing-03-spacing:  $measure-wing-wing-03-spacing, 
+   $measure-wing-wing-03-repeat:   $measure-wing-wing-03-repeat,
+ 
+   $measure-wing-wing-04-position: $measure-wing-wing-04-position, 
+   $measure-wing-wing-04-spacing:  $measure-wing-wing-04-spacing, 
+   $measure-wing-wing-04-repeat:   $measure-wing-wing-04-repeat,
+ 
+   $measure-wing-wing-05-position: $measure-wing-wing-05-position, 
+   $measure-wing-wing-05-spacing:  $measure-wing-wing-05-spacing, 
+   $measure-wing-wing-05-repeat:   $measure-wing-wing-05-repeat,
+ 
+   $measure-wing-wing-06-position: $measure-wing-wing-06-position, 
+   $measure-wing-wing-06-spacing:  $measure-wing-wing-06-spacing, 
+   $measure-wing-wing-06-repeat:   $measure-wing-wing-06-repeat,
+ 
+   $measure-wing-wing-07-position: $measure-wing-wing-07-position, 
+   $measure-wing-wing-07-spacing:  $measure-wing-wing-07-spacing, 
+   $measure-wing-wing-07-repeat:   $measure-wing-wing-07-repeat,
+ 
+   $measure-wing-wing-08-position: $measure-wing-wing-08-position, 
+   $measure-wing-wing-08-spacing:  $measure-wing-wing-08-spacing, 
+   $measure-wing-wing-08-repeat:   $measure-wing-wing-08-repeat,
+ 
+   $measure-wing-wing-09-position: $measure-wing-wing-09-position, 
+   $measure-wing-wing-09-spacing:  $measure-wing-wing-09-spacing, 
+   $measure-wing-wing-09-repeat:   $measure-wing-wing-09-repeat,
+ 
+ $layout: $measure-wing-layout,
+ $cleanup: $measure-wing-clean-up
+ );
+
+
+// All sprites should extend this class
+// The measure-wing-sprite mixin will do so for you.
+@if $measure-wing-inline {
+  #{$measure-wing-sprite-base-class} {
+    background-image: inline-sprite($measure-wing-sprites);
+  } 
+} @else {
+  #{$measure-wing-sprite-base-class} {
+    background: $measure-wing-sprites no-repeat;
+  }
+}
+//sass functions to return the dimensions of a sprite image as units
+
+  @function measure-wing-sprite-width($name) {
+    $file: sprite_file($measure-wing-sprites, $name);
+    @return image-width($file);
+  }
+
+  @function measure-wing-sprite-height($name) {
+    $file: sprite_file($measure-wing-sprites, $name);
+    @return image-height($file);
+  }
+
+
+// Use this to set the dimensions of an element
+// based on the size of the original image.
+@mixin measure-wing-sprite-dimensions($name) {
+  @include sprite-dimensions($measure-wing-sprites, $name)
+}
+
+// Move the background position to display the sprite.
+@mixin measure-wing-sprite-position($name, $offset-x: 0, $offset-y: 0) {
+  @include sprite-background-position($measure-wing-sprites, $name, $offset-x, $offset-y)
+}
+
+// Extends the sprite base class and set the background position for the desired sprite.
+// It will also apply the image dimensions if $dimensions is true.
+@mixin measure-wing-sprite($name, $dimensions: $measure-wing-sprite-dimensions, $offset-x: 0, $offset-y: 0) {
+  @extend #{$measure-wing-sprite-base-class};
+  @include sprite($measure-wing-sprites, $name, $dimensions, $offset-x, $offset-y)
+}
+
+@mixin measure-wing-sprites($sprite-names, $dimensions: $measure-wing-sprite-dimensions, $prefix: sprite-map-name($measure-wing-sprites), $offset-x: 0, $offset-y: 0) {
+  @include sprites($measure-wing-sprites, $sprite-names, $measure-wing-sprite-base-class, $dimensions, $prefix, $offset-x, $offset-y)
+}
+
+// Generates a class for each sprited image.
+@mixin all-measure-wing-sprites($dimensions: $measure-wing-sprite-dimensions, $prefix: sprite-map-name($measure-wing-sprites), $offset-x: 0, $offset-y: 0) {
+  @include measure-wing-sprites(wing-01 wing-02 wing-03 wing-04 wing-05 wing-06 wing-07 wing-08 wing-09, $dimensions, $prefix, $offset-x, $offset-y);
+}

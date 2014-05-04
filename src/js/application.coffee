@@ -25,7 +25,7 @@ Router = {
 
 
   route: (section)->
-    console.log 'Incoming Section ', section
+    # console.log 'Incoming Section ', section
     Router.toggleSections(section)
 
 
@@ -142,7 +142,7 @@ Router = {
         when "#range" then openModal = "#step_4"
 
       if openModal != null
-        console.log openModal
+        # console.log openModal
         $(openModal).modal({backdrop: "static"})
         $(openModal).modal('show')
         Router.modals.secondary(openModal)
@@ -191,7 +191,9 @@ Listeners = {
           ev.preventDefault()
           if $(section).attr('id') != 'magnify'
             $(section).find(".instructions").addClass('hidden')
-            $(this).addClass('checked')
+
+            if $(section).attr('id') != 'measurements'
+              $(this).addClass('checked')
 
           currentInteractions = currentInteractions + 1
 
@@ -212,22 +214,36 @@ Listeners = {
 
             # reset interactions
             currentInteractions = 0
-            $(section).find('.checked').removeClass('checked')
+            if section != "#measurements"
+              Listeners.resetSection(section)
 
-            # reset measurements list
-            if section == "#measurements"
-              $(section).find(".hidden").removeClass('hidden')
+
+
 
         )
 
+  resetSection: (section)->
+    $(section)
+      .find('.checked')
+      .removeClass('checked')
+
+    # reset measurements list
+    if section == "#measurements"
+      $(section).find(".hidden").removeClass('hidden')
+
+
 
   measurements: ()->
+    section = "#measurements"
+    requireAnimations = $(section).find('.icon:not(.close)').length
     # measurements
-    $("#measurements .icon").on({
+    $(section).find('.icon').on({
       "click": (ev)->
+        $self = $(this)
+        $parent = $(this).parent()
         ev.preventDefault();
         if !$(this).hasClass('checked')
-          $parent = $(this).parent()
+          $self.addClass('animate')
 
           if $(this).hasClass('tail')
             area = "tail"
@@ -238,7 +254,31 @@ Listeners = {
           else if $(this).hasClass('beak')
             area = "beak"
 
-          $parent.find('.info-' + area ).children('strong').removeClass('hidden')
+          # end of animation
+          $self.one('webkitAnimationEnd oanimationend msAnimationEnd animationend ', (e)->
+
+              $self
+                .removeClass('animate')
+                .addClass('complete')
+
+              setTimeout( (e)->
+                # show info
+                $parent
+                  .find('.info-' + area )
+                  .children('strong')
+                  .removeClass('hidden')
+
+                # complete checkmark
+                $self
+                  .removeClass('complete')
+                  .addClass('checked')
+
+                # reset Section after all animations have completed
+                if $('#measurements .icon.checked').length  == requireAnimations
+                  Listeners.resetSection('#measurements')
+
+              , 300)
+          )
 
       })
 
@@ -278,7 +318,7 @@ Listeners = {
 
     # quiz route
     $('#magnify .instructions .btn').click ()->
-      console.log 'magnify router'
+      # console.log 'magnify router'
       Router.modals.open($(this).attr('href'))
 
 
@@ -291,7 +331,8 @@ Listeners = {
         url: 'images/bird-' + i + '-large.jpg'
         on: 'click'
         callback: ()->
-          console.log 'image loaded'
+          if console.log
+            console.log 'image loaded'
 
 
 }

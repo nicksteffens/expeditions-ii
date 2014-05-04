@@ -303,8 +303,15 @@ a.btn, a.btn:hover, a.btn:visited {
       cursor: url('../images/icon-measure.png'), auto;
 
       .icon  {
-        opacity: 0.32;
-        filter: alpha(opacity=32);
+        opacity: 0.45;
+        filter: alpha(opacity=45);
+
+        &.animate,
+        &.complete,
+        &.checked {
+          opacity: 1.0;
+          filter: alpha(opacity=100);
+        }
       }
     }
 
@@ -770,3 +777,7 @@ a.btn, a.btn:hover, a.btn:visited {
   }
 
 }
+
+// sprites & animations
+@import (css) "sprites.css";
+@import (css) "animations.css";

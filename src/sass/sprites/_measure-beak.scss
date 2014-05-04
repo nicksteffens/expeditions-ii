@@ -1,0 +1,124 @@
+@import "compass/utilities/sprites/base";
+
+// General Sprite Defaults
+// You can override them before you import this file.
+$measure-beak-sprite-base-class: ".measure-beak-sprite" !default;
+$measure-beak-sprite-dimensions: false !default;
+$measure-beak-position: 0% !default;
+$measure-beak-spacing: 0 !default;
+$measure-beak-repeat: no-repeat !default;
+$measure-beak-prefix: '' !default;
+$measure-beak-clean-up: true !default;
+$measure-beak-layout:vertical !default;
+$measure-beak-inline: false !default;
+
+  
+ // These variables control the generated sprite output
+ // You can override them selectively before you import this file.
+ 
+   $measure-beak-beak-01-position: $measure-beak-position !default;
+   $measure-beak-beak-01-spacing:  $measure-beak-spacing !default;
+   $measure-beak-beak-01-repeat:   $measure-beak-repeat !default;
+ 
+   $measure-beak-beak-02-position: $measure-beak-position !default;
+   $measure-beak-beak-02-spacing:  $measure-beak-spacing !default;
+   $measure-beak-beak-02-repeat:   $measure-beak-repeat !default;
+ 
+   $measure-beak-beak-03-position: $measure-beak-position !default;
+   $measure-beak-beak-03-spacing:  $measure-beak-spacing !default;
+   $measure-beak-beak-03-repeat:   $measure-beak-repeat !default;
+ 
+   $measure-beak-beak-04-position: $measure-beak-position !default;
+   $measure-beak-beak-04-spacing:  $measure-beak-spacing !default;
+   $measure-beak-beak-04-repeat:   $measure-beak-repeat !default;
+ 
+   $measure-beak-beak-05-position: $measure-beak-position !default;
+   $measure-beak-beak-05-spacing:  $measure-beak-spacing !default;
+   $measure-beak-beak-05-repeat:   $measure-beak-repeat !default;
+ 
+   $measure-beak-beak-06-position: $measure-beak-position !default;
+   $measure-beak-beak-06-spacing:  $measure-beak-spacing !default;
+   $measure-beak-beak-06-repeat:   $measure-beak-repeat !default;
+ 
+
+ $measure-beak-sprites: sprite-map("measure-beak/*.png",
+ 
+   $measure-beak-beak-01-position: $measure-beak-beak-01-position, 
+   $measure-beak-beak-01-spacing:  $measure-beak-beak-01-spacing, 
+   $measure-beak-beak-01-repeat:   $measure-beak-beak-01-repeat,
+ 
+   $measure-beak-beak-02-position: $measure-beak-beak-02-position, 
+   $measure-beak-beak-02-spacing:  $measure-beak-beak-02-spacing, 
+   $measure-beak-beak-02-repeat:   $measure-beak-beak-02-repeat,
+ 
+   $measure-beak-beak-03-position: $measure-beak-beak-03-position, 
+   $measure-beak-beak-03-spacing:  $measure-beak-beak-03-spacing, 
+   $measure-beak-beak-03-repeat:   $measure-beak-beak-03-repeat,
+ 
+   $measure-beak-beak-04-position: $measure-beak-beak-04-position, 
+   $measure-beak-beak-04-spacing:  $measure-beak-beak-04-spacing, 
+   $measure-beak-beak-04-repeat:   $measure-beak-beak-04-repeat,
+ 
+   $measure-beak-beak-05-position: $measure-beak-beak-05-position, 
+   $measure-beak-beak-05-spacing:  $measure-beak-beak-05-spacing, 
+   $measure-beak-beak-05-repeat:   $measure-beak-beak-05-repeat,
+ 
+   $measure-beak-beak-06-position: $measure-beak-beak-06-position, 
+   $measure-beak-beak-06-spacing:  $measure-beak-beak-06-spacing, 
+   $measure-beak-beak-06-repeat:   $measure-beak-beak-06-repeat,
+ 
+ $layout: $measure-beak-layout,
+ $cleanup: $measure-beak-clean-up
+ );
+
+
+// All sprites should extend this class
+// The measure-beak-sprite mixin will do so for you.
+@if $measure-beak-inline {
+  #{$measure-beak-sprite-base-class} {
+    background-image: inline-sprite($measure-beak-sprites);
+  } 
+} @else {
+  #{$measure-beak-sprite-base-class} {
+    background: $measure-beak-sprites no-repeat;
+  }
+}
+//sass functions to return the dimensions of a sprite image as units
+
+  @function measure-beak-sprite-width($name) {
+    $file: sprite_file($measure-beak-sprites, $name);
+    @return image-width($file);
+  }
+
+  @function measure-beak-sprite-height($name) {
+    $file: sprite_file($measure-beak-sprites, $name);
+    @return image-height($file);
+  }
+
+
+// Use this to set the dimensions of an element
+// based on the size of the original image.
+@mixin measure-beak-sprite-dimensions($name) {
+  @include sprite-dimensions($measure-beak-sprites, $name)
+}
+
+// Move the background position to display the sprite.
+@mixin measure-beak-sprite-position($name, $offset-x: 0, $offset-y: 0) {
+  @include sprite-background-position($measure-beak-sprites, $name, $offset-x, $offset-y)
+}
+
+// Extends the sprite base class and set the background position for the desired sprite.
+// It will also apply the image dimensions if $dimensions is true.
+@mixin measure-beak-sprite($name, $dimensions: $measure-beak-sprite-dimensions, $offset-x: 0, $offset-y: 0) {
+  @extend #{$measure-beak-sprite-base-class};
+  @include sprite($measure-beak-sprites, $name, $dimensions, $offset-x, $offset-y)
+}
+
+@mixin measure-beak-sprites($sprite-names, $dimensions: $measure-beak-sprite-dimensions, $prefix: sprite-map-name($measure-beak-sprites), $offset-x: 0, $offset-y: 0) {
+  @include sprites($measure-beak-sprites, $sprite-names, $measure-beak-sprite-base-class, $dimensions, $prefix, $offset-x, $offset-y)
+}
+
+// Generates a class for each sprited image.
+@mixin all-measure-beak-sprites($dimensions: $measure-beak-sprite-dimensions, $prefix: sprite-map-name($measure-beak-sprites), $offset-x: 0, $offset-y: 0) {
+  @include measure-beak-sprites(beak-01 beak-02 beak-03 beak-04 beak-05 beak-06, $dimensions, $prefix, $offset-x, $offset-y);
+}
