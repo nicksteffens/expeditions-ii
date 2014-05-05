@@ -1,7 +1,9 @@
 mixin eachBird(obj)
   .col-xs-4(class="bird #{obj.bird}")
 
-    a.icon.crosshair
+    a.icon.helix
+    .genetic-sequence.hidden #{obj.sequence}
+    .genetic-analysis
 
     .footer.text-center
       h3.common= obj.common
@@ -14,10 +16,3 @@ mixin eachBird(obj)
 
   .instructions.text-center
     h3= physical.genetic.instructions
-
-  //- TODO:
-  //-   Conclusion Light box
-  //-     DNA Comparsion
-  //-     Question
-  //-     Correct
-  //-     Wrong

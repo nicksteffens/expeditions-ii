@@ -25,7 +25,10 @@
   background: url('../images/bg-range.jpg') 0 0 no-repeat;
 }
 
-
+// sprites & animations
+@import (css) "sprites.css";
+@import (css) "animations.css";
+@import (css) "jplayer.blue.monday.css";
 // globals
 body {
   background: url('http://expeditions.fieldmuseum.org/sites/all/themes/expeditions/images/bg.png');
@@ -194,6 +197,10 @@ a.btn, a.btn:hover, a.btn:visited {
   &.close {
     background: url('../images/icon-close.png') 0 0 no-repeat;
   }
+
+  &.helix {
+    background: url('../images/icon-helix.png') 0 0 no-repeat;
+  }
 }
 
 #intro_1 {
@@ -279,6 +286,16 @@ a.btn, a.btn:hover, a.btn:visited {
     position: absolute;
     top: 422px;
     width: 100%;
+
+    &.footer {
+      top: auto;
+      bottom: 2px;
+
+      h3 {
+        box-shadow: none;
+      }
+
+    }
 
 
     h3 {
@@ -379,18 +396,54 @@ a.btn, a.btn:hover, a.btn:visited {
   #listen {
     position: relative;
 
-    .icon.microphone {
-      top: 87px;
-      left: 214px;
+    .icon {
+      display: inline-block;
+      position: relative;
+      top: auto;
+      left: auto;
+      margin-left: 20px;
+      vertical-align: middle;
     }
+
+    .dropzone {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 160px;
+
+      width: 150px;
+      height: 70px;
+      background: pink;
+    }
+
   }
 
   #genetic {
     position: relative;
 
-    .icon.crosshair {
+    .icon.helix {
       top: 163px;
       left: 111px;
+    }
+
+    .genetic-sequence {
+      display: block;
+      position: absolute;
+      bottom: 85px;
+      font-family: "Oswald";
+      font-size: 14px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .genetic-analysis {
+      display: block;
+      position: absolute;
+      bottom: 120px;
+      left: 50%;
+      height: 44px;
+      width: 157px;
+      margin: 0 -78px;
     }
   }
 }
@@ -426,15 +479,36 @@ a.btn, a.btn:hover, a.btn:visited {
     }
   }
 
-  .icon.crosshair {
+  .icon.helix {
     top: 282px;
     left: 138px;
+  }
+
+  .genetic-sequence {
+    display: block;
+    position: absolute;
+    bottom: 85px;
+    font-family: "Oswald";
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .genetic-analysis {
+    display: block;
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    height: 44px;
+    width: 157px;
+    margin: 0 -78px;
   }
 
   .instructions {
     position: absolute;
     top: 422px;
     width: 100%;
+
 
     h3 {
       display:inline-block;
@@ -777,7 +851,3 @@ a.btn, a.btn:hover, a.btn:visited {
   }
 
 }
-
-// sprites & animations
-@import (css) "sprites.css";
-@import (css) "animations.css";

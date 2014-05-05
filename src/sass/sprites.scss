@@ -3,13 +3,13 @@
 $measure-beak-layout: horizontal;
 $measure-tail-layout: horizontal;
 $measure-wing-layout: horizontal;
+$genetic-analysis-layout: horizontal;
 
 @import "measure-beak/*.png";
 @import "measure-tail/*.png";
 @import "measure-wing/*.png";
+@import "genetic-analysis/*.png";
 
-@include all-measure-tail-sprites;
-@include all-measure-wing-sprites;
 
 
 .icon.beak {
@@ -49,6 +49,16 @@ $measure-wing-layout: horizontal;
 
   &.complete {
     @include measure-wing-sprite-position(img-06);
+  }
+}
+
+.genetic-analysis {
+  background-image: $genetic-analysis-sprites;
+  @include measure-beak-sprite-dimensions(img-01);
+  @include genetic-analysis-sprite-position(DNA-Animation0001);
+
+  &.complete {
+    @include genetic-analysis-sprite-position(DNA-Animation0096);
   }
 }
 

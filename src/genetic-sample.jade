@@ -1,0 +1,24 @@
+physical = {"genetic": {"instructions": "Drag the DNA samples to the to the test tubes.","info": [{"bird": "a", "common": "Ivory-billed Araçari", "scientific": "Pteroglossus azara mariae","sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac"  },  {"bird": "b", "common": "Ivory-billed Araçari", "scientific": "Pteroglossus azara flavirostris","sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac"  },  {"bird": "c", "common": "Ivory-billed Araçari", "scientific": "Pteroglossus azara azara","sequence": "ccctaggcttcatcttcctgttcactgtggggggcttaac"}]}}
+
+mixin eachBird(obj)
+  .col-xs-4(class="bird #{obj.bird}")
+
+    a.icon.helix
+    .genetic-sequence.hidden #{obj.sequence}
+    .genetic-analysis
+
+    .footer.text-center
+      h3.common= obj.common
+      p.scientific= obj.scientific
+
+
+
+#physical.row
+  .col-12-md
+    #genetic.section.content(data-section="#genetic")
+      .row
+        each entry in physical.genetic.info
+          +eachBird(entry)
+
+      .instructions.text-center
+        h3= physical.genetic.instructions

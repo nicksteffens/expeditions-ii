@@ -1,0 +1,19 @@
+physical = { "listen": {"instructions": "Drag the microphone from bill to bill to compare birdcalls.","info": [  {    "bird": "a",    "sonogram": "audio/bird-a.mp3",    "modal": "#listen_a",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara"  },  {    "bird": "b",    "sonogram": "audio/bird-b.mp3",    "modal": "#listen_b",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara"  },  {    "bird": "c",    "sonogram": "audio/bird-c.mp3",    "modal": "#listen_c",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara"  }]}}
+
+mixin eachBird(obj)
+  .col-xs-4(class="bird #{obj.bird}")
+
+    .dropzone(data-href=obj.sonogram, data-toggle='modal', data-target=obj.modal)
+
+
+#physical.row
+  .col-12-md
+    #listen.content.section(data-section="#listen")
+      .row
+        each entry in physical.listen.info
+          +eachBird(entry)
+
+      .footer.instructions.text-center
+        h3 #{physical.listen.instructions}
+          .icon.microphone.draggable
+

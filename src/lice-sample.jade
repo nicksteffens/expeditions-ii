@@ -1,0 +1,22 @@
+lice = {"instructions": "Drag the DNA samples to the to the test tubes.","info": [  {    "lice": "a",    "common": "Chewing Lice",    "from": "Pteroglossus azara mariae",    "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat"  },  {    "lice": "b",    "common": "Chewing Lice",    "from": "Pteroglossus azara flavirostris",    "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat"  },  {    "lice": "c",    "common": "Chewing Lice",    "from": "Pteroglossus azara azara",    "sequence": "aaagaggaaaaaaggaaagctttggtgttattgggataat"  }]}
+
+mixin eachLice(obj)
+  .col-xs-4(class="lice #{obj.lice}")
+
+    a.icon.helix
+    .genetic-sequence.hidden #{obj.sequence}
+    .genetic-analysis
+
+    .footer.text-center
+      h3.common= obj.common
+      p.scientific From: #{obj.from}
+
+#lice-section.row.section
+  .col-12-md
+    .genetic.content(data-section="#lice-section")
+      .row
+        each entry in lice.info
+          +eachLice(entry)
+
+      .instructions.text-center
+        h3= lice.instructions

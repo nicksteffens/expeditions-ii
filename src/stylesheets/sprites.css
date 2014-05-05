@@ -4,73 +4,18 @@
 }
 
 /* line 82, measure-tail/*.png */
-.measure-tail-sprite, .measure-tail-img-01, .measure-tail-img-02, .measure-tail-img-03, .measure-tail-img-04, .measure-tail-img-05, .measure-tail-img-06 {
+.measure-tail-sprite {
   background: url('/images/measure-tail-sd877a2ac77.png') no-repeat;
 }
 
 /* line 82, measure-wing/*.png */
-.measure-wing-sprite, .measure-wing-img-01, .measure-wing-img-02, .measure-wing-img-03, .measure-wing-img-04, .measure-wing-img-05, .measure-wing-img-06 {
+.measure-wing-sprite {
   background: url('/images/measure-wing-s0e90bf5383.png') no-repeat;
 }
 
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-tail-img-01 {
-  background-position: 0 0;
-}
-
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-tail-img-02 {
-  background-position: -100px 0;
-}
-
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-tail-img-03 {
-  background-position: -200px 0;
-}
-
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-tail-img-04 {
-  background-position: -300px 0;
-}
-
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-tail-img-05 {
-  background-position: -400px 0;
-}
-
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-tail-img-06 {
-  background-position: -500px 0;
-}
-
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-wing-img-01 {
-  background-position: 0 0;
-}
-
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-wing-img-02 {
-  background-position: -160px 0;
-}
-
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-wing-img-03 {
-  background-position: -320px 0;
-}
-
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-wing-img-04 {
-  background-position: -480px 0;
-}
-
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-wing-img-05 {
-  background-position: -640px 0;
-}
-
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.measure-wing-img-06 {
-  background-position: -800px 0;
+/* line 802, genetic-analysis/*.png */
+.genetic-analysis-sprite {
+  background: url('/images/genetic-analysis-s3690261d91.png') no-repeat;
 }
 
 /* line 17, ../sass/sprites.scss */
@@ -107,4 +52,16 @@
 /* line 50, ../sass/sprites.scss */
 .icon.wing.complete {
   background-position: -800px 0;
+}
+
+/* line 55, ../sass/sprites.scss */
+.genetic-analysis {
+  background-image: url('/images/genetic-analysis-s3690261d91.png');
+  height: 50px;
+  width: 170px;
+  background-position: 0 0;
+}
+/* line 60, ../sass/sprites.scss */
+.genetic-analysis.complete {
+  background-position: -15010px 0;
 }

@@ -1,7 +1,9 @@
 mixin eachLice(obj)
   .col-xs-4(class="lice #{obj.lice}")
 
-    a.icon.crosshair
+    a.icon.helix
+    .genetic-sequence.hidden #{obj.sequence}
+    .genetic-analysis
 
     .footer.text-center
       h3.common= obj.common
@@ -16,10 +18,3 @@ mixin eachLice(obj)
 
       .instructions.text-center
         h3= lice.instructions
-
-      //- TODO:
-      //-   Conclusion Light box
-      //-     DNA Comparsion
-      //-     Question
-      //-     Correct
-      //-     Wrong

@@ -1,7 +1,9 @@
 Router = {
   init: ()->
     # listeners
-    Listeners.measurements()
+    Listeners.measurements('#measurements')
+    Listeners.genetic('#genetic')
+    Listeners.genetic('#lice-section')
     Listeners.viewPort()
     Listeners.router()
     Listeners.magnifier()
@@ -142,7 +144,7 @@ Router = {
         when "#range" then openModal = "#step_4"
 
       if openModal != null
-        # console.log openModal
+        console.log openModal
         $(openModal).modal({backdrop: "static"})
         $(openModal).modal('show')
         Router.modals.secondary(openModal)
@@ -192,19 +194,23 @@ Listeners = {
           if $(section).attr('id') != 'magnify'
             $(section).find(".instructions").addClass('hidden')
 
-            if $(section).attr('id') != 'measurements'
-              $(this).addClass('checked')
+            if section isnt '#measurements'
+              if section isnt '#genetic'
+                if section isnt '#lice-section'
+                  $(this).addClass('checked')
 
           currentInteractions = currentInteractions + 1
 
           if currentInteractions == howManyIntercations
             # open modal
-            if section != "#listen"
-              Router.modals.open(section)
+            if section isnt "#listen"
+              if section isnt "#genetic"
+                if section isnt "#measurements"
+                  if section isnt "#lice-section"
+                    Router.modals.open(section)
 
             # wait for the last modal to close for magnify / listen
-            else
-
+            else if section is '#listen'
               modalId = $(this).attr('data-target')
               $(modalId).on('hidden.bs.modal', ()->
                 Router.modals.open(section)
@@ -214,8 +220,10 @@ Listeners = {
 
             # reset interactions
             currentInteractions = 0
-            if section != "#measurements"
-              Listeners.resetSection(section)
+            if section isnt "#measurements"
+              if section isnt '#genetic'
+                if section isnt '#lice-section'
+                  Listeners.resetSection(section)
 
 
 
@@ -223,18 +231,29 @@ Listeners = {
         )
 
   resetSection: (section)->
+    # uncheck checked
     $(section)
       .find('.checked')
       .removeClass('checked')
 
-    # reset measurements list
-    if section == "#measurements"
-      $(section).find(".hidden").removeClass('hidden')
+    # show hidden
+    $(section)
+      .find(".hidden")
+      .removeClass('hidden')
+
+    # reset animations
+    $(section)
+      .find('.complete')
+      .removeClass('complete')
+
+    # hide sequence
+    $(section)
+      .find('.genetic-sequence')
+      .addClass('hidden')
 
 
 
-  measurements: ()->
-    section = "#measurements"
+  measurements: (section)->
     requireAnimations = $(section).find('.icon:not(.close)').length
     # measurements
     $(section).find('.icon').on({
@@ -274,8 +293,9 @@ Listeners = {
                   .addClass('checked')
 
                 # reset Section after all animations have completed
-                if $('#measurements .icon.checked').length  == requireAnimations
-                  Listeners.resetSection('#measurements')
+                if $(section).find('.icon.checked').length  == requireAnimations
+                  Listeners.resetSection(section)
+                  Router.modals.open(section)
 
               , 300)
           )
@@ -333,6 +353,125 @@ Listeners = {
         callback: ()->
           if console.log
             console.log 'image loaded'
+
+
+  genetic: (section)->
+
+    requireAnimations = $(section).find('.icon:not(.close)').length
+    $(section).find( ".icon.helix" ).draggable(
+      containment: "parent"
+      revert: true
+      start: (e, ui)->
+        $(this).trigger('click')
+      )
+    $(section).find( ".genetic-analysis" ).droppable(
+      accept: ".icon.helix"
+
+      drop: (e, ui)->
+        ui.draggable.addClass('hidden')
+        $self = $(this)
+        $self.addClass('animate')
+
+        $self.one('webkitAnimationEnd oanimationend msAnimationEnd animationend ', (e)->
+          # show complete
+          $self
+            .removeClass('animate')
+            .addClass('complete')
+
+          # show sequence
+          $self.siblings('.genetic-sequence')
+            .removeClass('hidden')
+
+          # show checked
+          ui.draggable
+            .addClass('checked')
+            .removeClass('hidden')
+
+          # resetSection
+          setTimeout( (e)->
+            # reset Section after all animations have completed
+            if $(section).find('.icon.checked').length  == requireAnimations
+              console.log 'required animations'
+              Listeners.resetSection(section)
+              Router.modals.open(section)
+
+          , 300)
+
+
+          )
+
+
+
+
+
+
+      )
+
+  listen: (section)->
+    # NOTES:
+    #   1. Get MP3's playing via default player
+    #   2. Style Player
+
+    $(section).find('.draggable').draggable(
+      revert: true
+      )
+    $(section).find('.dropzone').droppable(
+      accept: '.draggable'
+      drop: (e, ui)->
+        player = $(this)
+        sonogramURL = $(this).attr('data-href')
+        Listeners.playSonogram(player, sonogramURL)
+      )
+
+  playSonogram: (player, URL)->
+    $parent = player.parent()
+    playerID = $(player).attr('data-target')
+    template = Listeners.sonogramTemplate(playerID.slice(1))
+
+    # attach template
+    $parent.append(template)
+
+    $(playerID).jPlayer
+      swfPath: "../js"
+      solution: "html, flash"
+      supplied: "mp3"
+      preload: "metadata"
+      volume: 0.8
+      muted: false
+      backgroundColor: "#000000"
+      cssSelectorAncestor: playerID
+      cssSelector:
+        videoPlay: ".jp-video-play"
+        play: ".cp-play"
+        pause: ".cp-pause"
+        stop: ".jp-stop"
+        seekBar: ".jp-seek-bar"
+        playBar: ".jp-play-bar"
+        mute: ".jp-mute"
+        unmute: ".jp-unmute"
+        volumeBar: ".jp-volume-bar"
+        volumeBarValue: ".jp-volume-bar-value"
+        volumeMax: ".jp-volume-max"
+        playbackRateBar: ".jp-playback-rate-bar"
+        playbackRateBarValue: ".jp-playback-rate-bar-value"
+        currentTime: ".jp-current-time"
+        duration: ".jp-duration"
+        title: ".jp-title"
+        fullScreen: ".jp-full-screen"
+        restoreScreen: ".jp-restore-screen"
+        repeat: ".jp-repeat"
+        repeatOff: ".jp-repeat-off"
+        gui: ".jp-gui"
+        noSolution: ".jp-no-solution"
+
+      errorAlerts: false
+      warningAlerts: false
+
+
+
+
+  sonogramTemplate: (id)->
+    '<div id="' + id + '" class="cp-container"><div class="cp-buffer-holder" style="display: block;"> <!-- .cp-gt50 only needed when buffer is > than 50% -->  <div class="cp-buffer-1"></div>  <div class="cp-buffer-2"></div></div><div class="cp-progress-holder" style="display: block;"> <!-- .cp-gt50 only needed when progress is > than 50% -->  <div class="cp-progress-1" style="-webkit-transform: rotate(0deg);"></div>  <div class="cp-progress-2" style="-webkit-transform: rotate(0deg); display: none;"></div></div><div class="cp-circle-control"></div><ul class="cp-controls">  <li><a class="cp-play" tabindex="1">play</a></li>  <li><a class="cp-pause" style="display: none;" tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block --></ul></div>'
 
 
 }
