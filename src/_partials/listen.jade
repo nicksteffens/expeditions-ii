@@ -1,17 +1,20 @@
 mixin eachBird(obj)
   .col-xs-4(class="bird #{obj.bird}")
 
-    a.icon.microphone(href=obj.sonogram, data-toggle='modal', data-target=obj.modal, href=obj.modal)
+    .dropzone
+      .ui360.hidden
+        a(href=obj.sonogram)
 
-    .footer.text-center
-      h3.common= obj.common
-      p.scientific= obj.scientific
+    img(src="images/sonogram-" + obj.bird + ".png", alt="").sonogram.hidden
 
 #listen.content.section.hidden(data-section="#listen")
   .row
     each entry in physical.listen.info
       +eachBird(entry)
 
-  .instructions.text-center
-    h3= physical.listen.instructions
+  .footer.instructions.text-center
+    h3 #{physical.listen.instructions}
+      .icon.microphone.draggable
+
+    a(href=physical.listen.link.href, data-dismiss="modal", aria-hidden="true", class="btn").hidden #{physical.listen.link.copy}
 

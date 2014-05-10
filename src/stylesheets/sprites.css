@@ -1,26 +1,26 @@
 /* line 82, measure-beak/*.png */
 .measure-beak-sprite {
-  background: url('src/src/images/measure-beak-s5e86239b8b.png') no-repeat;
+  background: url('../images/measure-beak-s5e86239b8b.png') no-repeat;
 }
 
 /* line 82, measure-tail/*.png */
 .measure-tail-sprite {
-  background: url('src/src/images/measure-tail-sd877a2ac77.png') no-repeat;
+  background: url('../images/measure-tail-sd877a2ac77.png') no-repeat;
 }
 
 /* line 82, measure-wing/*.png */
 .measure-wing-sprite {
-  background: url('src/src/images/measure-wing-s0e90bf5383.png') no-repeat;
+  background: url('../images/measure-wing-s0e90bf5383.png') no-repeat;
 }
 
 /* line 802, genetic-analysis/*.png */
 .genetic-analysis-sprite {
-  background: url('src/src/images/genetic-analysis-s3690261d91.png') no-repeat;
+  background: url('../images/genetic-analysis-s3690261d91.png') no-repeat;
 }
 
 /* line 17, ../../sass/sprites.scss */
 .icon.beak.animate, .icon.beak.complete {
-  background-image: url('src/src/images/measure-beak-s5e86239b8b.png');
+  background-image: url('../images/measure-beak-s5e86239b8b.png');
   margin: 0 -50px;
   height: 50px;
   width: 170px;
@@ -32,7 +32,7 @@
 
 /* line 30, ../../sass/sprites.scss */
 .icon.tail.animate, .icon.tail.complete {
-  background-image: url('src/src/images/measure-tail-sd877a2ac77.png');
+  background-image: url('../images/measure-tail-sd877a2ac77.png');
   margin: -75px -30px 0;
   height: 240px;
   width: 100px;
@@ -44,7 +44,7 @@
 
 /* line 44, ../../sass/sprites.scss */
 .icon.wing.animate, .icon.wing.complete {
-  background-image: url('src/src/images/measure-wing-s0e90bf5383.png');
+  background-image: url('../images/measure-wing-s0e90bf5383.png');
   margin: -60px -50px 0;
   height: 180px;
   width: 160px;
@@ -56,7 +56,7 @@
 
 /* line 55, ../../sass/sprites.scss */
 .genetic-analysis {
-  background-image: url('src/src/images/genetic-analysis-s3690261d91.png');
+  background-image: url('../images/genetic-analysis-s3690261d91.png');
   height: 50px;
   width: 170px;
   background-position: 0 0;

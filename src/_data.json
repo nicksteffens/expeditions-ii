@@ -95,26 +95,30 @@
         "info": [
           {
             "bird": "a",
-            "sonogram": "http://www.xeno-canto.org/sounds/uploaded/SBFBVYGIJC/pteaza02.mp3",
+            "sonogram": "audio/bird-a.mp3",
             "modal": "#listen_a",
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           },
           {
             "bird": "b",
-            "sonogram": "http://www.xeno-canto.org/sounds/uploaded/YTUXOCTUEM/IvoryBilArac-FL.mp3",
+            "sonogram": "audio/bird-b.mp3",
             "modal": "#listen_b",
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           },
           {
             "bird": "c",
-            "sonogram": "http://www.xeno-canto.org/sounds/uploaded/BHRXQZEQFL/04apr07-Pteroglossus_azaraGSV-4.mp3",
+            "sonogram": "audio/bird-c.mp3",
             "modal": "#listen_c",
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           }
-        ]
+        ],
+        "link": {
+          "copy": "continue",
+          "href": "#listen_quiz"
+        }
       },
       "genetic": {
         "instructions": "Drag the DNA samples to the to the test tubes.",
@@ -291,36 +295,24 @@
         }
       },
       {
-        "id": "listen_a",
-        "type": "audio",
-        "href": "#"
-      },
-      {
-        "id": "listen_b",
-        "type": "audio",
-        "href": "#"
-      },
-      {
-        "id": "listen_c",
-        "type": "audio",
-        "href": "#"
-      },
-      {
         "id": "listen_quiz",
         "type": "quiz",
         "headline": "​Do you hear BIG differences in the birdcalls? <br><span class='hint'>(HINT: pay attention only to pitch, tone, and rhythm, not the speed or number of calls.)</span>",
         "audio": [
           {
             "id": "a",
-            "href": "#"
+            "href": "audio/bird-a.mp3",
+            "sonogram": "images/sonogram-quiz-a.png"
           },
           {
             "id": "b",
-            "href": "#"
+            "href": "audio/bird-b.mp3",
+            "sonogram": "images/sonogram-quiz-b.png"
           },
           {
             "id": "c",
-            "href": "#"
+            "href": "audio/bird-c.mp3",
+            "sonogram": "images/sonogram-quiz-c.png"
           }
         ],
         "answers": [

@@ -7,6 +7,7 @@ Router = {
     Listeners.viewPort()
     Listeners.router()
     Listeners.magnifier()
+    Listeners.listen('#listen')
 
     #quiz
     Router.quiz.measurements()
@@ -89,6 +90,7 @@ Router = {
       $quiz.find('.answers a').on({
         click: (ev)->
           ev.preventDefault()
+          soundManager.stopAll()
           isCorrect = $(this).hasClass('correct')
           switch isCorrect
             when true then $quiz.find('.correct').removeClass('hidden')
@@ -144,7 +146,7 @@ Router = {
         when "#range" then openModal = "#step_4"
 
       if openModal != null
-        console.log openModal
+        console.log 'next modal %o', openModal if window.console
         $(openModal).modal({backdrop: "static"})
         $(openModal).modal('show')
         Router.modals.secondary(openModal)
@@ -251,6 +253,27 @@ Listeners = {
       .find('.genetic-sequence')
       .addClass('hidden')
 
+    # audio section
+    if section == "#listen"
+      # player
+      $(section)
+        .find('.ui360')
+        .addClass('hidden')
+      # sonogram
+      $(section)
+        .find('.sonogram')
+        .addClass('hidden')
+      # instructions
+      $(section)
+        .find('.instructions h3')
+        .removeClass('hidden')
+      # continue btn
+      $(section)
+        .find('.instructions .btn')
+        .addClass('hidden')
+
+
+
 
 
   measurements: (section)->
@@ -351,7 +374,7 @@ Listeners = {
         url: 'images/bird-' + i + '-large.jpg'
         on: 'click'
         callback: ()->
-          if console.log
+          if window.console
             console.log 'image loaded'
 
 
@@ -391,7 +414,7 @@ Listeners = {
           setTimeout( (e)->
             # reset Section after all animations have completed
             if $(section).find('.icon.checked').length  == requireAnimations
-              console.log 'required animations'
+              console.log 'required animations' if window.console
               Listeners.resetSection(section)
               Router.modals.open(section)
 
@@ -400,17 +423,16 @@ Listeners = {
 
           )
 
-
-
-
-
-
       )
 
   listen: (section)->
-    # NOTES:
-    #   1. Get MP3's playing via default player
-    #   2. Style Player
+    # audio player stuff
+    soundManager.setup({
+      # // path to directory containing SM2 SWF
+      url: 'swf/'
+    })
+    # play count
+    playCount = 0
 
     $(section).find('.draggable').draggable(
       revert: true
@@ -418,60 +440,33 @@ Listeners = {
     $(section).find('.dropzone').droppable(
       accept: '.draggable'
       drop: (e, ui)->
-        player = $(this)
-        sonogramURL = $(this).attr('data-href')
-        Listeners.playSonogram(player, sonogramURL)
+        player = $(this).find('.ui360')
+        bird = $(this).parent('.bird')
+
+        player.toggleClass('hidden') if player.hasClass('hidden')
+        bird.find('.sonogram').toggleClass('hidden') if bird.find('.sonogram').hasClass('hidden')
+        player.find('.sm2-360btn').click()
+        playCount = playCount + 1
+
+        if playCount == $(section).find('.dropzone').length
+          $(section).find('.instructions h3').addClass('hidden')
+          $(section).find('.instructions .btn').removeClass('hidden')
+
+          # quiz route
+          $(section).find('.instructions .btn').click ()->
+            #stop all sound
+            soundManager.stopAll()
+
+            # reset section
+            Listeners.resetSection(section)
+            playCount = 0
+            # openModal
+            Router.modals.open(section)
+
+
       )
 
-  playSonogram: (player, URL)->
-    $parent = player.parent()
-    playerID = $(player).attr('data-target')
-    template = Listeners.sonogramTemplate(playerID.slice(1))
 
-    # attach template
-    $parent.append(template)
-
-    $(playerID).jPlayer
-      swfPath: "../js"
-      solution: "html, flash"
-      supplied: "mp3"
-      preload: "metadata"
-      volume: 0.8
-      muted: false
-      backgroundColor: "#000000"
-      cssSelectorAncestor: playerID
-      cssSelector:
-        videoPlay: ".jp-video-play"
-        play: ".cp-play"
-        pause: ".cp-pause"
-        stop: ".jp-stop"
-        seekBar: ".jp-seek-bar"
-        playBar: ".jp-play-bar"
-        mute: ".jp-mute"
-        unmute: ".jp-unmute"
-        volumeBar: ".jp-volume-bar"
-        volumeBarValue: ".jp-volume-bar-value"
-        volumeMax: ".jp-volume-max"
-        playbackRateBar: ".jp-playback-rate-bar"
-        playbackRateBarValue: ".jp-playback-rate-bar-value"
-        currentTime: ".jp-current-time"
-        duration: ".jp-duration"
-        title: ".jp-title"
-        fullScreen: ".jp-full-screen"
-        restoreScreen: ".jp-restore-screen"
-        repeat: ".jp-repeat"
-        repeatOff: ".jp-repeat-off"
-        gui: ".jp-gui"
-        noSolution: ".jp-no-solution"
-
-      errorAlerts: false
-      warningAlerts: false
-
-
-
-
-  sonogramTemplate: (id)->
-    '<div id="' + id + '" class="cp-container"><div class="cp-buffer-holder" style="display: block;"> <!-- .cp-gt50 only needed when buffer is > than 50% -->  <div class="cp-buffer-1"></div>  <div class="cp-buffer-2"></div></div><div class="cp-progress-holder" style="display: block;"> <!-- .cp-gt50 only needed when progress is > than 50% -->  <div class="cp-progress-1" style="-webkit-transform: rotate(0deg);"></div>  <div class="cp-progress-2" style="-webkit-transform: rotate(0deg); display: none;"></div></div><div class="cp-circle-control"></div><ul class="cp-controls">  <li><a class="cp-play" tabindex="1">play</a></li>  <li><a class="cp-pause" style="display: none;" tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block --></ul></div>'
 
 
 }

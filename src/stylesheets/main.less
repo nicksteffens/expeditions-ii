@@ -28,7 +28,6 @@
 // sprites & animations
 @import (css) "sprites.css";
 @import (css) "animations.css";
-@import (css) "jplayer.blue.monday.css";
 // globals
 body {
   background: url('http://expeditions.fieldmuseum.org/sites/all/themes/expeditions/images/bg.png');
@@ -295,6 +294,14 @@ a.btn, a.btn:hover, a.btn:visited {
         box-shadow: none;
       }
 
+      .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -23px;
+        margin-left: -90px;
+      }
+
     }
 
 
@@ -307,6 +314,8 @@ a.btn, a.btn:hover, a.btn:visited {
       font-size: 20px;
       box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4);
     }
+
+
   }
 
   #measurements{
@@ -413,7 +422,43 @@ a.btn, a.btn:hover, a.btn:visited {
 
       width: 150px;
       height: 70px;
-      background: pink;
+      // border: 2px solid pink;
+
+      // audio player stuff
+      .ui360, .sm2-360ui {
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        margin:-28px 0 0 -28px;
+      }
+      .ui360,
+      .sm2-360ui,
+      .sm2-canvas {
+        /* size of the container for the circle, etc. */
+        min-width: 56px;
+        min-height: 56px;
+        width:56px;
+        height:56px;
+      }
+
+      .sm2-360btn.sm2-360btn-default {
+        background: url('../images/icon-audio.png') 50% 50% no-repeat;
+      }
+
+      .sm2-inline-block .ui360 .sm2-360btn, .ui360 .sm2-360ui.sm2_playing .sm2-360btn, .ui360 .sm2-360ui.sm2_paused .sm2-360btn {
+          width: 56px;
+          height: 56px;
+          margin-left: -28px;
+          margin-top: -28px;
+      }
+    }
+
+    .sonogram {
+      display: block;
+      position: absolute;
+      top: 380px;
+      left: 3px;
     }
 
   }
@@ -663,6 +708,46 @@ a.btn, a.btn:hover, a.btn:visited {
       margin-top: 65px;
     }
 
+  }
+
+  #listen_quiz.quiz & {
+    .sonogram-holder {
+      position: relative;
+
+      img {
+        display: block;
+        position: relative;
+      }
+    }
+
+    // audio player stuff
+    .ui360, .sm2-360ui {
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      left: 50%;
+      margin:-28px 0 0 -28px;
+    }
+    .ui360,
+    .sm2-360ui,
+    .sm2-canvas {
+      /* size of the container for the circle, etc. */
+      min-width: 56px;
+      min-height: 56px;
+      width:56px;
+      height:56px;
+    }
+
+    .sm2-360btn.sm2-360btn-default {
+      background: url('../images/icon-play.png') 50% 50% no-repeat;
+    }
+
+    .sm2-inline-block .ui360 .sm2-360btn, .ui360 .sm2-360ui.sm2_playing .sm2-360btn, .ui360 .sm2-360ui.sm2_paused .sm2-360btn {
+        width: 56px;
+        height: 56px;
+        margin-left: -28px;
+        margin-top: -28px;
+    }
   }
 
   // dna

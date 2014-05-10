@@ -3,7 +3,11 @@ physical = { "listen": {"instructions": "Drag the microphone from bill to bill t
 mixin eachBird(obj)
   .col-xs-4(class="bird #{obj.bird}")
 
-    .dropzone(data-href=obj.sonogram, data-toggle='modal', data-target=obj.modal)
+    .dropzone
+      .ui360.hidden
+        a(href=obj.sonogram)
+
+    img(src="images/sonogram-" + obj.bird + ".png", alt="").sonogram.hidden
 
 
 #physical.row
@@ -16,4 +20,6 @@ mixin eachBird(obj)
       .footer.instructions.text-center
         h3 #{physical.listen.instructions}
           .icon.microphone.draggable
+
+        a(href="#listen_quiz", data-dismiss="modal", aria-hidden="true", class="btn").hidden continue
 

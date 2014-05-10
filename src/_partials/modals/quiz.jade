@@ -51,8 +51,12 @@
           .row.pre
             each sonogram in audio
               .col-xs-4
+                .sonogram-holder
+                  img(src=sonogram.sonogram)
+                  .ui360
+                    a(href=sonogram.href)
+
                 h2 #{sonogram.id}.
-                a.btn.listen(href=sonogram.href) Listen
 
 
         .next.post.hidden
