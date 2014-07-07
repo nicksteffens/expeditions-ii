@@ -6,7 +6,7 @@ Router = {
     Listeners.genetic('#lice-section')
     Listeners.viewPort()
     Listeners.router()
-    Listeners.magnifier()
+    Listeners.magnifier('#magnify')
     Listeners.listen('#listen')
 
     #quiz
@@ -235,6 +235,16 @@ Listeners = {
         )
 
   resetSection: (section)->
+    resetInstructions = ()->
+       # instructions
+      $(section)
+        .find('.instructions h3')
+        .removeClass('hidden')
+      # continue btn
+      $(section)
+        .find('.instructions .btn')
+        .addClass('hidden')
+
     # uncheck checked
     $(section)
       .find('.checked')
@@ -266,23 +276,15 @@ Listeners = {
         .find('.sonogram')
         .addClass('hidden')
       # instructions
-      $(section)
-        .find('.instructions h3')
-        .removeClass('hidden')
-      # continue btn
-      $(section)
-        .find('.instructions .btn')
-        .addClass('hidden')
+      resetInstructions();
 
     if section is "#measurements"
-      # instructions
-      $(section)
-        .find('.instructions h3')
-        .removeClass('hidden')
-      # continue btn
-      $(section)
-        .find('.instructions .btn')
-        .addClass('hidden')
+      resetInstructions();
+
+    if section is "#magnify"
+      resetInstructions();
+
+
 
 
 
@@ -356,18 +358,13 @@ Listeners = {
     $('.viewport .slider').draggable({axis: "x", containment: "parent"})
 
 
-  magnifier: ()->
+  magnifier: (section)->
+    requiredZooms = $(section).find('.magnify').length
+    viewedZooms = 0
     # attach zoom for each bird
-    $.each $('.magnify .close'), (i,v)->
+    $.each $(section + ' .magnify'), (i,v)->
       birdId = $(this).attr('data-bird')
       Listeners.attachZoom(birdId)
-
-    # close button
-    $('.magnify .close').click( (ev)->
-        ev.preventDefault()
-        $(this).toggle()
-
-      )
 
     # listens for zoom
     $('.small span').click( ->
@@ -376,12 +373,19 @@ Listeners = {
           .parent()
           .find('.close')
           .toggle()
+
+        viewedZooms = viewedZooms + 1
+        if viewedZooms is requiredZooms
+          $(section + ' .instructions h3').addClass('hidden')
+          $(section + ' .instructions .btn').removeClass('hidden')
       )
 
     # quiz route
     $('#magnify .instructions .btn').click ()->
-      # console.log 'magnify router'
+      viewedZooms = 0
+      Listeners.resetSection(section)
       Router.modals.open($(this).attr('href'))
+
 
 
   attachZoom: (i)->

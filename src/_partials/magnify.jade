@@ -3,17 +3,12 @@ mixin eachBird(obj)
     .small
       img.source(src=obj.images.small data-bird=obj.bird)
 
-    a.icon.close(href="#" data-bird=obj.bird)
-
 #magnify.content.hidden.section(data-section="#magnify")
   .row-fluid
     each entry in physical.magnify.info
       +eachBird(entry)
 
-  .row.instructions
-    .col-xs-8.text-center
+  .footer.instructions.text-center
+    h3!= physical.magnify.instructions
 
-        h3!= physical.magnify.instructions
-
-    .col-xs-4
-        a.btn(href=physical.magnify.link.href, data-dismiss="modal" aria-hidden="true")= physical.magnify.link.copy
+    a.btn.hidden(href=physical.magnify.link.href, data-dismiss="modal" aria-hidden="true")= physical.magnify.link.copy
