@@ -195,7 +195,8 @@ Listeners = {
           ev.preventDefault()
           if $(section).attr('id') != 'magnify'
             if section isnt '#measurements'
-              $(section).find(".instructions").addClass('hidden')
+              if section isnt '#genetic'
+                $(section).find(".instructions").addClass('hidden')
 
             if section isnt '#measurements'
               if section isnt '#genetic'

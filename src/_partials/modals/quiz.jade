@@ -5,6 +5,10 @@
     .modal-content
       .modal-header.text-center
         h2.pre!= headline
+
+        if id == 'magnify_quiz'
+          img.pre(src="images/magnify-quiz.jpg" alt="magnify quiz")
+
         .answers.post
           each answer in answers
             if answer.isCorrect == true
@@ -17,6 +21,8 @@
             if answer.isCorrect
               .correct.hidden
                 h2= answer.headline
+                if answer.subhead
+                  p!= answer.subhead
 
             else
               .wrong.hidden

@@ -1,4 +1,4 @@
-lice = {"instructions": "Drag the DNA samples to the to the test tubes.","info": [  {    "lice": "a",    "common": "Chewing Lice",    "from": "Pteroglossus azara mariae",    "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat"  },  {    "lice": "b",    "common": "Chewing Lice",    "from": "Pteroglossus azara flavirostris",    "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat"  },  {    "lice": "c",    "common": "Chewing Lice",    "from": "Pteroglossus azara azara",    "sequence": "aaagaggaaaaaaggaaagctttggtgttattgggataat"  }]}
+lice = {"instructions": "Drag the DNA samples to the to the test tubes.","info": [  {    "lice": "a",    "common": "Chewing Lice",    "from": "Pteroglossus azara <span class='colored'>mariae</span>",    "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat"  },  {    "lice": "b",    "common": "Chewing Lice",    "from": "Pteroglossus azara <span class='colored'>flavirostris</span>",    "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat"  },  {    "lice": "c",    "common": "Chewing Lice",    "from": "Pteroglossus azara <span class='colored'>azara</span>",    "sequence": "aaagaggaaaaaaggaaagctttggtgttattgggataat"  }]}
 
 mixin eachLice(obj)
   .col-xs-4(class="lice #{obj.lice}")
@@ -9,7 +9,7 @@ mixin eachLice(obj)
 
     .footer.text-center
       h3.common= obj.common
-      p.scientific From: #{obj.from}
+      p.scientific!= 'From:' + obj.from
 
 #lice-section.row.section
   .col-12-md

@@ -168,19 +168,19 @@
         {
           "lice": "a",
           "common": "Chewing Lice",
-          "from": "Pteroglossus azara mariae",
+          "from": "Pteroglossus azara <span class='colored'>mariae</span>",
           "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat"
         },
         {
           "lice": "b",
           "common": "Chewing Lice",
-          "from": "Pteroglossus azara flavirostris",
+          "from": "Pteroglossus azara <span class='colored'>flavirostris</span>",
           "sequence": "agagaggaaaaaaggaaagctttggtgttattggaataat"
         },
         {
           "lice": "c",
           "common": "Chewing Lice",
-          "from": "Pteroglossus azara azara",
+          "from": "Pteroglossus azara <span class='colored'>azara</span>",
           "sequence": "aaagaggaaaaaaggaaagctttggtgttattgggataat"
         }
       ]
@@ -329,10 +329,10 @@
           {
             "answer": "no",
             "isCorrect": true,
-            "headline": "You're right!"
+            "headline": "You're right!",
+            "subhead": "When the team compared the calls and sonograms of several specimens from each Ivory-billed Araçari population, the pitch, tone, and rhythm of the calls were <em>virtually identical</em>."
           }
         ],
-        "copy": "When the team compared the calls and sonograms of several specimens from each Ivory-billed Araçari population, the pitch, tone, and rhythm of the calls were <em>virtually identical</em>.",
         "next": {
           "copy": "Next, closely examine birds from each population to see if their plumage, eyes, and bills differ.",
           "link": {

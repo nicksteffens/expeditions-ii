@@ -7,7 +7,7 @@ mixin eachLice(obj)
 
     .footer.text-center
       h3.common= obj.common
-      p.scientific From: #{obj.from}
+      p.scientific!= "From: " + obj.from
 
 #lice-section.row.section.hidden
   .col-12-md
