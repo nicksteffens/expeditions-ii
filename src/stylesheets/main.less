@@ -160,21 +160,27 @@ a.btn, a.btn:hover, a.btn:visited {
   height: 46px;
 
   &.beak {
+    width: 51px;
+    height: 56px;
     top: 28px;
     left: 203px;
-    background: url('../images/icon-beak.png') 0 0 no-repeat;
+    background: url('../images/icon-beak.png') center center no-repeat;
   }
 
   &.wing {
+    width: 51px;
+    height: 56px;
     top: 159px;
     left: 73px;
-    background: url('../images/icon-wing.png') 0 0 no-repeat;
+    background: url('../images/icon-wing.png') center center no-repeat;
   }
 
   &.tail {
-    top: 337px;
-    left: 21px;
-    background: url('../images/icon-tail.png') 0 0 no-repeat;
+    width: 51px;
+    height: 56px;
+    top: 342px;
+    left: 20px;
+    background: url('../images/icon-tail.png') center center no-repeat;
   }
 
   &.microphone {
@@ -312,7 +318,7 @@ a.btn, a.btn:hover, a.btn:visited {
       background: #fff;
       color: @font-blue;
       font-size: 20px;
-      box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4);
+      // box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4);
     }
 
 
@@ -422,7 +428,7 @@ a.btn, a.btn:hover, a.btn:visited {
 
       width: 150px;
       height: 70px;
-      // border: 2px solid pink;
+      background: url('../images/icon-note.png') center center no-repeat;
 
       // audio player stuff
       .ui360, .sm2-360ui {
@@ -489,6 +495,15 @@ a.btn, a.btn:hover, a.btn:visited {
       height: 44px;
       width: 157px;
       margin: 0 -78px;
+    }
+
+    .instructions {
+      top: 322px;
+      bottom: auto;
+
+      h3 {
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4);
+      }
     }
   }
 }

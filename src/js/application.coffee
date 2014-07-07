@@ -194,7 +194,8 @@ Listeners = {
         'click': (ev)->
           ev.preventDefault()
           if $(section).attr('id') != 'magnify'
-            $(section).find(".instructions").addClass('hidden')
+            if section isnt '#measurements'
+              $(section).find(".instructions").addClass('hidden')
 
             if section isnt '#measurements'
               if section isnt '#genetic'
@@ -272,6 +273,16 @@ Listeners = {
         .find('.instructions .btn')
         .addClass('hidden')
 
+    if section is "#measurements"
+      # instructions
+      $(section)
+        .find('.instructions h3')
+        .removeClass('hidden')
+      # continue btn
+      $(section)
+        .find('.instructions .btn')
+        .addClass('hidden')
+
 
 
 
@@ -317,8 +328,15 @@ Listeners = {
 
                 # reset Section after all animations have completed
                 if $(section).find('.icon.checked').length  == requireAnimations
-                  Listeners.resetSection(section)
-                  Router.modals.open(section)
+                  $(section).find('.instructions h3').addClass('hidden')
+                  $(section).find('.instructions .btn').removeClass('hidden')
+
+                  # button continue
+                  $(section).on({
+                    click: (e)->
+                      Listeners.resetSection(section)
+                      Router.modals.open(section)
+                    })
 
               , 300)
           )

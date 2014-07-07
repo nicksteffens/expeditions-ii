@@ -32,7 +32,7 @@
     },
     "physical": {
       "measurements": {
-        "instructions": "Drag the tape from point to point to take measurements.",
+        "instructions": "Measure each bird to compare their sizes.",
         "info": [
           {
             "bird": "a",
@@ -58,10 +58,14 @@
             "common": "Ivory-billed Araçari",
             "scientific": "Pteroglossus azara"
           }
-        ]
+        ],
+        "link": {
+          "copy": "continue",
+          "href": "#measurements_quiz"
+        }
       },
       "magnify": {
-        "instructions": "Drag the magnifier from point to point to compare features.",
+        "instructions": "Magnify each bird to compare their features.",
         "info": [
           {
             "bird": "a",
@@ -91,7 +95,7 @@
         }
       },
       "listen": {
-        "instructions": "Drag the microphone from bill to bill to compare birdcalls.",
+        "instructions": "Record each bird to compare their birdcalls.",
         "info": [
           {
             "bird": "a",
@@ -121,7 +125,7 @@
         }
       },
       "genetic": {
-        "instructions": "Drag the DNA samples to the to the test tubes.",
+        "instructions": "Drop the DNA samples in the test tubes.",
         "info": [
           {
             "bird": "a",
@@ -537,7 +541,7 @@
   "magnify-sample": {
     "physical": {
       "magnify": {
-        "instructions": "Drag the magnifier from point to point to compare features.",
+        "instructions": "Magnify each bird to compare their features.",
         "info": [
           {
             "bird": "a",

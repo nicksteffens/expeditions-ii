@@ -12,17 +12,16 @@ mixin eachBird(obj)
     a.icon.wing
     a.icon.tail
 
-    .footer.text-center
-      h3.common= obj.common
-      p.scientific= obj.scientific
 
 #measurements.content.section.hidden(data-section="#measurements")
   .row
     each entry in physical.measurements.info
       +eachBird(entry)
 
-  .instructions.text-center
+  .footer.instructions.text-center
     h3= physical.measurements.instructions
+
+    a(href=physical.measurements.link.href, data-dismiss="modal", aria-hidden="true", class="btn").hidden #{physical.measurements.link.copy}
 
 
 
