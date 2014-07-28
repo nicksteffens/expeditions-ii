@@ -457,12 +457,38 @@ Listeners = {
     # play count
     playCount = 0
 
-    $(section).find('.draggable').draggable(
-      revert: true
-      )
-    $(section).find('.dropzone').droppable(
-      accept: '.draggable'
-      drop: (e, ui)->
+    # $(section).find('.dropzone').droppable(
+    #   accept: '.draggable'
+    #   drop: (e, ui)->
+    #     player = $(this).find('.ui360')
+    #     bird = $(this).parent('.bird')
+
+    #     player.toggleClass('hidden') if player.hasClass('hidden')
+    #     bird.find('.sonogram').toggleClass('hidden') if bird.find('.sonogram').hasClass('hidden')
+    #     player.find('.sm2-360btn').click()
+    #     playCount = playCount + 1
+
+    #     if playCount == $(section).find('.dropzone').length
+    #       $(section).find('.instructions h3').addClass('hidden')
+    #       $(section).find('.instructions .btn').removeClass('hidden')
+
+    #       # quiz route
+    #       $(section).find('.instructions .btn').click ()->
+    #         #stop all sound
+    #         soundManager.stopAll()
+
+    #         # reset section
+    #         Listeners.resetSection(section)
+    #         playCount = 0
+    #         # openModal
+    #         Router.modals.open(section)
+
+
+    #   )
+
+    $(section + " .dropzone").on({
+
+      mousedown: (e) ->
         player = $(this).find('.ui360')
         bird = $(this).parent('.bird')
 
@@ -484,10 +510,11 @@ Listeners = {
             Listeners.resetSection(section)
             playCount = 0
             # openModal
-            Router.modals.open(section)
+          Router.modals.open(section)
 
 
-      )
+
+      })
 
 
 
