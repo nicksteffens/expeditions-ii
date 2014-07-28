@@ -6,6 +6,7 @@ mixin eachBird(obj)
         a(href=obj.sonogram)
 
     img(src="images/sonogram-" + obj.bird + ".png", alt="").sonogram.hidden
+    .credit.hidden &copy; #{obj.credit.url}, recordist #{obj.credit.recordist}, #{obj.credit.hex}
 
 #listen.content.section.hidden(data-section="#listen")
   .row

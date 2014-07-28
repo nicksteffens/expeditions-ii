@@ -102,21 +102,36 @@
             "sonogram": "audio/bird-a.mp3",
             "modal": "#listen_a",
             "common": "Ivory-billed Araçari",
-            "scientific": "Pteroglossus azara"
+            "scientific": "Pteroglossus azara",
+            "credit": {
+              "url": "xeno-canto.org",
+              "recordist": "David Geale",
+              "hex":"XC64125"
+            }
           },
           {
             "bird": "b",
             "sonogram": "audio/bird-b.mp3",
             "modal": "#listen_b",
             "common": "Ivory-billed Araçari",
-            "scientific": "Pteroglossus azara"
+            "scientific": "Pteroglossus azara",
+            "credit": {
+              "url": "xeno-canto.org",
+              "recordist": "Frank Lambert",
+              "hex":"XC12070"
+            }
           },
           {
             "bird": "c",
             "sonogram": "audio/bird-c.mp3",
             "modal": "#listen_c",
             "common": "Ivory-billed Araçari",
-            "scientific": "Pteroglossus azara"
+            "scientific": "Pteroglossus azara",
+            "credit": {
+              "url": "xeno-canto.org",
+              "recordist": "Doug Knapp",
+              "hex":"XC12083"
+            }
           }
         ],
         "link": {
@@ -334,7 +349,7 @@
           }
         ],
         "next": {
-          "copy": "Next, closely examine birds from each population to see if their plumage, eyes, and bills differ.",
+          "copy": "Next, closely examine birds from each population to see if their plumage, eyes, and <br/>bills differ.",
           "link": {
             "copy": "continue",
             "href": "#magnify"

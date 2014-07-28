@@ -275,6 +275,10 @@ Listeners = {
       $(section)
         .find('.sonogram')
         .addClass('hidden')
+
+      $(section)
+        .find('.credit')
+        .addClass('hidden')
       # instructions
       resetInstructions();
 
@@ -494,23 +498,29 @@ Listeners = {
 
         player.toggleClass('hidden') if player.hasClass('hidden')
         bird.find('.sonogram').toggleClass('hidden') if bird.find('.sonogram').hasClass('hidden')
+        bird.find('.credit').toggleClass('hidden') if bird.find('.credit').hasClass('hidden')
         player.find('.sm2-360btn').click()
-        playCount = playCount + 1
+        $(this).addClass('played');
 
+
+        playCount = $('#listen .dropzone.played').length
         if playCount == $(section).find('.dropzone').length
           $(section).find('.instructions h3').addClass('hidden')
           $(section).find('.instructions .btn').removeClass('hidden')
 
           # quiz route
-          $(section).find('.instructions .btn').click ()->
-            #stop all sound
-            soundManager.stopAll()
+          $(section).find('.instructions .btn').on({
+            click: ()->
+              #stop all sound
+              soundManager.stopAll()
 
-            # reset section
-            Listeners.resetSection(section)
-            playCount = 0
-            # openModal
-          Router.modals.open(section)
+              # reset section
+              Listeners.resetSection(section)
+              playCount = 0
+              # openModal
+              Router.modals.open(section)
+            })
+
 
 
 

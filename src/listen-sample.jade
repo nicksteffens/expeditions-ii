@@ -1,4 +1,4 @@
-physical = { "listen": {"instructions": "Record each bird to compare their birdcalls.","info": [  {    "bird": "a",    "sonogram": "audio/bird-a.mp3",    "modal": "#listen_a",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara"  },  {    "bird": "b",    "sonogram": "audio/bird-b.mp3",    "modal": "#listen_b",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara"  },  {    "bird": "c",    "sonogram": "audio/bird-c.mp3",    "modal": "#listen_c",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara"  }]}}
+physical = { "listen": {"instructions": "Record each bird to compare their birdcalls.","info": [  {    "bird": "a",    "sonogram": "audio/bird-a.mp3",    "modal": "#listen_a",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara", "credit": {"url": "xeno-canto.org", "recordist": "David Geale", "hex": "XC12070"}  },  {    "bird": "b",    "sonogram": "audio/bird-b.mp3",    "modal": "#listen_b",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara", "credit": {"url": "xeno-canto.org", "recordist": "David Geale", "hex": "XC12070"}  },  {    "bird": "c",    "sonogram": "audio/bird-c.mp3",    "modal": "#listen_c",    "common": "Ivory-billed Araçari",    "scientific": "Pteroglossus azara", "credit": {"url": "xeno-canto.org", "recordist": "David Geale", "hex": "XC12070"}  }]}}
 
 mixin eachBird(obj)
   .col-xs-4(class="bird #{obj.bird}")
@@ -8,6 +8,8 @@ mixin eachBird(obj)
         a(href=obj.sonogram)
 
     img(src="images/sonogram-" + obj.bird + ".png", alt="").sonogram.hidden
+    .credit.hidden
+      | &copy; #{obj.credit.url}, <br> recordist #{obj.credit.recordist}, #{obj.credit.hex}
 
 
 #physical.row
