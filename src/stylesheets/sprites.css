@@ -1,6 +1,6 @@
 /* line 82, measure-beak/*.png */
 .measure-beak-sprite {
-  background: url('../images/measure-beak-s5e86239b8b.png') no-repeat;
+  background: url('../images/measure-beak-s401df90aaf.png') no-repeat;
 }
 
 /* line 82, measure-tail/*.png */
@@ -20,7 +20,7 @@
 
 /* line 17, ../../sass/sprites.scss */
 .icon.beak.animate, .icon.beak.complete {
-  background-image: url('../images/measure-beak-s5e86239b8b.png');
+  background-image: url('../images/measure-beak-s401df90aaf.png');
   margin: 0 -50px;
   height: 50px;
   width: 170px;
