@@ -498,7 +498,7 @@
       {
         "id": "lice_quiz",
         "type": "dna",
-        "headline": "Do you see ANY differences in these louse genes? <br><span class='hint'>(HINT: slide the bar slowly along the gene sequences, then select which louse's DNA doesn't match the others.)</span>",
+        "headline": "Do you see ANY differences in these louse genes? <br><span class='hint'>(HINT: slide the bar slowly along the gene sequences, then select which louse's DNA doesn't match <br>the others.)</span>",
         "answers": [
           {
             "answer": "a",
@@ -517,7 +517,8 @@
           }
         ],
         "correct": {
-          "headline": "You're right!"
+          "headline": "You're right!",
+          "subhead": "When the team compared samples of DNA taken from several specimens of Chewing Lice found on the three Ivory-billed Aracari populations, the genes of the lice from population C were unique."
         },
         "wrong": {
           "headline": "Are you sure?",
