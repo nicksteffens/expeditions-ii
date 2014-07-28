@@ -258,13 +258,13 @@
           },
           {
             "answer": "no",
-            "headline": "You're Right!",
+            "headline": "You're right!",
             "isCorrect": true
           }
         ],
         "copy": "When the team measured the wings, bills, tails, and other features of several specimens from each Ivory-billed Araçari population, <em>the birds appeared to be virtually the same size</em>.",
         "next": {
-          "copy": "Next, listen to recordings of individuals and flocks from each population to compare their birdcalls.",
+          "copy": "Next, listen to recordings of individuals and flocks from each population to compare <br/>their birdcalls.",
           "link": {
             "copy": "continue",
             "href": "#listen"
