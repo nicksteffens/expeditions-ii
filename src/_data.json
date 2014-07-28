@@ -472,7 +472,7 @@
         "type": "text",
         "headline": "Step 3: Range Mapping",
         "copy": [
-          "To understand why species begin evolving separately, scientists look at the landscape for barriers that prevent interbreeding."
+          "To understand why species begin evolving separately, scientists look at the landscape for barriers that <br>prevent interbreeding."
           ],
         "next": {
           "copy": "Let's examine the range maps to see what separates each Ivory-billed Araçari population.",

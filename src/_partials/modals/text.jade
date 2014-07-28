@@ -18,7 +18,7 @@
              li.text-left: em!= item
 
         hr.dashed
-        p= next.copy
+        p!= next.copy
 
         a.btn.router(href=next.link.href, data-dismiss="modal" aria-hidden="true")= next.link.copy
 
