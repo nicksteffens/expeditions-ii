@@ -44,7 +44,7 @@
           .row.pre
             each size in sizes
               .col-xs-4.size.text-center
-                h2 #{size.id}.
+                h2(class="#{size.id}") #{size.id}.
                 ul
                   li.text-right beak:
                     strong #{size.beak}
