@@ -145,19 +145,19 @@
           {
             "bird": "a",
             "common": "Ivory-billed Araçari",
-            "scientific": "Pteroglossus azara mariae",
+            "scientific": "Pteroglossus azara <span class='color'>mariae</span>",
             "sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac"
           },
           {
             "bird": "b",
             "common": "Ivory-billed Araçari",
-            "scientific": "Pteroglossus azara flavirostris",
+            "scientific": "Pteroglossus azara <span class='color'>flavirostris</span>",
             "sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac"
           },
           {
             "bird": "c",
             "common": "Ivory-billed Araçari",
-            "scientific": "Pteroglossus azara azara",
+            "scientific": "Pteroglossus azara <span class='color'>azara</span>",
             "sequence": "ccctaggcttcatcttcctgttcactgtggggggcttaac"
           }
         ]

@@ -1,4 +1,4 @@
-physical = {"genetic": {"instructions": "Drag the DNA samples to the to the test tubes.","info": [{"bird": "a", "common": "Ivory-billed Araçari", "scientific": "Pteroglossus azara mariae","sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac"  },  {"bird": "b", "common": "Ivory-billed Araçari", "scientific": "Pteroglossus azara flavirostris","sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac"  },  {"bird": "c", "common": "Ivory-billed Araçari", "scientific": "Pteroglossus azara azara","sequence": "ccctaggcttcatcttcctgttcactgtggggggcttaac"}]}}
+physical = {"genetic": {"instructions": "Drag the DNA samples to the to the test tubes.","info": [{"bird": "a", "common": "Ivory-billed Araçari", "scientific": "Pteroglossus azara <span class='color'>mariae</span>","sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac"  },  {"bird": "b", "common": "Ivory-billed Araçari", "scientific": "Pteroglossus azara <span class='color'>flavirostris</span>","sequence": "ccctgggcttcatcttcctattcactgtagggggcttaac"  },  {"bird": "c", "common": "Ivory-billed Araçari", "scientific": "Pteroglossus azara <span class='color'>azara</span>","sequence": "ccctaggcttcatcttcctgttcactgtggggggcttaac"}]}}
 
 mixin eachBird(obj)
   .col-xs-4(class="bird #{obj.bird}")
@@ -9,7 +9,7 @@ mixin eachBird(obj)
 
     .footer.text-center
       h3.common= obj.common
-      p.scientific= obj.scientific
+      p.scientific!= obj.scientific
 
 
 

@@ -6,8 +6,8 @@ mixin eachBird(obj)
     .genetic-analysis
 
     .footer.text-center
-      h3.common= obj.common
-      p.scientific= obj.scientific
+      h3.common!= obj.common
+      p.scientific!= obj.scientific
 
 #genetic.section.content(data-section="#genetic")
   .row
