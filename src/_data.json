@@ -439,7 +439,7 @@
           "subhead": "Compare the DNA sequences again and select the one that is different."
         },
         "next": {
-          "copy": "Good job! You've confirmed the team's results by demonstrating that, although they appear almost identical, population C (P.a. azara) is genetically distinct from the other two Ivory-billed Araçari populations.",
+          "copy": "Good job! You've confirmed the team's results by demonstrating that, although they appear almost identical, population C (<em>P.a. azara</em>) is genetically distinct from the other two Ivory-billed Araçari populations.",
           "link": {
             "copy": "continue",
             "href": "#step_2_conclusion"

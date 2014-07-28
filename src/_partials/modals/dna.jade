@@ -11,7 +11,7 @@
         p
           span.pre= subhead
           span.wrong.hidden!= wrong.subhead
-          span.correct.hidden!= copy
+          span.correct.hidden!= correct.subhead
 
 
         hr.dashed.no-margin-bottom
@@ -38,7 +38,7 @@
 
         .next.post.hidden
           if next.copy
-            p= next.copy
+            p!= next.copy
 
           if id == 'listen_quiz'
             a.btn.open-modal(data-dismiss="modal" aria-hidden="true" href=next.link.href)= next.link.copy
