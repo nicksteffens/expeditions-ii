@@ -10,8 +10,6 @@ $genetic-analysis-layout: horizontal;
 @import "measure-wing/*.png";
 @import "genetic-analysis/*.png";
 
-
-
 .icon.beak {
 
   &.animate, &.complete {
@@ -29,7 +27,7 @@ $genetic-analysis-layout: horizontal;
 
   &.animate, &.complete {
     background-image: $measure-tail-sprites;
-    margin: -75px -30px 0;
+    margin: -92px -30px 0;
     @include measure-tail-sprite-dimensions(img-01);
   }
 

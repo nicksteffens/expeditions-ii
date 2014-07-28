@@ -12,61 +12,61 @@ $measure-tail-clean-up: true !default;
 $measure-tail-layout:vertical !default;
 $measure-tail-inline: false !default;
 
-  
+
  // These variables control the generated sprite output
  // You can override them selectively before you import this file.
- 
+
    $measure-tail-tail-01-position: $measure-tail-position !default;
    $measure-tail-tail-01-spacing:  $measure-tail-spacing !default;
    $measure-tail-tail-01-repeat:   $measure-tail-repeat !default;
- 
+
    $measure-tail-tail-02-position: $measure-tail-position !default;
    $measure-tail-tail-02-spacing:  $measure-tail-spacing !default;
    $measure-tail-tail-02-repeat:   $measure-tail-repeat !default;
- 
+
    $measure-tail-tail-03-position: $measure-tail-position !default;
    $measure-tail-tail-03-spacing:  $measure-tail-spacing !default;
    $measure-tail-tail-03-repeat:   $measure-tail-repeat !default;
- 
+
    $measure-tail-tail-04-position: $measure-tail-position !default;
    $measure-tail-tail-04-spacing:  $measure-tail-spacing !default;
    $measure-tail-tail-04-repeat:   $measure-tail-repeat !default;
- 
+
    $measure-tail-tail-05-position: $measure-tail-position !default;
    $measure-tail-tail-05-spacing:  $measure-tail-spacing !default;
    $measure-tail-tail-05-repeat:   $measure-tail-repeat !default;
- 
+
    $measure-tail-tail-06-position: $measure-tail-position !default;
    $measure-tail-tail-06-spacing:  $measure-tail-spacing !default;
    $measure-tail-tail-06-repeat:   $measure-tail-repeat !default;
- 
+
 
  $measure-tail-sprites: sprite-map("measure-tail/*.png",
- 
-   $measure-tail-tail-01-position: $measure-tail-tail-01-position, 
-   $measure-tail-tail-01-spacing:  $measure-tail-tail-01-spacing, 
+
+   $measure-tail-tail-01-position: $measure-tail-tail-01-position,
+   $measure-tail-tail-01-spacing:  $measure-tail-tail-01-spacing,
    $measure-tail-tail-01-repeat:   $measure-tail-tail-01-repeat,
- 
-   $measure-tail-tail-02-position: $measure-tail-tail-02-position, 
-   $measure-tail-tail-02-spacing:  $measure-tail-tail-02-spacing, 
+
+   $measure-tail-tail-02-position: $measure-tail-tail-02-position,
+   $measure-tail-tail-02-spacing:  $measure-tail-tail-02-spacing,
    $measure-tail-tail-02-repeat:   $measure-tail-tail-02-repeat,
- 
-   $measure-tail-tail-03-position: $measure-tail-tail-03-position, 
-   $measure-tail-tail-03-spacing:  $measure-tail-tail-03-spacing, 
+
+   $measure-tail-tail-03-position: $measure-tail-tail-03-position,
+   $measure-tail-tail-03-spacing:  $measure-tail-tail-03-spacing,
    $measure-tail-tail-03-repeat:   $measure-tail-tail-03-repeat,
- 
-   $measure-tail-tail-04-position: $measure-tail-tail-04-position, 
-   $measure-tail-tail-04-spacing:  $measure-tail-tail-04-spacing, 
+
+   $measure-tail-tail-04-position: $measure-tail-tail-04-position,
+   $measure-tail-tail-04-spacing:  $measure-tail-tail-04-spacing,
    $measure-tail-tail-04-repeat:   $measure-tail-tail-04-repeat,
- 
-   $measure-tail-tail-05-position: $measure-tail-tail-05-position, 
-   $measure-tail-tail-05-spacing:  $measure-tail-tail-05-spacing, 
+
+   $measure-tail-tail-05-position: $measure-tail-tail-05-position,
+   $measure-tail-tail-05-spacing:  $measure-tail-tail-05-spacing,
    $measure-tail-tail-05-repeat:   $measure-tail-tail-05-repeat,
- 
-   $measure-tail-tail-06-position: $measure-tail-tail-06-position, 
-   $measure-tail-tail-06-spacing:  $measure-tail-tail-06-spacing, 
+
+   $measure-tail-tail-06-position: $measure-tail-tail-06-position,
+   $measure-tail-tail-06-spacing:  $measure-tail-tail-06-spacing,
    $measure-tail-tail-06-repeat:   $measure-tail-tail-06-repeat,
- 
+
  $layout: $measure-tail-layout,
  $cleanup: $measure-tail-clean-up
  );
@@ -77,7 +77,7 @@ $measure-tail-inline: false !default;
 @if $measure-tail-inline {
   #{$measure-tail-sprite-base-class} {
     background-image: inline-sprite($measure-tail-sprites);
-  } 
+  }
 } @else {
   #{$measure-tail-sprite-base-class} {
     background: $measure-tail-sprites no-repeat;

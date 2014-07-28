@@ -12,85 +12,85 @@ $measure-wing-clean-up: true !default;
 $measure-wing-layout:vertical !default;
 $measure-wing-inline: false !default;
 
-  
+
  // These variables control the generated sprite output
  // You can override them selectively before you import this file.
- 
+
    $measure-wing-wing-01-position: $measure-wing-position !default;
    $measure-wing-wing-01-spacing:  $measure-wing-spacing !default;
    $measure-wing-wing-01-repeat:   $measure-wing-repeat !default;
- 
+
    $measure-wing-wing-02-position: $measure-wing-position !default;
    $measure-wing-wing-02-spacing:  $measure-wing-spacing !default;
    $measure-wing-wing-02-repeat:   $measure-wing-repeat !default;
- 
+
    $measure-wing-wing-03-position: $measure-wing-position !default;
    $measure-wing-wing-03-spacing:  $measure-wing-spacing !default;
    $measure-wing-wing-03-repeat:   $measure-wing-repeat !default;
- 
+
    $measure-wing-wing-04-position: $measure-wing-position !default;
    $measure-wing-wing-04-spacing:  $measure-wing-spacing !default;
    $measure-wing-wing-04-repeat:   $measure-wing-repeat !default;
- 
+
    $measure-wing-wing-05-position: $measure-wing-position !default;
    $measure-wing-wing-05-spacing:  $measure-wing-spacing !default;
    $measure-wing-wing-05-repeat:   $measure-wing-repeat !default;
- 
+
    $measure-wing-wing-06-position: $measure-wing-position !default;
    $measure-wing-wing-06-spacing:  $measure-wing-spacing !default;
    $measure-wing-wing-06-repeat:   $measure-wing-repeat !default;
- 
+
    $measure-wing-wing-07-position: $measure-wing-position !default;
    $measure-wing-wing-07-spacing:  $measure-wing-spacing !default;
    $measure-wing-wing-07-repeat:   $measure-wing-repeat !default;
- 
+
    $measure-wing-wing-08-position: $measure-wing-position !default;
    $measure-wing-wing-08-spacing:  $measure-wing-spacing !default;
    $measure-wing-wing-08-repeat:   $measure-wing-repeat !default;
- 
+
    $measure-wing-wing-09-position: $measure-wing-position !default;
    $measure-wing-wing-09-spacing:  $measure-wing-spacing !default;
    $measure-wing-wing-09-repeat:   $measure-wing-repeat !default;
- 
+
 
  $measure-wing-sprites: sprite-map("measure-wing/*.png",
- 
-   $measure-wing-wing-01-position: $measure-wing-wing-01-position, 
-   $measure-wing-wing-01-spacing:  $measure-wing-wing-01-spacing, 
+
+   $measure-wing-wing-01-position: $measure-wing-wing-01-position,
+   $measure-wing-wing-01-spacing:  $measure-wing-wing-01-spacing,
    $measure-wing-wing-01-repeat:   $measure-wing-wing-01-repeat,
- 
-   $measure-wing-wing-02-position: $measure-wing-wing-02-position, 
-   $measure-wing-wing-02-spacing:  $measure-wing-wing-02-spacing, 
+
+   $measure-wing-wing-02-position: $measure-wing-wing-02-position,
+   $measure-wing-wing-02-spacing:  $measure-wing-wing-02-spacing,
    $measure-wing-wing-02-repeat:   $measure-wing-wing-02-repeat,
- 
-   $measure-wing-wing-03-position: $measure-wing-wing-03-position, 
-   $measure-wing-wing-03-spacing:  $measure-wing-wing-03-spacing, 
+
+   $measure-wing-wing-03-position: $measure-wing-wing-03-position,
+   $measure-wing-wing-03-spacing:  $measure-wing-wing-03-spacing,
    $measure-wing-wing-03-repeat:   $measure-wing-wing-03-repeat,
- 
-   $measure-wing-wing-04-position: $measure-wing-wing-04-position, 
-   $measure-wing-wing-04-spacing:  $measure-wing-wing-04-spacing, 
+
+   $measure-wing-wing-04-position: $measure-wing-wing-04-position,
+   $measure-wing-wing-04-spacing:  $measure-wing-wing-04-spacing,
    $measure-wing-wing-04-repeat:   $measure-wing-wing-04-repeat,
- 
-   $measure-wing-wing-05-position: $measure-wing-wing-05-position, 
-   $measure-wing-wing-05-spacing:  $measure-wing-wing-05-spacing, 
+
+   $measure-wing-wing-05-position: $measure-wing-wing-05-position,
+   $measure-wing-wing-05-spacing:  $measure-wing-wing-05-spacing,
    $measure-wing-wing-05-repeat:   $measure-wing-wing-05-repeat,
- 
-   $measure-wing-wing-06-position: $measure-wing-wing-06-position, 
-   $measure-wing-wing-06-spacing:  $measure-wing-wing-06-spacing, 
+
+   $measure-wing-wing-06-position: $measure-wing-wing-06-position,
+   $measure-wing-wing-06-spacing:  $measure-wing-wing-06-spacing,
    $measure-wing-wing-06-repeat:   $measure-wing-wing-06-repeat,
- 
-   $measure-wing-wing-07-position: $measure-wing-wing-07-position, 
-   $measure-wing-wing-07-spacing:  $measure-wing-wing-07-spacing, 
+
+   $measure-wing-wing-07-position: $measure-wing-wing-07-position,
+   $measure-wing-wing-07-spacing:  $measure-wing-wing-07-spacing,
    $measure-wing-wing-07-repeat:   $measure-wing-wing-07-repeat,
- 
-   $measure-wing-wing-08-position: $measure-wing-wing-08-position, 
-   $measure-wing-wing-08-spacing:  $measure-wing-wing-08-spacing, 
+
+   $measure-wing-wing-08-position: $measure-wing-wing-08-position,
+   $measure-wing-wing-08-spacing:  $measure-wing-wing-08-spacing,
    $measure-wing-wing-08-repeat:   $measure-wing-wing-08-repeat,
- 
-   $measure-wing-wing-09-position: $measure-wing-wing-09-position, 
-   $measure-wing-wing-09-spacing:  $measure-wing-wing-09-spacing, 
+
+   $measure-wing-wing-09-position: $measure-wing-wing-09-position,
+   $measure-wing-wing-09-spacing:  $measure-wing-wing-09-spacing,
    $measure-wing-wing-09-repeat:   $measure-wing-wing-09-repeat,
- 
+
  $layout: $measure-wing-layout,
  $cleanup: $measure-wing-clean-up
  );
@@ -101,7 +101,7 @@ $measure-wing-inline: false !default;
 @if $measure-wing-inline {
   #{$measure-wing-sprite-base-class} {
     background-image: inline-sprite($measure-wing-sprites);
-  } 
+  }
 } @else {
   #{$measure-wing-sprite-base-class} {
     background: $measure-wing-sprites no-repeat;

@@ -5,12 +5,12 @@
 
 /* line 82, measure-tail/*.png */
 .measure-tail-sprite {
-  background: url('../images/measure-tail-sd877a2ac77.png') no-repeat;
+  background: url('../images/measure-tail-s27227e22dd.png') no-repeat;
 }
 
 /* line 82, measure-wing/*.png */
 .measure-wing-sprite {
-  background: url('../images/measure-wing-s0e90bf5383.png') no-repeat;
+  background: url('../images/measure-wing-s796216db1b.png') no-repeat;
 }
 
 /* line 802, genetic-analysis/*.png */
@@ -18,50 +18,50 @@
   background: url('../images/genetic-analysis-s3690261d91.png') no-repeat;
 }
 
-/* line 17, ../../sass/sprites.scss */
+/* line 15, ../../sass/sprites.scss */
 .icon.beak.animate, .icon.beak.complete {
   background-image: url('../images/measure-beak-s401df90aaf.png');
   margin: 0 -50px;
   height: 50px;
   width: 170px;
 }
-/* line 23, ../../sass/sprites.scss */
+/* line 21, ../../sass/sprites.scss */
 .icon.beak.complete {
   background-position: -850px 0;
 }
 
-/* line 30, ../../sass/sprites.scss */
+/* line 28, ../../sass/sprites.scss */
 .icon.tail.animate, .icon.tail.complete {
-  background-image: url('../images/measure-tail-sd877a2ac77.png');
-  margin: -75px -30px 0;
+  background-image: url('../images/measure-tail-s27227e22dd.png');
+  margin: -92px -30px 0;
   height: 240px;
   width: 100px;
 }
-/* line 36, ../../sass/sprites.scss */
+/* line 34, ../../sass/sprites.scss */
 .icon.tail.complete {
   background-position: -500px 0;
 }
 
-/* line 44, ../../sass/sprites.scss */
+/* line 42, ../../sass/sprites.scss */
 .icon.wing.animate, .icon.wing.complete {
-  background-image: url('../images/measure-wing-s0e90bf5383.png');
+  background-image: url('../images/measure-wing-s796216db1b.png');
   margin: -60px -50px 0;
-  height: 180px;
+  height: 190px;
   width: 160px;
 }
-/* line 50, ../../sass/sprites.scss */
+/* line 48, ../../sass/sprites.scss */
 .icon.wing.complete {
   background-position: -800px 0;
 }
 
-/* line 55, ../../sass/sprites.scss */
+/* line 53, ../../sass/sprites.scss */
 .genetic-analysis {
   background-image: url('../images/genetic-analysis-s3690261d91.png');
   height: 50px;
   width: 170px;
   background-position: 0 0;
 }
-/* line 60, ../../sass/sprites.scss */
+/* line 58, ../../sass/sprites.scss */
 .genetic-analysis.complete {
   background-position: -15010px 0;
 }
