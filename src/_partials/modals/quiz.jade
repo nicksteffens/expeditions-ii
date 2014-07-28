@@ -6,9 +6,6 @@
       .modal-header.text-center
         h2.pre!= headline
 
-        if id == 'magnify_quiz'
-          img.pre(src="images/magnify-quiz.jpg" alt="magnify quiz")
-
         .answers.post
           each answer in answers
             if answer.isCorrect == true
@@ -26,9 +23,9 @@
 
             else
               .wrong.hidden
-                h2= answer.headline
+                h2!= answer.headline
                 if answer.subhead
-                  p= answer.subhead
+                  p!= answer.subhead
 
         .copy.post.hidden
           p!= copy
@@ -37,8 +34,8 @@
         if id != 'magnify_quiz'
           hr.dashed
         else
-          img.hidden.wrong(src="images/magnify-quiz.jpg" alt="magnify quiz")
-          hr.dashed.post.hidden
+          hr.dashed
+          img.pre(src="images/magnify-quiz.jpg" alt="magnify quiz")
 
         if id == 'measurements_quiz'
           .row.pre
