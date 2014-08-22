@@ -6,7 +6,7 @@
         "These birds represent three populations of toucans sampled by John, Jason, and Alex during their 2007 Amazonian Expedition, as well as other earlier collecting trips.",
         "The dots represent locations where specimens from the three populations were found. As you can see, each population lives within specific, river-bordered Areas of Endemism&mdash;zones containing species unique to that region."
         ],
-      "credit": "We thank Handbook of the Birds of the World for allowing us to use illustrations by Albert Earl Gilbert. The original images from Handbook of the Birds of the World, Volume 7, have been modified for use in this interactive.",
+      "credit": "We thank <strong>Handbook of the Birds of the World</strong> for allowing us to use illustrations by Albert Earl Gilbert. The original images from <strong>Handbook of the Birds of the World, Volume 7</strong>, have been modified for use in this interactive.",
       "link": {
         "copy": "continue",
         "href": "#intro_2"
@@ -304,7 +304,7 @@
             "subhead": "Remember, toucans' facial features and bills are key factors for distinguishing <br>different species."
           }
         ],
-        "copy": "When the team compared the appearance of several specimens from each Ivory-billed Araçari population, <em>their plumage appeared to be virtually identical, but their eye rings and bills differed.</em>",
+        "copy": "When the team compared the appearance of several specimens from each Ivory-billed Araçari population, <em>their plumage appeared to be virtually identical, <br />but their eye rings and bills differed.</em>",
         "next": {
           "copy": "Good job! You've confirmed the team's results by demonstrating that the three Ivory-billed Araçari populations appear to be <em>almost</em> identical—that's why they've long been considered members of the same species.",
           "link": {
@@ -340,7 +340,7 @@
             "answer": "yes",
             "isCorrect": false,
             "headline": "Sorry...",
-            "subhead": "Remember, the speed and number of the birdcalls can change based on the mood and size of the population. When the team compared the calls and sonograms of several specimens from each Ivory-billed Araçari population, the pitch, tone, and rhythm of the calls were <em>virtually identical</em>"
+            "subhead": "Remember, the speed and number of the birdcalls can change based on the mood and size of the population. <br />When the team compared the calls and sonograms of several specimens from each Ivory-billed Araçari population, the pitch, tone, and rhythm of the calls were <em>virtually identical</em>"
           },
           {
             "answer": "no",
@@ -403,7 +403,7 @@
           "Today's scientists don't have to rely on appearances alone to classify species. They have another tool in their toolbox: genetic sequencing."
           ],
         "next": {
-          "copy": "Take a DNA sample of birds from each Ivory-billed Araçari population to determine their relationships.",
+          "copy": "Take a DNA sample of birds from each Ivory-billed Araçari population to <br />determine their relationships.",
           "link": {
             "copy": "begin",
             "href": "#genetic"
@@ -473,7 +473,7 @@
         "type": "text",
         "headline": "Step 3: Range Mapping",
         "copy": [
-          "To understand why species begin evolving separately, scientists look at the landscape for barriers that <br>prevent interbreeding."
+          "To understand why species begin evolving separately, scientists look at the landscape for <br />barriers that prevent interbreeding."
           ],
         "next": {
           "copy": "Let's examine the range maps to see what separates each Ivory-billed Araçari population.",
