@@ -454,7 +454,7 @@
         "copy": [
           "By confirming that population C is genetically distinct, you and the team have altered our understanding of the Ivory-billed Araçari family tree. Populations A and B share the same twig, while C branches off on its own.",
 
-          "This may mean that population C should be reclassified as a species, not a subspecies!"
+          "This may mean that population C should be reclassified as a species, <br />not a subspecies!"
         ],
         "image": {
           "src": "images/step_2_conclusion.jpg",
